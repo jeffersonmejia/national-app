@@ -51,13 +51,12 @@ html {
 	width: 100%;
 	position: fixed;
 	transform: translateX(-200%);
+	transition: opacity 0.3s ease-in-out;
 }
 .loader-bar-active {
 	background-color: var(--main-bg);
 	transition: transform 0.3s ease-in-out;
 	animation: barLoader 1.7s linear infinite;
-	opacity: 1;
-	transition: opacity 0.3s ease-in-out;
 }
 .loader-bar-disabled {
 	opacity: 0;
@@ -297,6 +296,26 @@ footer {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+}
+.professional-contact {
+	display: flex;
+	flex-direction: column;
+	margin: 12px;
+	margin-bottom: 0;
+}
+.professional-contact h5 {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+.professional-contact-content span {
+	font-size: 20px;
+}
+.professional-contact-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 4px;
 }
 .feedback-container {
 	width: 80%;
