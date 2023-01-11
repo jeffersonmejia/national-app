@@ -200,6 +200,7 @@ header button {
 .purchases figure {
 	width: 100%;
 	max-width: 600px;
+	padding-bottom: 16px;
 }
 .purchases figcaption {
 	text-align: center;
