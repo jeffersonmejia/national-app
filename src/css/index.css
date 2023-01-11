@@ -4,9 +4,13 @@
 	--btn-bg: hsl(224, 100%, 60%);
 	--btn-hover: hsl(224, 100%, 54%);
 	--btn-fg: rgb(255, 255, 255);
+	--gray-fg: hsl(0, 0%, 40%);
 	--btn-height: 48px;
 	--border-radius: 8px;
-	--light-border: 1px solid var(--main-fg);
+	--light-border-color: hsl(0, 0%, 90%);
+	--light-border: 1px solid var(--light-border-color);
+	--opacity: rgba(0, 0, 0, 0.5);
+	--opacity-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 * {
 	margin: 0;
@@ -27,6 +31,8 @@ html {
 	position: fixed;
 	height: 65px;
 	top: 0;
+	z-index: 997;
+	box-shadow: var(--opacity-shadow);
 }
 .logo {
 	padding: 12px;
@@ -52,12 +58,55 @@ html {
 	padding: 12px;
 	border-radius: 50%;
 	cursor: pointer;
+	z-index: 999;
 	transition: transform 0.3s ease-in-out;
 }
 @media (hover: hover) {
 	.burger-menu:hover {
 		transform: translateY(-8px);
 	}
+}
+.navbar-modal {
+	background-color: var(--opacity);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 998;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navbar-modal-content {
+	width: 100%;
+	text-align: center;
+	background-color: var(--main-fg);
+	list-style: none;
+}
+.navbar-modal-content li {
+	padding: 12px;
+	cursor: pointer;
+	color: var(--gray-fg);
+	transition: padding 0.3s ease-in-out;
+}
+@media (hover: hover) {
+	.navbar-modal-content li:hover {
+		padding: 18px;
+		background-color: var(--main-bg);
+		color: var(--main-fg);
+	}
+}
+.navbar-modal-content li:first-child {
+	border-bottom: var(--light-border);
+}
+.navbar-modal-disabled {
+	visibility: hidden;
+	opacity: 0;
+}
+.navbar-modal-active {
+	visibility: visible;
+	opacity: 1;
 }
 main {
 	margin-top: 65px;
@@ -105,6 +154,7 @@ header button {
 		background-color: var(--btn-hover);
 	}
 }
+
 @media screen and (min-width: 800px) {
 	header :is(figure, img) {
 		height: 50vh;
