@@ -7,6 +7,7 @@
 	--btn-fg: rgb(255, 255, 255);
 	--gray-fg: hsl(0, 0%, 40%);
 	--blue-fg: hsl(224, 100%, 20%);
+	--input-blue-fg: hsl(224, 100%, 30%);
 	--btn-height: 48px;
 	--border-radius: 8px;
 	--light-border-color: hsl(0, 0%, 90%);
@@ -211,9 +212,16 @@ header button {
 	gap: 4px;
 	padding: 20px;
 }
-.purchases a {
-	text-decoration: none;
-	color: var(--main-fg);
+.purchases button {
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+	transition: background-color 0.3s ease-in-out;
+	cursor: pointer;
+}
+@media (hover: hover) {
+	.purchases button:hover {
+		background-color: var(--btn-hover);
+	}
 }
 .contacts {
 	background-color: var(--blue-fg);
@@ -234,6 +242,7 @@ header button {
 	margin: 12px 0 0 0;
 	background-color: var(--main-bg);
 	color: var(--main-fg);
+	transition: background-color 0.3s ease-in-out;
 }
 @media (hover: hover) {
 	.contacts-content button:hover {
@@ -247,6 +256,37 @@ footer {
 	color: var(--main-fg);
 	border-top: var(--border-white);
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.feedback-container {
+	width: 80%;
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto;
+}
+.feedback-container textarea {
+	margin-top: 8px;
+	border-radius: var(--border-radius);
+	border: none;
+	padding: 12px 6px;
+	background-color: var(--input-blue-fg);
+	color: var(--main-fg);
+	outline: none;
+	resize: none;
+}
+.feedback-container button {
+	margin-top: 16px;
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+@media (hover: hover) {
+	.feedback-container button:hover {
+		background-color: var(--btn-hover);
+	}
 }
 @media screen and (min-width: 600px) {
 	.contacts {
@@ -261,6 +301,7 @@ footer {
 		max-width: 300px;
 		margin: initial;
 		padding: 32px 0;
+		padding-bottom: 48px;
 	}
 	.contacts-content button {
 		width: 100%;
@@ -283,6 +324,7 @@ footer {
 		background-color: var(--main-fg);
 		flex-direction: row;
 		align-items: flex-start;
+		padding-bottom: 32px;
 	}
 	.purchases figcaption {
 		background-color: var(--main-fg);
