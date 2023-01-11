@@ -8,6 +8,9 @@
 	--gray-fg: hsl(0, 0%, 40%);
 	--blue-fg: hsl(224, 100%, 20%);
 	--input-blue-fg: hsl(224, 100%, 30%);
+	--btn-dark-bg: hsl(91, 100%, 33%);
+	--btn-dark-hover: hsl(91, 100%, 40%);
+	--blue-border: 1px solid hsl(224, 100%, 40%);
 	--btn-height: 48px;
 	--border-radius: 8px;
 	--light-border-color: hsl(0, 0%, 90%);
@@ -240,13 +243,13 @@ header button {
 	width: 80%;
 	max-width: 300px;
 	margin: 12px 0 0 0;
-	background-color: var(--main-bg);
+	background-color: var(--btn-dark-bg);
 	color: var(--main-fg);
 	transition: background-color 0.3s ease-in-out;
 }
 @media (hover: hover) {
 	.contacts-content button:hover {
-		background-color: var(--btn-hover);
+		background-color: var(--btn-dark-hover);
 		cursor: pointer;
 	}
 }
@@ -254,7 +257,7 @@ footer {
 	padding: 32px 0;
 	background-color: var(--main-box-bg);
 	color: var(--main-fg);
-	border-top: var(--border-white);
+	border-top: var(--blue-border);
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -270,22 +273,26 @@ footer {
 	margin-top: 8px;
 	border-radius: var(--border-radius);
 	border: none;
-	padding: 12px 6px;
+	padding: 12px;
 	background-color: var(--input-blue-fg);
 	color: var(--main-fg);
 	outline: none;
 	resize: none;
+	transition: box-shadow 0.3s ease-in-out;
+}
+textarea:focus {
+	box-shadow: var(--opacity-shadow);
 }
 .feedback-container button {
 	margin-top: 16px;
-	background-color: var(--btn-bg);
+	background-color: var(--btn-dark-bg);
 	color: var(--btn-fg);
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
 }
 @media (hover: hover) {
 	.feedback-container button:hover {
-		background-color: var(--btn-hover);
+		background-color: var(--btn-dark-hover);
 	}
 }
 @media screen and (min-width: 600px) {
@@ -316,6 +323,7 @@ footer {
 @media screen and (min-width: 600px) {
 	.services {
 		padding: 20px 0;
+		text-align: center;
 	}
 	.services ul {
 		flex-direction: row;
@@ -323,7 +331,7 @@ footer {
 	.purchases {
 		background-color: var(--main-fg);
 		flex-direction: row;
-		align-items: flex-start;
+		align-items: baseline;
 		padding-bottom: 32px;
 	}
 	.purchases figcaption {
