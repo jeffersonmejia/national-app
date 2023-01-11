@@ -1,14 +1,17 @@
 :root {
 	--main-bg: hsl(224, 100%, 60%);
 	--main-fg: rgb(255, 255, 255);
+	--main-box-bg: hsl(224, 100%, 20%);
 	--btn-bg: hsl(224, 100%, 60%);
 	--btn-hover: hsl(224, 100%, 54%);
 	--btn-fg: rgb(255, 255, 255);
 	--gray-fg: hsl(0, 0%, 40%);
+	--blue-fg: hsl(224, 100%, 20%);
 	--btn-height: 48px;
 	--border-radius: 8px;
 	--light-border-color: hsl(0, 0%, 90%);
 	--light-border: 1px solid var(--light-border-color);
+	--border-white: 1px solid var(--main-fg);
 	--opacity: rgba(0, 0, 0, 0.5);
 	--opacity-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
@@ -19,6 +22,11 @@
 }
 img {
 	width: 100%;
+}
+button {
+	height: var(--btn-height);
+	border-radius: var(--border-radius);
+	border: none;
 }
 html {
 	font-family: "Nunito Sans", sans-serif;
@@ -59,11 +67,14 @@ html {
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 999;
+	box-shadow: var(--opacity-shadow);
+	transition-property: background-color;
 	transition: transform 0.3s ease-in-out;
 }
 @media (hover: hover) {
 	.burger-menu:hover {
 		transform: translateY(-8px);
+		background-color: var(--btn-hover);
 	}
 }
 .navbar-modal {
@@ -154,9 +165,134 @@ header button {
 		background-color: var(--btn-hover);
 	}
 }
-
+.services {
+	color: var(--blue-fg);
+}
+.services h1 {
+	width: 100%;
+	padding: 12px 16px;
+}
+.services ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	gap: 16px;
+	padding: 0 0 24px 0;
+}
+.services a {
+	text-decoration: none;
+	color: var(--blue-fg);
+}
+@media (hover: hover) {
+	.services a:hover {
+		text-decoration: underline;
+	}
+}
+.purchases {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--main-box-bg);
+}
+.purchases figure {
+	width: 100%;
+	max-width: 600px;
+}
+.purchases figcaption {
+	text-align: center;
+	background-color: var(--main-box-bg);
+	color: var(--main-fg);
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 20px;
+}
+.purchases a {
+	text-decoration: none;
+	color: var(--main-fg);
+}
+.contacts {
+	background-color: var(--blue-fg);
+	border-top: var(--border-white);
+	color: var(--main-fg);
+}
+.contacts-content {
+	margin: auto;
+	padding: 16px 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.contacts-content button {
+	width: 80%;
+	max-width: 300px;
+	margin: 12px 0 0 0;
+	background-color: var(--main-bg);
+	color: var(--main-fg);
+}
+@media (hover: hover) {
+	.contacts-content button:hover {
+		background-color: var(--btn-hover);
+		cursor: pointer;
+	}
+}
+footer {
+	padding: 32px 0;
+	background-color: var(--main-box-bg);
+	color: var(--main-fg);
+	border-top: var(--border-white);
+	text-align: center;
+}
+@media screen and (min-width: 600px) {
+	.contacts {
+		background-color: var(--blue-fg);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 60px;
+		place-items: center;
+	}
+	.contacts-content {
+		width: 80%;
+		max-width: 300px;
+		margin: initial;
+		padding: 32px 0;
+	}
+	.contacts-content button {
+		width: 100%;
+	}
+	.contacts-content:last-child {
+		justify-self: left;
+	}
+	.contacts-content:first-child {
+		justify-self: right;
+	}
+}
+@media screen and (min-width: 600px) {
+	.services {
+		padding: 20px 0;
+	}
+	.services ul {
+		flex-direction: row;
+	}
+	.purchases {
+		background-color: var(--main-fg);
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.purchases figcaption {
+		background-color: var(--main-fg);
+		color: var(--blue-fg);
+	}
+}
 @media screen and (min-width: 800px) {
 	header :is(figure, img) {
 		height: 50vh;
+	}
+	.burger-menu {
+		display: none;
 	}
 }
