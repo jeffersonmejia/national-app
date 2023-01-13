@@ -75,6 +75,7 @@ html {
 	background-color: var(--main-fg);
 	color: var(--main-bg);
 	display: flex;
+	align-items: center;
 	position: fixed;
 	height: 65px;
 	top: 0;
@@ -84,17 +85,38 @@ html {
 .logo {
 	padding: 12px;
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	gap: 4px;
+	flex-grow: 1;
 }
 .logo i {
-	font-size: 28px;
+	font-size: 20px;
 }
 .logo h1 {
 	font-size: 20px;
 }
 .navbar :is(ul) {
 	visibility: hidden;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	height: 100%;
+}
+.navbar li {
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
+	height: 100%;
+}
+.navbar a {
+	text-align: center;
+	text-decoration: none;
+	color: var(--blue-fg);
+}
+@media (hover: hover) {
+	.navbar a:hover {
+		text-decoration: underline;
+	}
 }
 .burger-menu {
 	position: fixed;
@@ -400,5 +422,11 @@ textarea:focus {
 	}
 	.burger-menu {
 		display: none;
+	}
+	.navbar {
+		padding: 0 32px;
+	}
+	.navbar :is(ul) {
+		visibility: visible;
 	}
 }
