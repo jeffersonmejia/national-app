@@ -3,6 +3,7 @@
 	--main-fg: rgb(255, 255, 255);
 	--main-box-bg: hsl(224, 100%, 20%);
 	--btn-bg: hsl(224, 100%, 60%);
+	--input-focus: hsl(0, 0%, 95%);
 	--btn-hover: hsl(224, 100%, 54%);
 	--btn-fg: rgb(255, 255, 255);
 	--gray-fg: hsl(0, 0%, 40%);
@@ -39,7 +40,13 @@ button {
 hr {
 	color: var(--main-fg);
 }
-
+input {
+	cursor: pointer;
+	outline: none;
+}
+input:focus {
+	background-color: var(--input-focus);
+}
 html {
 	font-family: "Nunito Sans", sans-serif;
 	color: var(--blue-fg);
