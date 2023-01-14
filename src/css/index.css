@@ -1,5 +1,5 @@
-@import "./__reset.css";
-@import "./__navbar.css";
+@import "__reset.css";
+@import "__navbar.css";
 
 main {
 	margin-top: 65px;
