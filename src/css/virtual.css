@@ -1,5 +1,5 @@
-@import "__reset.css";
-@import "__navbar.css";
+@import "reset.css";
+@import "navbar.css";
 main {
 	height: 100vh;
 	display: flex;

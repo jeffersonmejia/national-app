@@ -1,5 +1,5 @@
-@import "__reset.css";
-@import "__navbar.css";
+@import "reset.css";
+@import "navbar.css";
 main {
 	margin: 0 auto;
 	margin-top: calc(var(--navbar-height) + 20px);
