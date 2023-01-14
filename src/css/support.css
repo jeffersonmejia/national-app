@@ -1,0 +1,58 @@
+@import "__reset.css";
+@import "__navbar.css";
+main {
+	margin: 0 auto;
+	margin-top: calc(var(--navbar-height) + 20px);
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main :is(h1, small) {
+	width: 100%;
+	max-width: 700px;
+}
+article {
+	max-width: 700px;
+}
+article :is(h2, h3) {
+	margin: 6px 0;
+}
+article {
+	margin: 28px 0;
+}
+.callout {
+	width: 80%;
+	max-width: 300px;
+	margin-bottom: 40px;
+}
+
+.callout small {
+	display: block;
+	margin: 8px 0;
+}
+.callout button {
+	width: 100%;
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+}
+@media (hover: hover) {
+	.callout button:hover {
+		background-color: var(--btn-hover);
+	}
+}
+.callout-number {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin-top: 12px;
+}
+.callout-number span {
+	cursor: pointer;
+	color: var(--btn-bg);
+}
+@media (hover: hover) {
+	.callout-number span:hover {
+		color: var(--btn-hover);
+	}
+}
