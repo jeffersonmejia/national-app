@@ -1,4 +1,4 @@
-import handleLoader from "./helpers/loader.js";
+import handleLoader from "./loader.js";
 const d = document,
 	$modalLoader = d.querySelector(".modal-loader"),
 	$navbarModal = d.querySelector(".navbar-modal");
