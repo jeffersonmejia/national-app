@@ -1,5 +1,5 @@
-export default function handleLoader(loader) {
+export default function handleLoader(loader, body) {
 	setTimeout(() => {
 		loader.classList.add("loader-bar-disabled");
-	}, 1500);
+	}, 3500);
 }

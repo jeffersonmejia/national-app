@@ -86,31 +86,39 @@
 	list-style: none;
 }
 .navbar-modal-content li {
-	padding: 12px;
+	height: 100%;
+	padding: 12px 0;
 	cursor: pointer;
 	color: var(--gray-fg);
+}
+.navbar-modal-content a {
+	padding: 12px 0;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	color: var(--main-bg);
+	display: block;
 	transition: padding 0.3s ease-in-out;
 }
 @media (hover: hover) {
-	.navbar-modal-content li:hover {
+	.navbar-modal-content a:hover {
 		padding: 18px;
-		background-color: var(--main-bg);
-		color: var(--main-fg);
+		text-decoration: underline;
 	}
 }
-.navbar-modal-content li:first-child {
+.navbar-modal-content :is(li:first-child, li:nth-child(2)) {
 	border-bottom: var(--light-border);
 }
 .navbar-modal-disabled {
 	visibility: hidden;
 	opacity: 0;
 }
-.navbar-modal-active {
-	visibility: visible;
-	opacity: 1;
-}
+
 @media screen and (min-width: 800px) {
 	.burger-menu {
+		display: none;
+	}
+	.navbar-modal {
 		display: none;
 	}
 	.navbar {

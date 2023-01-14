@@ -51,6 +51,11 @@ html {
 	font-family: "Nunito Sans", sans-serif;
 	color: var(--blue-fg);
 }
+.select-disabled {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
 .modal-loader {
 	position: fixed;
 	top: 0;
