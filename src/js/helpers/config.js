@@ -9,7 +9,13 @@ export default function loadConfig() {
 	});
 	d.addEventListener("click", (e) => {
 		if (e.target.matches(".burger-menu")) {
-			$navbarModal.classList.toggle("navbar-modal-disabled");
+			if ($navbarModal.classList.contains("navbar-modal-disabled")) {
+				$navbarModal.classList.remove("navbar-modal-disabled");
+				e.target.textContent = "arrow_back";
+			} else {
+				$navbarModal.classList.add("navbar-modal-disabled");
+				e.target.textContent = "menu";
+			}
 		}
 	});
 }
