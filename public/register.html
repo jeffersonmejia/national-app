@@ -51,9 +51,41 @@
 						<h1>Abrir una cuenta</h1>
 						<p>Ingresa tu número de cédula para empezar el registro</p>
 					</legend>
-					<input type="text" placeholder="Cédula de identidad" />
-					<input type="text" placeholder="Código dactilar" />
-					<button>Continuar</button>
+					<input
+						type="text"
+						placeholder="Cédula de identidad"
+						name="dni"
+						id="dni"
+						autocomplete="off"
+					/>
+					<ul class="error-group">
+						<li>
+							<small>La cédula debe contener 10 dígitos</small>
+						</li>
+						<li>
+							<small>No se admiten caracteres especiales</small>
+						</li>
+					</ul>
+					<input
+						type="text"
+						placeholder="Código dactilar"
+						name="fingerprint"
+						id="fingerprint"
+						autocomplete="off"
+						disabled
+					/>
+					<ul class="error-group">
+						<li>
+							<small
+								>El código dactilar se encuentra en la parte trasera de tu cédula</small
+							>
+						</li>
+						<li><small> Debe contener 10 dígitos </small></li>
+						<li>
+							<small>No se admiten caracteres especiales</small>
+						</li>
+					</ul>
+					<button id="submit " class="btn-disabled" disabled>Continuar</button>
 				</fieldset>
 			</form>
 			<div class="advices-container">
@@ -69,9 +101,8 @@
 								<li>Compra por internet de forma segura.</li>
 								<li>Seguro anual contra robos y pérdidas.</li>
 								<li>
-									Gestiona tus compras por internet con un click. Ahora con tu Cuenta
-									Nacional puedes desactivar el desembolso no autorizado de compras por
-									internet.
+									Ahora con tu Cuenta Nacional puedes desactivar el desembolso no
+									autorizado de compras por internet.
 								</li>
 								<li>Paga tus servicios básicos con nosotros.</li>
 							</ul>

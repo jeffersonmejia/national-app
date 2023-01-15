@@ -2,8 +2,10 @@
 	--main-bg: hsl(224, 100%, 60%);
 	--main-fg: rgb(255, 255, 255);
 	--main-box-bg: hsl(224, 100%, 20%);
-	--btn-bg: hsl(224, 100%, 60%);
 	--input-focus: hsl(0, 0%, 95%);
+	--btn-bg: hsl(224, 100%, 60%);
+	--btn-disabled: hsla(224, 100%, 60%, 0.5);
+	--btn-bg: hsl(224, 100%, 60%);
 	--btn-hover: hsl(224, 100%, 54%);
 	--btn-fg: rgb(255, 255, 255);
 	--gray-fg: hsl(0, 0%, 40%);
@@ -14,6 +16,7 @@
 	--blue-border: 1px solid hsl(224, 100%, 40%);
 	--bar-loader-bg: hsl(194, 100%, 53%);
 	--span-highlight: red;
+	--error-fg: red;
 	--btn-height: 48px;
 	--border-radius: 8px;
 	--light-border-color: hsl(0, 0%, 90%);
@@ -46,6 +49,15 @@ button a {
 	border-radius: var(--border-radius);
 	text-decoration: none;
 	color: var(--btn-fg);
+}
+.btn-disabled {
+	background-color: var(--btn-disabled);
+	cursor: not-allowed;
+}
+@media (hover: hover) {
+	body button.btn-disabled:hover {
+		background-color: var(--btn-disabled);
+	}
 }
 hr {
 	color: var(--main-fg);
