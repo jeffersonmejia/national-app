@@ -55,6 +55,11 @@ main {
 	border: var(--light-border);
 	border-radius: var(--border-radius);
 	padding: 12px;
+	height: var(--btn-height);
+}
+.hidden {
+	display: none;
+	transition: height 3s ease-in-out;
 }
 .error-group {
 	width: 90%;

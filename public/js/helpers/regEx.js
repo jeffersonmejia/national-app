@@ -10,8 +10,5 @@ const exp = {
 	decimal: /^[0-9]{1,4}\.?[0-9]{0,3}$/,
 };
 
-const validate = (value, type) => {
-	console.log(value, type);
-	return exp[type].test(value);
-};
+const validate = (value, type) => exp[type].test(value);
 export default validate;

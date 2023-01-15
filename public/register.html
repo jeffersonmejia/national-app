@@ -46,7 +46,7 @@
 		</nav>
 		<main>
 			<form class="register-form">
-				<fieldset>
+				<fieldset class="register-user-query">
 					<legend class="guide-form">
 						<h1>Abrir una cuenta</h1>
 						<p>Ingresa tu número de cédula para empezar el registro</p>
@@ -71,8 +71,8 @@
 						placeholder="Código dactilar"
 						name="fingerprint"
 						id="fingerprint"
+						class="hidden"
 						autocomplete="off"
-						disabled
 					/>
 					<ul class="error-group">
 						<li>
@@ -85,7 +85,7 @@
 							<small>No se admiten caracteres especiales</small>
 						</li>
 					</ul>
-					<button id="submit " class="btn-disabled" disabled>Continuar</button>
+					<button id="submit" class="btn-disabled" disabled>Continuar</button>
 				</fieldset>
 			</form>
 			<div class="advices-container">
