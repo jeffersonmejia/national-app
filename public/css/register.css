@@ -57,10 +57,6 @@ main {
 	padding: 12px;
 	height: var(--btn-height);
 }
-.hidden {
-	display: none;
-	transition: height 3s ease-in-out;
-}
 .error-group {
 	width: 90%;
 	color: var(--error-fg);
@@ -92,10 +88,31 @@ main {
 		text-decoration: underline;
 	}
 }
+.register-form-expanded {
+	margin-top: calc(var(--navbar-height) * 2 + 16px);
+}
+.group-date {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.group-date input {
+	width: 100%;
+}
+.register-form-expanded a {
+	text-decoration: none;
+	color: var(--blue-fg);
+	font-weight: bold;
+}
 @media screen and (min-width: 600px) {
 	.register-form {
 		width: 80%;
 		border: var(--light-border);
+	}
+	.register-form-expanded {
+		border: none;
 	}
 }
 @media screen and (min-width: 900px) {
@@ -103,8 +120,45 @@ main {
 		display: grid;
 		grid-template-columns: 2fr 1.5fr;
 	}
+	.main-expanded {
+		grid-template-columns: auto;
+		place-content: center;
+		place-items: center;
+		padding-top: var(--navbar-height);
+	}
 	.advices-container {
 		display: flex;
+	}
+	.register-form-expanded {
+		border: var(--light-border);
+		max-width: 750px;
+		width: 100vw;
+		margin: 0;
+	}
+	.register-form-expanded legend {
+		height: fit-content;
+	}
+	.register-form-expanded fieldset {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 16px;
+		place-items: end;
+	}
+	.register-form-expanded input {
+		width: 100%;
+	}
+	.group-date {
+		grid-column: 1/-1;
+	}
+	.register-form-expanded button:last-child {
+		max-width: 500px;
+		margin-left: auto;
+		width: 60%;
+		padding: 16px;
+		margin-top: 16px;
+	}
+	.register-form-expanded a {
+		margin-right: auto;
 	}
 }
 @media screen and (min-width: 1200px) {

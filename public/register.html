@@ -89,22 +89,25 @@
 					</ul>
 					<button id="submit" class="btn-disabled" disabled>Continuar</button>
 				</fieldset>
-				<fieldset class="hidden">
+				<fieldset class="register-user-data hidden">
 					<legend>
 						<h1>Datos personales</h1>
 						<p>
 							Al llenar el formulario autorizas a Banco Nacional a realizar validaciones
-							internas para corroborar la veracidad de la información.
+							internas
 						</p>
 					</legend>
 					<input type="text" placeholder="Nombres completos" maxlength="32" />
 					<input type="text" placeholder="Apellidos completos" maxlength="32" />
-					<label><small>Fecha de nacimiento</small></label>
-					<input type="date" />
+					<div class="group-date">
+						<label><small>Fecha de nacimiento</small></label>
+						<input type="date" />
+					</div>
 					<input type="text" placeholder="Dirección" maxlength="32" />
 					<input type="tel" placeholder="Teléfono celular" maxlength="10" />
 					<input type="email" placeholder="Correo electrónico" />
 					<input type="text" placeholder="Ingresos mensuales" value="425" maxlength="5" />
+					<a href="./virtual.html">Ingresar</a>
 					<button class="btn-disabled" disabled>Registrarme ahora</button>
 				</fieldset>
 			</form>

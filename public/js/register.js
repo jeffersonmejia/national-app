@@ -5,7 +5,13 @@ const d = document,
 	$inputs = d.querySelectorAll("input"),
 	$fingerprint = d.getElementById("fingerprint"),
 	$errorGroup = d.querySelectorAll("fieldset .error-group"),
-	$submit = d.getElementById("submit");
+	$submit = d.getElementById("submit"),
+	$adviceForm = d.querySelector(".advices-container"),
+	$registerForm = d.querySelector(".register-form"),
+	$formMainData = d.querySelector(".register-user-query"),
+	$formUserData = d.querySelector(".register-user-data"),
+	$main = d.querySelector("main");
+
 loadConfig();
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches("fieldset")) {
@@ -32,7 +38,13 @@ d.addEventListener("keyup", (e) => {
 d.addEventListener("click", (e) => {
 	if (e.target.matches("#submit") && !e.target.matches(".btn-disabled")) {
 		e.preventDefault();
-		console.log("touched!");
+		if (!e.target.disabled) {
+			$main.classList.add("main-expanded");
+			$adviceForm.classList.add("hidden");
+			$registerForm.classList.add("register-form-expanded");
+			$formMainData.classList.add("hidden");
+			$formUserData.classList.remove("hidden");
+		}
 	}
 });
 d.addEventListener("DOMContentLoaded", (e) => {
