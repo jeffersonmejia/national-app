@@ -89,7 +89,7 @@ main {
 	}
 }
 .register-form-expanded {
-	margin-top: calc(var(--navbar-height) * 2 + 16px);
+	margin-top: calc(var(--navbar-height) * 2 + 60px);
 }
 .group-date {
 	width: 100%;
@@ -105,7 +105,27 @@ main {
 	text-decoration: none;
 	color: var(--blue-fg);
 	font-weight: bold;
+	text-align: center;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
 }
+.checked-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+}
+.checked-btn {
+	width: fit-content;
+	padding: 12px;
+	border-radius: 50%;
+	color: rgb(16, 161, 0);
+	background-color: rgb(179, 255, 179);
+	transition-property: border-radius;
+	transition: padding 0.3s ease-in-out;
+}
+
 @media screen and (min-width: 600px) {
 	.register-form {
 		width: 80%;
@@ -144,6 +164,11 @@ main {
 		column-gap: 16px;
 		place-items: end;
 	}
+	.register-form-expanded a {
+		height: fit-content;
+		opacity: 1;
+		visibility: visible;
+	}
 	.register-form-expanded input {
 		width: 100%;
 	}
@@ -168,4 +193,7 @@ main {
 }
 body .hidden {
 	display: none;
+}
+body .border-none {
+	border: none;
 }

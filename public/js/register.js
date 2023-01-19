@@ -10,7 +10,8 @@ const d = document,
 	$registerForm = d.querySelector(".register-form"),
 	$formMainData = d.querySelector(".register-user-query"),
 	$formUserData = d.querySelector(".register-user-data"),
-	$main = d.querySelector("main");
+	$main = d.querySelector("main"),
+	$checkedBtn = d.querySelector(".checked-container");
 
 loadConfig();
 d.addEventListener("keyup", (e) => {
@@ -36,17 +37,28 @@ d.addEventListener("keyup", (e) => {
 	}
 });
 d.addEventListener("click", (e) => {
+	if (e.target.matches("button")) e.preventDefault();
 	if (e.target.matches("#submit") && !e.target.matches(".btn-disabled")) {
-		e.preventDefault();
 		if (!e.target.disabled) {
 			$main.classList.add("main-expanded");
 			$adviceForm.classList.add("hidden");
 			$registerForm.classList.add("register-form-expanded");
 			$formMainData.classList.add("hidden");
 			$formUserData.classList.remove("hidden");
+			$formUserData.querySelector("button").disabled = false;
+			$formUserData.querySelector("button").classList.remove("btn-disabled");
 		}
 	}
+	if (e.target.matches(".register-now")) {
+		$registerForm.classList.add("border-none");
+		$formUserData.classList.add("hidden");
+		$checkedBtn.classList.remove("hidden");
+		setTimeout(() => {
+			window.location.pathname = "/";
+		}, 2000);
+	}
 });
+console.log($registerForm);
 d.addEventListener("DOMContentLoaded", (e) => {
 	$inputs.forEach((el) => (el.value = ""));
 });
