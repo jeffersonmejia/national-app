@@ -58,6 +58,7 @@ d.addEventListener("click", (e) => {
 		}, 2000);
 	}
 });
+
 console.log($registerForm);
 d.addEventListener("DOMContentLoaded", (e) => {
 	$inputs.forEach((el) => (el.value = ""));
