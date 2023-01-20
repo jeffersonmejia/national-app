@@ -35,10 +35,13 @@ img {
 	width: 100%;
 }
 button {
+	width: 100%;
 	height: var(--btn-height);
 	border-radius: var(--border-radius);
 	border: none;
 	cursor: pointer;
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
 }
 button a {
 	width: 100%;

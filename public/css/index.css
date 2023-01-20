@@ -209,6 +209,7 @@ header button {
 		background-color: var(--main-fg);
 		flex-direction: row;
 		align-items: baseline;
+		padding-bottom: 32px;
 	}
 	.purchases figcaption {
 		background-color: var(--main-fg);
