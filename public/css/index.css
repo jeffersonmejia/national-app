@@ -109,6 +109,9 @@ header button {
 	border-top: var(--border-white);
 	color: var(--main-fg);
 }
+.contacts img {
+	display: none;
+}
 .contacts-content {
 	margin: auto;
 	padding: 16px 12px;
@@ -155,6 +158,44 @@ header button {
 	.contacts-content:first-child {
 		justify-self: right;
 	}
+	.contacts {
+		background-color: var(--main-fg);
+	}
+	.contacts .contacts-content {
+		max-width: 500px;
+		border: 1px solid rgb(212, 212, 212);
+		border-radius: var(--border-radius);
+		padding: 32px;
+		margin-bottom: 60px;
+		color: var(--blue-fg);
+	}
+	.contacts img {
+		max-width: 150px;
+		margin-bottom: 24px;
+		display: block;
+	}
+	.contacts button,
+	.feedback-container button {
+		background-color: var(--btn-bg);
+	}
+	@media (hover: hover) {
+		.contacts button:hover,
+		.feedback-container button:hover {
+			background-color: var(--btn-hover);
+		}
+	}
+	footer {
+		border: none;
+		background-color: var(--main-fg);
+		color: var(--blue-fg);
+	}
+	.feedback-container textarea {
+		background-color: rgb(240, 240, 240);
+		color: var(--blue-fg);
+		margin-top: 16px;
+		margin-bottom: 4px;
+		cursor: pointer;
+	}
 }
 @media screen and (min-width: 600px) {
 	.services {
@@ -168,7 +209,6 @@ header button {
 		background-color: var(--main-fg);
 		flex-direction: row;
 		align-items: baseline;
-		padding-bottom: 32px;
 	}
 	.purchases figcaption {
 		background-color: var(--main-fg);
@@ -177,6 +217,17 @@ header button {
 }
 @media screen and (min-width: 800px) {
 	header :is(figure, img) {
-		height: 50vh;
+		height: 70vh;
+	}
+	.purchases {
+		padding: 60px;
+		gap: 32px;
+		padding-top: 16px;
+	}
+	.purchases img {
+		border-radius: var(--border-radius);
+	}
+	.purchases button {
+		margin-top: 8px;
 	}
 }

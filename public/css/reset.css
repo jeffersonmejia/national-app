@@ -124,11 +124,9 @@ footer {
 .professional-contact {
 	display: flex;
 	flex-direction: column;
-	margin: 12px;
 	margin-bottom: 0;
 }
 .professional-contact h5 {
-	margin-top: 8px;
 	margin-bottom: 0;
 }
 .professional-contact-content span {
@@ -164,7 +162,7 @@ textarea:focus {
 }
 .feedback-container button {
 	margin-top: 16px;
-	background-color: var(--btn-dark-bg);
+	background-color: var(--btn-bg);
 	color: var(--btn-fg);
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
@@ -172,5 +170,28 @@ textarea:focus {
 @media (hover: hover) {
 	.feedback-container button:hover {
 		background-color: var(--btn-dark-hover);
+	}
+}
+@media screen and (min-width: 600px) {
+	.feedback-container button {
+		background-color: var(--btn-bg);
+	}
+	@media (hover: hover) {
+		.contacts button:hover,
+		.feedback-container button:hover {
+			background-color: var(--btn-hover);
+		}
+	}
+	footer {
+		border: none;
+		background-color: var(--main-fg);
+		color: var(--blue-fg);
+	}
+	.feedback-container textarea {
+		background-color: rgb(240, 240, 240);
+		color: var(--blue-fg);
+		margin-top: 16px;
+		margin-bottom: 4px;
+		cursor: pointer;
 	}
 }
