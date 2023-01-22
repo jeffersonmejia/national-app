@@ -53,9 +53,9 @@ d.addEventListener("click", (e) => {
 		$registerForm.classList.add("border-none");
 		$formUserData.classList.add("hidden");
 		$checkedBtn.classList.remove("hidden");
-		/*		setTimeout(() => {
+		setTimeout(() => {
 			window.location.pathname = "/";
-		}, 2000);*/
+		}, 2000);
 	}
 });
 

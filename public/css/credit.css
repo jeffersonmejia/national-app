@@ -19,7 +19,7 @@ footer {
 	margin: 6px 0;
 }
 .credit-card-content:nth-child(-n + 3) {
-	/* animation: loadCards 2s ease-in-out; */
+	animation: loadCards 2s ease-in-out;
 }
 @keyframes loadCards {
 	0% {
