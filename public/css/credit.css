@@ -17,6 +17,9 @@ main {
 	margin: 6px 0;
 }
 
+.credit-card-title h4 {
+	font-size: 2rem;
+}
 .credit-card-content {
 	width: 100%;
 	text-align: center;
@@ -24,6 +27,9 @@ main {
 	max-width: 600px;
 	border-radius: var(--border-radius);
 	background-color: white;
+}
+.credit-card-content ul {
+	margin: 16px 0;
 }
 .credit-card-content li {
 	text-align: left;
@@ -51,7 +57,7 @@ main {
 	color: white;
 }
 .credit-card-master {
-	background-color: rgb(48, 48, 48);
+	background-color: rgb(0, 5, 49);
 }
 .credit-card-expert {
 	background-color: rgb(68, 6, 68);
@@ -102,6 +108,12 @@ main {
 	main {
 		padding-top: calc(var(--navbar-height) + 32px);
 		background-color: rgb(245, 245, 245);
+	}
+	.credit-card-title h4 {
+		font-size: 1.15rem;
+	}
+	.credit-card-content ul {
+		margin: 16px;
 	}
 	.credit-card-content {
 		max-width: 500px;
