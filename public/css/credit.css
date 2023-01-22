@@ -3,7 +3,9 @@
 
 main {
 	padding-top: calc(var(--navbar-height));
-	padding-bottom: 32px;
+	background-color: rgb(245, 245, 245);
+}
+footer {
 	background-color: rgb(245, 245, 245);
 }
 .credits-card {
@@ -17,7 +19,7 @@ main {
 	margin: 6px 0;
 }
 .credit-card-content:nth-child(-n + 3) {
-	animation: loadCards 2s ease-in-out;
+	/* animation: loadCards 2s ease-in-out; */
 }
 @keyframes loadCards {
 	0% {

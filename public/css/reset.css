@@ -116,85 +116,51 @@ html {
 	}
 }
 footer {
-	padding: 32px 0;
+	padding: 12px 0;
+	padding-bottom: 0;
 	background-color: var(--main-box-bg);
-	color: var(--main-fg);
+	color: rgb(140, 140, 140);
 	border-top: var(--blue-border);
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 }
-.professional-contact {
+footer small {
+	margin: 32px 0;
+}
+.social-group {
 	display: flex;
-	flex-direction: column;
-	margin-bottom: 0;
-}
-.professional-contact h5 {
-	margin-bottom: 0;
-}
-.professional-contact-content span {
-	font-size: 20px;
-}
-.professional-contact-content {
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	gap: 6px;
-	margin-bottom: 4px;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 20px;
 }
-.feedback-container {
-	width: 80%;
-	max-width: 300px;
-	display: flex;
-	flex-direction: column;
-	margin: 20px auto;
-}
-.feedback-container textarea {
-	margin-top: 8px;
+.social-group a {
+	text-decoration: none;
+	background-color: white;
+	padding: 28px;
 	border-radius: var(--border-radius);
-	border: none;
-	padding: 12px;
-	background-color: var(--input-blue-fg);
-	color: var(--main-fg);
-	outline: none;
-	resize: none;
-	transition: box-shadow 0.3s ease-in-out;
-}
-textarea:focus {
-	box-shadow: var(--opacity-shadow);
-}
-.feedback-container button {
-	margin-top: 16px;
-	background-color: var(--btn-bg);
-	color: var(--btn-fg);
-	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
+	font-size: 1.5rem;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgb(140, 140, 140);
+	box-shadow: 0px 6px 0 rgb(220, 220, 220);
+	transition-property: transform, color;
+	transition: 0.3s ease-in-out;
 }
 @media (hover: hover) {
-	.feedback-container button:hover {
-		background-color: var(--btn-dark-hover);
+	.social-group a:hover {
+		transform: translateY(-16%);
+		color: var(--btn-bg);
 	}
 }
+
 @media screen and (min-width: 600px) {
-	.feedback-container button {
-		background-color: var(--btn-bg);
-	}
-	@media (hover: hover) {
-		.contacts button:hover,
-		.feedback-container button:hover {
-			background-color: var(--btn-hover);
-		}
-	}
 	footer {
 		border: none;
 		background-color: var(--main-fg);
-		color: var(--blue-fg);
-	}
-	.feedback-container textarea {
-		background-color: rgb(240, 240, 240);
-		color: var(--blue-fg);
-		margin-top: 16px;
-		margin-bottom: 4px;
-		cursor: pointer;
 	}
 }
