@@ -120,7 +120,6 @@ footer {
 	padding-bottom: 0;
 	background-color: var(--main-box-bg);
 	color: rgb(140, 140, 140);
-	border-top: var(--blue-border);
 	text-align: center;
 	display: flex;
 	flex-direction: column;
