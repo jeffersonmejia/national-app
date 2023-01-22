@@ -2,33 +2,40 @@
 @import "navbar.css";
 
 main {
-	padding-top: calc(var(--navbar-height) + 32px);
-	margin-bottom: 32px;
+	padding-top: calc(var(--navbar-height));
+	padding-bottom: 32px;
+	background-color: rgb(245, 245, 245);
 }
 .credits-card {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-	place-items: center;
-	place-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	gap: 16px;
 }
+
+.credit-card-title :is(h4, p) {
+	margin: 6px 0;
+}
+
 .credit-card-content {
-	width: 80%;
+	width: 100%;
 	text-align: center;
-	padding: 32px;
+	padding: 32px 16px;
 	max-width: 600px;
 	border-radius: var(--border-radius);
+	background-color: white;
 }
-.credit-card-content:first-child {
-	grid-column: 1/-1;
+.credit-card-content li {
+	text-align: left;
+	margin-left: 24px;
 }
 .credit-card-info {
 	width: 100%;
+	background-color: #3800ff;
 	max-width: 380px;
 	padding: 16px 8px;
 	margin: 16px auto;
 	border-radius: var(--border-radius);
-	background-color: #3800ff;
 	box-shadow: 1px 0 12px rgb(140, 140, 140);
 	transition: transform 0.3s ease-in-out;
 	font-weight: bold;
@@ -42,6 +49,15 @@ main {
 }
 .credit-card-info {
 	color: white;
+}
+.credit-card-master {
+	background-color: rgb(48, 48, 48);
+}
+.credit-card-expert {
+	background-color: rgb(68, 6, 68);
+}
+.credit-card-basic {
+	background-color: rgb(6, 48, 48);
 }
 .credit-chip {
 	width: 36px;
@@ -81,18 +97,26 @@ main {
 .credit-card-type small {
 	font-size: 0.7rem;
 }
+
 @media screen and (min-width: 500px) {
-	.credit-card-content {
-		width: 100%;
-	}
-}
-@media screen and (min-width: 700px) {
 	main {
+		padding-top: calc(var(--navbar-height) + 32px);
 		background-color: rgb(245, 245, 245);
 	}
 	.credit-card-content {
+		max-width: 500px;
+		margin: auto;
+		padding: 16px 32px;
+		background-color: white;
+	}
+}
+@media screen and (min-width: 900px) {
+	.credit-card-content {
 		max-width: 700px;
 		background-color: white;
+	}
+	.credit-card-info {
+		margin-top: 12px;
 	}
 	.credit-card-content figcaption {
 		display: grid;
