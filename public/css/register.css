@@ -125,7 +125,6 @@ main {
 	transition-property: border-radius;
 	transition: padding 0.3s ease-in-out;
 }
-
 @media screen and (min-width: 600px) {
 	.register-form {
 		width: 80%;

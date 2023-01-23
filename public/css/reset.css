@@ -25,6 +25,7 @@
 	--opacity: rgba(0, 0, 0, 0.5);
 	--opacity-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 	--navbar-height: 65px;
+	--benefit-fg: rgb(25, 126, 0);
 }
 * {
 	margin: 0;

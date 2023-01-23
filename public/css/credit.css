@@ -47,8 +47,25 @@ footer {
 	margin: 16px 0;
 }
 .credit-card-content li {
+	width: 100%;
 	text-align: left;
 	margin-left: 24px;
+}
+.credit-card-master li,
+.credit-card-expert li {
+	list-style: none;
+}
+.credit-card-benefits {
+	list-style: none;
+	margin: 24px 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 32px;
+	color: var(--benefit-fg);
+}
+.credit-card-benefits span {
+	font-size: 1rem;
 }
 .credit-card-info {
 	width: 100%;
@@ -62,6 +79,9 @@ footer {
 	font-weight: bold;
 	font-size: 14px;
 	cursor: pointer;
+}
+.credit-card-content:last-child ul {
+	padding-top: 8px;
 }
 @media (hover: hover) {
 	.credit-card-info:hover {
@@ -136,34 +156,50 @@ footer {
 		padding: 16px 32px;
 		background-color: white;
 	}
+	.credit-card-benefits {
+		padding-right: 32px;
+	}
 }
 @media screen and (min-width: 900px) {
 	.credit-card-content {
-		max-width: 700px;
+		max-width: 800px;
 		background-color: white;
 	}
 	.credit-card-info {
 		margin-top: 12px;
 	}
+	.credit-card-title {
+		text-align: left;
+	}
 	.credit-card-content figcaption {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, auto) 1fr;
 		grid-template-rows: repeat(2, auto);
 	}
 	.credit-card-title {
-		grid-column: 1/-1;
+		grid-column: 1/3;
 	}
 	.credit-card-content {
-		grid-column: 1/-1;
+		grid-column: 1/3;
 	}
 	.credit-card-info {
 		grid-column: 1/3;
+		margin: 16px 0;
 	}
 	.credit-card-content ul {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	ul .credit-card-benefits {
+		justify-content: flex-start;
+		padding-right: 0;
+		margin-left: 0;
+	}
+	.credit-card-content:last-child ul {
+		padding-top: 32px;
 	}
 }
