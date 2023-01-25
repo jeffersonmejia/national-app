@@ -50,6 +50,11 @@ main > h1 {
 		color: hsl(114, 45%, 53%);
 	}
 }
+@media screen and (min-width: 300px) {
+	footer {
+		background-color: rgb(245, 245, 245);
+	}
+}
 @media screen and (min-width: 600px) {
 	main {
 		background-color: rgb(245, 245, 245);
@@ -80,5 +85,9 @@ main > h1 {
 	}
 	.loan-content img {
 		border-radius: var(--border-radius);
+	}
+	.loan-content :is(figcaption, h1),
+	main > h1 {
+		padding: 0 16px;
 	}
 }

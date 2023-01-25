@@ -91,7 +91,7 @@ footer {
 .credit-card-info {
 	color: white;
 }
-.logo {
+.credit-card-info > .logo {
 	color: white;
 }
 .credit-card-master {
