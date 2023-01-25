@@ -207,15 +207,20 @@ header button {
 	header :is(figure, img) {
 		height: 90vh;
 	}
+	.contacts .contacts-content {
+		margin-bottom: 16px;
+	}
 	.purchases {
-		padding: 60px;
+		padding: 16px 60px 0 16px;
 		gap: 32px;
-		padding-top: 16px;
 	}
 	.purchases img {
 		border-radius: var(--border-radius);
 	}
 	.purchases button {
 		margin-top: 8px;
+	}
+	.purchases figure {
+		border-radius: var(--border-radius);
 	}
 }
