@@ -21,10 +21,11 @@ main > h1 {
 	margin: 8px 0;
 	padding-left: 4px;
 }
-.loan-content :is(h4) {
-	margin: 4px 0;
-	padding-left: 4px;
+.loan-content :is(figcaption, h1),
+main > h1 {
+	padding: 0 16px;
 }
+
 .loan-content ul {
 	margin: 8px 0;
 }
@@ -35,10 +36,27 @@ main > h1 {
 .loan-content a {
 	display: block;
 	text-align: right;
-	padding-right: 4px;
 	margin: 12px 0;
 }
+.loan-content a {
+	color: var(--btn-bg);
+	text-decoration: none;
+	width: fit-content;
+	margin-left: auto;
+	transition: color 0.3s ease-in-out;
+}
+@media (hover: hover) {
+	.loan-content a:hover {
+		color: hsl(114, 45%, 53%);
+	}
+}
 @media screen and (min-width: 600px) {
+	main {
+		background-color: rgb(245, 245, 245);
+	}
+	.loan-content {
+		background-color: white;
+	}
 	.loan-container {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
@@ -52,16 +70,6 @@ main > h1 {
 		border: var(--light-border);
 		border-radius: var(--border-radius);
 		padding: 12px 24px;
-	}
-	.loan-content a {
-		color: var(--btn-bg);
-		text-decoration: none;
-		transition: color 0.3s ease-in-out;
-	}
-	@media (hover: hover) {
-		.loan-content a:hover {
-			color: hsl(114, 45%, 53%);
-		}
 	}
 	.loan-content h1 {
 		font-size: 1.5rem;

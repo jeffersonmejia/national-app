@@ -158,6 +158,7 @@ footer {
 		margin: auto;
 		padding: 16px 32px;
 		background-color: white;
+		border: var(--light-border);
 	}
 	.credit-card-benefits {
 		padding-right: 32px;
