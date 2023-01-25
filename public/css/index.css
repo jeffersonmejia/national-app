@@ -77,17 +77,15 @@ header button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--main-box-bg);
 }
 .purchases figure {
 	width: 100%;
 	max-width: 600px;
-	padding-bottom: 16px;
+	padding-bottom: 32px;
 }
 .purchases figcaption {
 	text-align: center;
-	background-color: var(--main-box-bg);
-	color: var(--main-fg);
+	color: var(--blue-fg);
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
@@ -98,6 +96,8 @@ header button {
 	color: var(--btn-fg);
 	transition: background-color 0.3s ease-in-out;
 	cursor: pointer;
+	max-width: 300px;
+	margin: auto;
 }
 @media (hover: hover) {
 	.purchases button:hover {
@@ -105,12 +105,12 @@ header button {
 	}
 }
 .contacts {
-	background-color: var(--blue-fg);
 	border-top: var(--border-white);
-	color: var(--main-fg);
+	color: var(--blue-fg);
 }
 .contacts img {
-	display: none;
+	width: 30%;
+	margin: 32px;
 }
 .contacts-content {
 	margin: auto;
@@ -170,6 +170,7 @@ header button {
 		color: var(--blue-fg);
 	}
 	.contacts img {
+		width: 100%;
 		max-width: 150px;
 		margin-bottom: 24px;
 		display: block;
@@ -204,7 +205,7 @@ header button {
 }
 @media screen and (min-width: 800px) {
 	header :is(figure, img) {
-		height: 70vh;
+		height: 90vh;
 	}
 	.purchases {
 		padding: 60px;
