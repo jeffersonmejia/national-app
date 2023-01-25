@@ -152,6 +152,16 @@ footer small {
 	transition-property: transform, color;
 	transition: 0.3s ease-in-out;
 }
+.ancle-btn {
+	display: block;
+	text-align: right;
+	margin: 12px 0;
+	color: var(--btn-bg);
+	text-decoration: none;
+	width: fit-content;
+	margin-left: auto;
+	transition: color 0.3s ease-in-out;
+}
 @media (hover: hover) {
 	.social-group a:hover {
 		transform: translateY(-16%);
