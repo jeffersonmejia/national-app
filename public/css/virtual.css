@@ -87,6 +87,10 @@ main {
 	main {
 		display: grid;
 		grid-template-columns: 2fr 1.5fr;
+		background-color: rgb(245, 245, 245);
+	}
+	main .login-form {
+		background-color: white;
 	}
 	.advices-container {
 		display: flex;

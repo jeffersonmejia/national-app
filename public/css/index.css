@@ -109,7 +109,6 @@ header button.btn {
 	}
 }
 .contacts {
-	border-top: var(--border-white);
 	color: var(--blue-fg);
 }
 .contacts img {
@@ -133,8 +132,10 @@ header button.btn {
 	transition: background-color 0.3s ease-in-out;
 }
 @media screen and (min-width: 600px) {
+	main {
+		background-color: rgb(245, 245, 245);
+	}
 	.contacts {
-		background-color: var(--blue-fg);
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 60px;
@@ -146,6 +147,10 @@ header button.btn {
 		margin: initial;
 		padding: 32px 0;
 		padding-bottom: 48px;
+		background-color: white;
+	}
+	footer {
+		background-color: rgb(245, 245, 245);
 	}
 	.contacts-content button {
 		width: 100%;
@@ -157,7 +162,6 @@ header button.btn {
 		justify-self: right;
 	}
 	.contacts {
-		background-color: var(--main-fg);
 		max-width: 80%;
 		margin: auto;
 	}
@@ -198,13 +202,11 @@ header button.btn {
 		flex-direction: row;
 	}
 	.purchases {
-		background-color: var(--main-fg);
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 		padding-bottom: 32px;
 	}
 	.purchases figcaption {
-		background-color: var(--main-fg);
 		color: var(--blue-fg);
 	}
 }

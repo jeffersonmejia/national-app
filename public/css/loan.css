@@ -55,6 +55,7 @@ main > h1 {
 		gap: 16px;
 		padding: 0 12px;
 	}
+
 	main > h1 {
 		padding: 0 32px;
 	}
@@ -73,8 +74,16 @@ main > h1 {
 	.loan-content img {
 		border-radius: var(--border-radius);
 	}
-	.loan-content :is(figcaption, h1),
+	.loan-container h1 {
+		padding-left: 0;
+	}
 	main > h1 {
 		padding: 0 16px;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	main {
+		padding: 0 160px;
 	}
 }

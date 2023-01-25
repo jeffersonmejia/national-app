@@ -126,9 +126,13 @@ main {
 	transition: padding 0.3s ease-in-out;
 }
 @media screen and (min-width: 600px) {
+	main {
+		background-color: rgb(245, 245, 245);
+	}
 	.register-form {
 		width: 80%;
 		border: var(--light-border);
+		background-color: white;
 	}
 	.register-form-expanded {
 		border: none;
