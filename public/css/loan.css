@@ -19,7 +19,6 @@ main > h1 {
 }
 .loan-content :is(h1, h3) {
 	margin: 8px 0;
-	padding-left: 4px;
 }
 .loan-content :is(figcaption, h1),
 main > h1 {
