@@ -119,11 +119,12 @@ html {
 footer {
 	padding: 12px 0;
 	padding-bottom: 0;
-	background-color: var(--main-box-bg);
-	color: rgb(140, 140, 140);
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	border: none;
+	background-color: var(--main-fg);
+	color: rgb(140, 140, 140);
 }
 footer small {
 	margin: 32px 0;
@@ -155,12 +156,5 @@ footer small {
 	.social-group a:hover {
 		transform: translateY(-16%);
 		color: var(--btn-bg);
-	}
-}
-
-@media screen and (min-width: 600px) {
-	footer {
-		border: none;
-		background-color: var(--main-fg);
 	}
 }

@@ -16,10 +16,12 @@
 	align-items: baseline;
 	gap: 4px;
 	flex-grow: 1;
+	color: var(--blue-fg);
 }
 .logo i {
 	font-size: 24px;
 }
+
 .logo h1 {
 	display: flex;
 	align-items: center;

@@ -174,27 +174,13 @@ header button {
 		margin-bottom: 24px;
 		display: block;
 	}
-	.contacts button,
-	.feedback-container button {
+	.contacts button {
 		background-color: var(--btn-bg);
 	}
 	@media (hover: hover) {
-		.contacts button:hover,
-		.feedback-container button:hover {
+		.contacts button:hover {
 			background-color: var(--btn-hover);
 		}
-	}
-	footer {
-		border: none;
-		background-color: var(--main-fg);
-		color: var(--blue-fg);
-	}
-	.feedback-container textarea {
-		background-color: rgb(240, 240, 240);
-		color: var(--blue-fg);
-		margin-top: 16px;
-		margin-bottom: 4px;
-		cursor: pointer;
 	}
 }
 @media screen and (min-width: 600px) {
