@@ -137,16 +137,11 @@ header button.btn {
 	}
 	.contacts {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(400px, auto));
 		gap: 60px;
 		place-items: center;
 	}
 	.contacts-content {
-		width: 80%;
-		max-width: 300px;
-		margin: initial;
-		padding: 32px 0;
-		padding-bottom: 48px;
 		background-color: white;
 	}
 	footer {
