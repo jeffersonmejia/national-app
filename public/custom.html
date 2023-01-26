@@ -41,7 +41,31 @@
 				</li>
 			</ul>
 		</nav>
-		<main></main>
+		<main>
+			<h1 class="main-title">Cuéntanos tus inquietudes, estamos para ti</h1>
+			<form class="form">
+				<fieldset>
+					<legend><h2>Datos personales</h2></legend>
+					<input type="text" placeholder="Cédula de identidad" />
+					<input type="text" placeholder="Nombres completos" />
+					<input type="text" placeholder="Número de teléfono" />
+					<small>¿Cuándo nos podemos comunicar contigo?</small>
+					<select>
+						<option>Selecciona una jornada</option>
+						<option>Matutina</option>
+						<option>Vespertina</option>
+						<option>Nocturna</option>
+					</select>
+					<select>
+						<option>Selecciona un servicio</option>
+						<option>Tarjetas de cŕedito</option>
+						<option>Cuentas de ahorro</option>
+						<option>Préstamos</option>
+					</select>
+				</fieldset>
+				<button class="btn">Enviar</button>
+			</form>
+		</main>
 		<span class="material-symbols-outlined burger-menu select-disabled"> menu </span>
 		<div class="navbar-modal navbar-modal-disabled">
 			<ul class="navbar-modal-content">
@@ -56,6 +80,9 @@
 		<div class="modal-loader">
 			<div class="modal-loader-bar loader-bar-active"></div>
 		</div>
+		<footer>
+			<small>Jefferson Mejía © 2023</small>
+		</footer>
 		<script src="./js/custom.js" type="module"></script>
 	</body>
 </html>

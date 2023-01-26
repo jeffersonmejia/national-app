@@ -109,6 +109,50 @@ html {
 	opacity: 0;
 	visibility: hidden;
 }
+.form {
+	width: 90%;
+	padding: 8px;
+	max-width: 400px;
+	margin: auto;
+}
+.form button {
+	margin: 12px 0;
+}
+.form fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.form fieldset {
+	border: none;
+}
+.form :is(input, small, select) {
+	width: 100%;
+	padding: 12px;
+}
+.form small {
+	padding: 12px 0;
+}
+.form :is(input, select) {
+	border: var(--light-border);
+	border-radius: var(--border-radius);
+	height: var(--btn-height);
+}
+.form select {
+	background-color: white;
+	color: rgb(100, 100, 100);
+}
+.form legend {
+	margin: 12px 0;
+}
+@media screen and (min-width: 600px) {
+	.form {
+		background-color: white;
+		border: var(--light-border);
+		border-radius: var(--border-radius);
+		padding: 32px;
+	}
+}
 @keyframes barLoader {
 	0% {
 		transform: translateX(-200%);
