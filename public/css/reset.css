@@ -230,7 +230,7 @@ footer small {
 @keyframes imgVisible {
 	from {
 		opacity: 0;
-		transform: translateY(-12%);
+		transform: translateY(12%);
 	}
 	to {
 		opacity: 1;
