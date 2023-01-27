@@ -1,2 +1,27 @@
 @import "reset.css";
 @import "navbar.css";
+main {
+	margin-top: calc(var(--navbar-height) + 24px);
+}
+.form :is(small, h2) {
+	padding: 0;
+}
+@media screen and (min-width: 600px) {
+	.form {
+		max-width: 430px;
+	}
+	.form fieldset {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.form legend {
+		width: 100%;
+		grid-column: 1/-1;
+	}
+	.form :is(input:nth-child(2), select) {
+		grid-column: 1/-1;
+	}
+	.form button {
+		grid-column: 1/-1;
+	}
+}
