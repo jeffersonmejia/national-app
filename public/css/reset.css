@@ -109,6 +109,7 @@ html {
 	opacity: 0;
 	visibility: hidden;
 }
+
 .form {
 	width: 90%;
 	padding: 8px;
@@ -221,5 +222,18 @@ footer small {
 	.social-group a:hover {
 		transform: translateY(-16%);
 		color: var(--btn-bg);
+	}
+}
+.img-visible {
+	animation: imgVisible 0.7s linear;
+}
+@keyframes imgVisible {
+	from {
+		opacity: 0;
+		transform: translateY(-12%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
