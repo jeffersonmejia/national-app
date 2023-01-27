@@ -224,16 +224,20 @@ footer small {
 		color: var(--btn-bg);
 	}
 }
-.img-visible {
-	animation: imgVisible 0.7s linear;
+body .hidden {
+	display: none;
 }
-@keyframes imgVisible {
+body .visible {
+	display: block;
+	animation: visible 0.3s linear;
+}
+@keyframes visible {
 	from {
 		opacity: 0;
 		transform: translateY(12%);
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateY(0%);
 	}
 }
