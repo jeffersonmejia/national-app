@@ -3,6 +3,10 @@
 main {
 	margin-top: calc(var(--navbar-height) + 24px);
 }
+main,
+footer {
+	animation: visible 0.3s ease-in-out;
+}
 .form :is(small, h2) {
 	padding: 0;
 }
