@@ -3,11 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Banco Nacional | Productos & servicios</title>
-		<link
-			rel="shortcut icon"
-			href="./public/assets/images/favicon.svg"
-			type="image/x-icon"
-		/>
+		<link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -45,7 +41,40 @@
 				</li>
 			</ul>
 		</nav>
-		<main></main>
+		<main>
+			<h1 class="main-title">Tús metas, tu mejor inversión</h1>
+			<form class="form">
+				<fieldset>
+					<legend>
+						<h2>Cuánto quieres invertir</h2>
+					</legend>
+					<input type="text" placeholder="Ingresa el valor a invertir" maxlength="6" />
+					<small>Indica el plazo de inversión</small>
+					<input type="text" maxlength="2" placeholder="Rango entre 12 y 60 meses" />
+					<button class="btn">Consultar</button>
+				</fieldset>
+				<fieldset class="hidden">
+					<legend><h4>Tasa de interés aplicada de 4.8%</h4></legend>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Meses</th>
+								<td>24</td>
+							</tr>
+							<tr>
+								<th>Monto</th>
+								<td>$100</td>
+							</tr>
+							<tr>
+								<th>Ganancia bruta</th>
+								<td>$200</td>
+							</tr>
+						</thead>
+					</table>
+					<button class="btn">Volver</button>
+				</fieldset>
+			</form>
+		</main>
 		<footer>
 			<small>Jefferson Mejía © 2023</small>
 		</footer>

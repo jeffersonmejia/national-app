@@ -131,7 +131,8 @@ html {
 	padding: 12px;
 }
 .form small {
-	padding: 12px 0;
+	padding: 0;
+	padding-top: 12px;
 }
 .form :is(input, select) {
 	border: var(--light-border);
@@ -160,6 +161,16 @@ html {
 	100% {
 		transform: translateX(200%);
 	}
+}
+.table,
+.table :is(tr, th, td) {
+	border: var(--light-border);
+	border-collapse: collapse;
+}
+.table :is(tr, th, td) {
+	text-align: right;
+	padding: 4px 12px 4px 0;
+	font-size: 0.9rem;
 }
 footer {
 	padding-bottom: 0;

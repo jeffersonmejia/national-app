@@ -1,2 +1,37 @@
 @import "reset.css";
 @import "navbar.css";
+
+main {
+	margin-top: calc(var(--navbar-height) + 32px);
+}
+.main-title {
+	padding-left: 16px;
+	margin-bottom: 0px;
+	font-size: 1.7rem;
+}
+@media screen and (min-width: 600px) {
+	.main-title {
+		padding-left: 32px;
+		margin-bottom: 28px;
+		font-size: 2rem;
+		text-align: center;
+		padding: 0;
+	}
+}
+body .hidden {
+	display: none;
+}
+body .visible {
+	display: block;
+	animation: visible 0.3s linear;
+}
+@keyframes visible {
+	from {
+		opacity: 0;
+		transform: translateY(-12%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
