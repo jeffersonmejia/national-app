@@ -116,9 +116,7 @@ html {
 	max-width: 400px;
 	margin: auto;
 }
-.form button {
-	margin: 12px 0;
-}
+
 .form fieldset {
 	display: flex;
 	flex-direction: column;
