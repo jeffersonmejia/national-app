@@ -87,7 +87,7 @@ main {
 	}
 }
 .register-form-expanded {
-	margin-top: calc(var(--navbar-height) * 2 + 60px);
+	margin-top: calc(var(--navbar-height) * 2);
 	animation: visible 0.3s ease-in-out;
 }
 .group-date {
@@ -126,9 +126,13 @@ main {
 	transition-property: border-radius;
 	transition: padding 0.3s ease-in-out;
 }
+.fingerprint {
+	animation: visible 0.3s ease-in-out;
+}
 @media screen and (min-width: 600px) {
 	main {
 		background-color: rgb(245, 245, 245);
+		margin-bottom: calc((var(--navbar-height) + 60px));
 	}
 	.register-form {
 		width: 80%;
@@ -137,12 +141,14 @@ main {
 	}
 	.register-form-expanded {
 		border: none;
+		margin-top: calc(var(--navbar-height) * 2 + 60px);
 	}
 }
 @media screen and (min-width: 900px) {
 	main {
 		display: grid;
 		grid-template-columns: 2fr 1.5fr;
+		margin-bottom: 0;
 	}
 	.main-expanded {
 		grid-template-columns: auto;
