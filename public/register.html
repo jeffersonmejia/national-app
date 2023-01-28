@@ -51,12 +51,12 @@
 					<input
 						type="text"
 						placeholder="Cédula de identidad"
-						name="dni"
-						id="dni"
 						autocomplete="off"
 						maxlength="10"
+						name="dni"
+						id="dni"
 					/>
-					<ul class="error-group">
+					<ul class="error-group error__group__dni">
 						<li>
 							<small>La cédula debe contener 10 dígitos</small>
 						</li>
@@ -68,12 +68,12 @@
 						type="text"
 						placeholder="Código dactilar"
 						name="fingerprint"
-						id="fingerprint"
-						class="hidden"
 						autocomplete="off"
 						maxlength="10"
+						id="fingerprint"
+						class="hidden"
 					/>
-					<ul class="error-group">
+					<ul class="error-group error__group__finger">
 						<li>
 							<small
 								>El código dactilar se encuentra en la parte trasera de tu cédula</small
@@ -105,7 +105,7 @@
 					<input type="email" placeholder="Correo electrónico" />
 					<input type="text" placeholder="Ingresos mensuales" value="425" maxlength="5" />
 					<a href="./virtual.html"><p>Ingresar</p></a>
-					<button class="register-now btn-disabled" disabled>Registrarme ahora</button>
+					<button id="register-btn">Registrarme ahora</button>
 				</fieldset>
 				<div class="checked-container hidden">
 					<span class="material-symbols-outlined checked-btn"> check</span>

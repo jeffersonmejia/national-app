@@ -4,7 +4,8 @@
 	--main-box-bg: hsl(224, 100%, 20%);
 	--input-focus: hsl(0, 0%, 95%);
 	--btn-bg: hsl(224, 100%, 60%);
-	--btn-disabled: hsla(224, 100%, 60%, 0.5);
+	--btn-disabled: hsl(0, 0%, 57.6%);
+	--btn-disabled-hover: hsl(0, 0%, 65%);
 	--btn-bg: hsl(224, 100%, 60%);
 	--btn-hover: hsl(224, 100%, 54%);
 	--btn-ancle-hover: hsl(224, 100%, 65%);
@@ -61,7 +62,7 @@ button a {
 }
 @media (hover: hover) {
 	body button.btn-disabled:hover {
-		background-color: var(--btn-disabled);
+		background-color: var(--btn-disabled-hover);
 	}
 }
 hr {
