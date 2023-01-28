@@ -175,8 +175,12 @@ main {
 	.register-form-expanded input {
 		width: 100%;
 	}
-	.group-date {
+	.register-form-expanded input:nth-child(5) {
 		grid-column: 1/-1;
+	}
+	.register-form-expanded input:nth-child(8) {
+		grid-row: 2/3;
+		grid-column: 2/3;
 	}
 	.register-form-expanded button:last-child {
 		max-width: 500px;
