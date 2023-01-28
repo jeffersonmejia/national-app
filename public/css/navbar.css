@@ -8,7 +8,7 @@
 	height: var(--navbar-height);
 	top: 0;
 	z-index: 997;
-	box-shadow: var(--opacity-shadow);
+	border: var(--light-border);
 }
 .logo {
 	padding: 12px;
