@@ -90,6 +90,7 @@ main {
 }
 .register-form-expanded {
 	margin-top: calc(var(--navbar-height) * 2 + 60px);
+	animation: visible 0.3s ease-in-out;
 }
 .group-date {
 	width: 100%;
@@ -161,11 +162,13 @@ main {
 	.register-form-expanded legend {
 		height: fit-content;
 	}
+
 	.register-form-expanded fieldset {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 16px;
 		place-items: end;
+		animation: opacity 0.3s ease-in-out;
 	}
 	.register-form-expanded a {
 		height: fit-content;
@@ -191,6 +194,11 @@ main {
 	}
 	.register-form-expanded a {
 		margin-right: auto;
+		display: flex;
+		align-items: center;
+		height: var(--btn-height);
+		padding-left: 8px;
+		color: rgb(166, 163, 163);
 	}
 }
 @media screen and (min-width: 1200px) {
