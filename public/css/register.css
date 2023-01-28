@@ -100,7 +100,9 @@ main {
 	justify-content: center;
 }
 .group-date input {
-	width: 100%;
+	min-width: 100%;
+	background-color: rgb(246, 246, 246);
+	color: gray;
 }
 .register-form-expanded a {
 	text-decoration: none;
