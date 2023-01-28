@@ -54,12 +54,11 @@ d.addEventListener("click", (e) => {
 		$formUserData.classList.add("hidden");
 		$checkedBtn.classList.remove("hidden");
 		setTimeout(() => {
-			window.location.pathname = "/";
-		}, 2000);
+			location.pathname = location.pathname.match("github") ? "/national" : "/";
+		}, 1700);
 	}
 });
 
-console.log($registerForm);
 d.addEventListener("DOMContentLoaded", (e) => {
 	$inputs.forEach((el) => (el.value = ""));
 });
