@@ -71,6 +71,8 @@ hr {
 input {
 	cursor: pointer;
 	outline: none;
+	background-color: white;
+	transition: background-color 0.25s ease-out;
 }
 input:focus {
 	background-color: var(--input-focus);
