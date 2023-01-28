@@ -54,7 +54,8 @@ d.addEventListener("click", (e) => {
 		$formUserData.classList.add("hidden");
 		$checkedBtn.classList.remove("hidden");
 		setTimeout(() => {
-			location.pathname = location.host === "github" ? "/national" : "/";
+			let HOST = "jeffersonmejia.github.io";
+			location.pathname = location.host === HOST ? "/national" : "/";
 		}, 1700);
 	}
 });
