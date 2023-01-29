@@ -50,10 +50,9 @@ function checkFirstForm(input, first, next) {
 
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
-		//here
 		checkFirstForm(e.target);
 	}
-	if (e.target.parentElement.matches(".register-user-data")) {
+	if (e.target.parentElement.matches(".group-input")) {
 		checkForm(e.target, $error, isValid);
 		const { name, lastname, address, email, salary, tel } = isValid;
 
