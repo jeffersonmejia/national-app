@@ -8,6 +8,14 @@ const d = document,
 	$fingerprint = d.getElementById("fingerprint"),
 	$errorDni = d.querySelector(".error__group__dni"),
 	$errorFinger = d.querySelector(".error__group__finger"),
+	$error = {
+		name: d.querySelector(".error__group__name"),
+		lastname: d.querySelector(".error__group__lastname"),
+		address: d.querySelector(".error__group__address"),
+		tel: d.querySelector(".error__group__tel"),
+		email: d.querySelector(".error__group__email"),
+		salary: d.querySelector(".error__group__salary"),
+	},
 	$nextBtn = d.getElementById("submit"),
 	$registerBtn = d.getElementById("register-btn"),
 	$adviceForm = d.querySelector(".advices-container"),
@@ -22,6 +30,7 @@ const isValid = {
 	lastname: false,
 	address: false,
 	email: false,
+	tel: false,
 	salary: false,
 };
 /**
@@ -56,8 +65,14 @@ function checkFirstForm(input) {
 	}
 }
 
-function checkForm(form) {
-	console.log("runnning...");
+function checkForm(input) {
+	if (validate(input.value, input.name)) {
+		$error[input.name].classList.remove("visible");
+		isValid[input.name] = true;
+	} else {
+		$error[input.name].classList.add("visible");
+		isValid[input.name] = false;
+	}
 }
 
 d.addEventListener("keyup", (e) => {
@@ -66,6 +81,10 @@ d.addEventListener("keyup", (e) => {
 	}
 	if (e.target.parentElement.matches(".register-user-data")) {
 		checkForm(e.target);
+		const { name, lastname, address, email, salary, tel } = isValid;
+		if (name && lastname && address && email && salary && tel) {
+			setBtnState($registerBtn, false);
+		}
 	}
 });
 

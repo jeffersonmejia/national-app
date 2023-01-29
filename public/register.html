@@ -94,16 +94,105 @@
 							internas
 						</p>
 					</legend>
-					<input type="text" placeholder="Nombres completos" maxlength="32" />
-					<input type="text" placeholder="Apellidos completos" maxlength="32" />
+					<input
+						type="text"
+						placeholder="Nombres completos"
+						maxlength="32"
+						autocomplete="off"
+						name="name"
+					/>
+					<ul class="error-group error__group__name">
+						<li>
+							<small>El nombre debe tener mínimo 3 caracteres</small>
+						</li>
+						<li>
+							<small>No se admiten carácteres especiales</small>
+						</li>
+						<li>
+							<small>Ingresa tus nombres completos</small>
+						</li>
+					</ul>
+					<input
+						type="text"
+						placeholder="Apellidos completos"
+						maxlength="32"
+						autocomplete="off"
+						name="lastname"
+					/>
+					<ul class="error-group error__group__lastname">
+						<li>
+							<small>El apellido debe tener mínimo 3 caracteres</small>
+						</li>
+						<li>
+							<small>No se admiten carácteres especiales</small>
+						</li>
+						<li>
+							<small>Ingresa tus apellidos completos</small>
+						</li>
+					</ul>
 					<div class="group-date">
 						<label><small>Fecha de nacimiento</small></label>
-						<input type="date" />
+						<input type="date" name="date" />
+						<ul class="error-group error__group__datebirth">
+							<li>
+								<small>La fecha no debe estar vacía</small>
+							</li>
+						</ul>
 					</div>
-					<input type="text" placeholder="Dirección" maxlength="32" />
-					<input type="tel" placeholder="Teléfono celular" maxlength="10" />
-					<input type="email" placeholder="Correo electrónico" />
-					<input type="text" placeholder="Ingresos mensuales" value="425" maxlength="5" />
+					<input
+						type="text"
+						placeholder="Dirección"
+						maxlength="32"
+						autocomplete="off"
+						name="address"
+					/>
+					<ul class="error-group error__group__address">
+						<li>
+							<small>La dirección debe contener al menos 8 caracteres</small>
+						</li>
+					</ul>
+					<input
+						type="tel"
+						placeholder="Teléfono celular"
+						maxlength="10"
+						autocomplete="off"
+						name="tel"
+					/>
+					<ul class="error-group error__group__tel">
+						<li>
+							<small>El teléfono debe iniciar con '09'</small>
+						</li>
+						<li>
+							<small>El número debe contener 10 dígitos</small>
+						</li>
+					</ul>
+					<input
+						type="email"
+						placeholder="Correo electrónico"
+						autocomplete="off"
+						name="email"
+					/>
+					<ul class="error-group error__group__email">
+						<li>
+							<small>Ingresa un correo válido, ej: alguien@gmail.com</small>
+						</li>
+					</ul>
+					<input
+						type="text"
+						placeholder="Ingresos mensuales"
+						value="425"
+						maxlength="7"
+						autocomplete="off"
+						name="salary"
+					/>
+					<ul class="error-group error__group__salary">
+						<li>
+							<small>Ingresa un valor válido</small>
+						</li>
+						<li>
+							<small>Mínimo $0, máximo $4000.00</small>
+						</li>
+					</ul>
 					<a href="./virtual.html"><p>Ingresar</p></a>
 					<button id="register-btn">Registrarme ahora</button>
 				</fieldset>

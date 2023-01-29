@@ -231,6 +231,9 @@ body .hidden {
 body .visible {
 	display: block;
 	animation: visible 0.3s linear;
+	visibility: visible;
+	opacity: 1;
+	height: fit-content;
 }
 @keyframes visible {
 	from {

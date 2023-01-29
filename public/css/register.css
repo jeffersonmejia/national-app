@@ -90,6 +90,9 @@ main {
 	margin-top: calc(var(--navbar-height) * 2);
 	animation: visible 0.3s ease-in-out;
 }
+.register-form-expanded li {
+	margin-left: 12px;
+}
 .group-date {
 	width: 100%;
 	display: flex;
@@ -132,6 +135,8 @@ main {
 @media screen and (min-width: 600px) {
 	main {
 		background-color: rgb(245, 245, 245);
+	}
+	.main-expanded {
 		margin-bottom: calc((var(--navbar-height) + 60px));
 	}
 	.register-form {
