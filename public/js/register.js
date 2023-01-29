@@ -1,5 +1,5 @@
 import loadConfig from "./helpers/config.js";
-import validate from "./helpers/regEx.js";
+import { checkForm, validate } from "./helpers/validateForm.js";
 import setBtnState from "./helpers/btnState.js";
 loadConfig();
 
@@ -65,22 +65,12 @@ function checkFirstForm(input) {
 	}
 }
 
-function checkForm(input) {
-	if (validate(input.value, input.name)) {
-		$error[input.name].classList.remove("visible");
-		isValid[input.name] = true;
-	} else {
-		$error[input.name].classList.add("visible");
-		isValid[input.name] = false;
-	}
-}
-
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
 		checkFirstForm(e.target);
 	}
 	if (e.target.parentElement.matches(".register-user-data")) {
-		checkForm(e.target);
+		checkForm(e.target, $error, isValid);
 		const { name, lastname, address, email, salary, tel } = isValid;
 		if (name && lastname && address && email && salary && tel) {
 			setBtnState($registerBtn, false);

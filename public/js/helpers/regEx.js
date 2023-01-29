@@ -1,4 +1,4 @@
-const exp = {
+const regEx = {
 	dni: /^[0-9]{10}$/,
 	fingerprint: /^[0-9]{10}$/,
 	name: /^[A-Za-z]{3,16}\s{1}[A-Za-z]{3,16}$/,
@@ -12,5 +12,4 @@ const exp = {
 	tel: /^09[0-9]{8}$/,
 };
 
-const validate = (value, type) => exp[type].test(value);
-export default validate;
+export default regEx;

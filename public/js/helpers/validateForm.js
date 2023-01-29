@@ -1,10 +1,15 @@
-import validate from "./regEx";
+import regEx from "./regEx.js";
 
-function validateField(expression, field) {
-	if (validate(expression, field)) field.classList.remove(`group__error__${field.name}`);
-	else field.classList.add(`group__error__${field.name}`);
+const validate = (value, type) => regEx[type].test(value);
+
+function checkForm(input, error, isValid) {
+	if (validate(input.value, input.name)) {
+		error[input.name].classList.remove("visible");
+		isValid[input.name] = true;
+	} else {
+		error[input.name].classList.add("visible");
+		isValid[input.name] = false;
+	}
 }
 
-export default function validateForm(expression, inputs, e) {
-	return validateField(expression.name, e.target);
-}
+export { validate, checkForm };
