@@ -7,7 +7,6 @@ main {
 	align-items: center;
 	justify-content: center;
 }
-
 .advices-container {
 	display: none;
 	height: 100%;
@@ -132,12 +131,18 @@ main {
 .fingerprint {
 	animation: visible 0.3s ease-in-out;
 }
+.register-form p {
+	padding: 8px 0;
+}
 @media screen and (min-width: 600px) {
 	main {
 		background-color: rgb(245, 245, 245);
 	}
-	.main-expanded {
-		margin-bottom: calc((var(--navbar-height) + 60px));
+	main > h1 {
+		margin: 0;
+	}
+	.register-form h2 {
+		font-size: 1.7rem;
 	}
 	.register-form {
 		width: 80%;
@@ -159,7 +164,7 @@ main {
 		grid-template-columns: auto;
 		place-content: center;
 		place-items: center;
-		padding-top: var(--navbar-height);
+		padding-top: calc(var(--navbar-height) - 24px);
 	}
 	.advices-container {
 		display: flex;
@@ -176,7 +181,7 @@ main {
 
 	.register-form-expanded fieldset {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		column-gap: 16px;
 		place-items: end;
 		animation: opacity 0.3s ease-in-out;
@@ -189,19 +194,17 @@ main {
 	.register-form-expanded input {
 		width: 100%;
 	}
-	.register-form-expanded input:nth-child(5) {
+	.group-address {
 		grid-column: 1/-1;
-	}
-	.register-form-expanded input:nth-child(8) {
-		grid-row: 2/3;
-		grid-column: 2/3;
+		grid-row: 3/4;
 	}
 	.register-form-expanded button:last-child {
 		max-width: 500px;
 		margin-left: auto;
-		width: 60%;
+		width: 100%;
 		padding: 16px;
 		margin-top: 16px;
+		grid-column: 3/4;
 	}
 	.register-form-expanded a {
 		margin-right: auto;

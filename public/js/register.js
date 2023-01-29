@@ -1,5 +1,5 @@
 import loadConfig from "./helpers/config.js";
-import { checkForm, validate } from "./helpers/validateForm.js";
+import { checkForm, firstValidation } from "./helpers/validateForm.js";
 import setBtnState from "./helpers/btnState.js";
 loadConfig();
 
@@ -23,7 +23,8 @@ const d = document,
 	$formMainData = d.querySelector(".register-user-query"),
 	$formUserData = d.querySelector(".register-user-data"),
 	$main = d.querySelector("main"),
-	$checkedBtn = d.querySelector(".checked-container");
+	$checkedBtn = d.querySelector(".checked-container"),
+	$mainTitle = d.querySelector(".main-title");
 
 const isValid = {
 	name: false,
@@ -33,30 +34,12 @@ const isValid = {
 	tel: false,
 	salary: false,
 };
-/**
- * Validate the first step to get an account
- *
- * @param {HTMLInputElement} input it gets an input to get validated
- * @param {HTMLUListElement} error The message when things get wrong
- * @param {HTMLInputElement} next The next Element to show
- */
-function firstValidation(input, error, next) {
-	let isCompleted = validate(input.value, input.name);
 
-	if (!isCompleted) {
-		error.classList.add("error-active");
-		if (next !== undefined) next.classList.add("hidden");
-	} else {
-		error.classList.remove("error-active");
-		if (next !== undefined) next.classList.remove("hidden") ?? null;
-	}
-	return isCompleted;
-}
 /**
  * Check if all inputs have been filled
  * @param {HTMLInputElement} input it gets an input element
  */
-function checkFirstForm(input) {
+function checkFirstForm(input, first, next) {
 	if (input.matches("#dni")) {
 		firstValidation(input, $errorDni, $fingerprint);
 	}
@@ -67,11 +50,13 @@ function checkFirstForm(input) {
 
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
+		//here
 		checkFirstForm(e.target);
 	}
 	if (e.target.parentElement.matches(".register-user-data")) {
 		checkForm(e.target, $error, isValid);
 		const { name, lastname, address, email, salary, tel } = isValid;
+
 		if (name && lastname && address && email && salary && tel) {
 			setBtnState($registerBtn, false);
 		}
@@ -87,6 +72,7 @@ d.addEventListener("click", (e) => {
 		$registerForm.classList.add("register-form-expanded");
 		$formMainData.classList.add("hidden");
 		$formUserData.classList.remove("hidden");
+		$mainTitle.classList.remove("hidden");
 	}
 	if (e.target.matches("#register-btn")) {
 		$registerForm.classList.add("border-none");
