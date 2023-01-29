@@ -16,6 +16,7 @@ const d = document,
 		email: d.querySelector(".error__group__email"),
 		salary: d.querySelector(".error__group__salary"),
 	},
+	$groupDate = d.querySelector(".group-date input"),
 	$nextBtn = d.getElementById("submit"),
 	$registerBtn = d.getElementById("register-btn"),
 	$adviceForm = d.querySelector(".advices-container"),
@@ -54,6 +55,7 @@ d.addEventListener("keyup", (e) => {
 	}
 	if (e.target.parentElement.matches(".group-input")) {
 		checkForm(e.target, $error, isValid);
+
 		const { name, lastname, address, email, salary, tel } = isValid;
 
 		if (name && lastname && address && email && salary && tel) {
