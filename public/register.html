@@ -138,7 +138,7 @@
 					<div class="group-input group-date">
 						<label><small>Fecha de nacimiento</small></label>
 						<input type="date" name="date" />
-						<ul class="error-group error__group__datebirth">
+						<ul class="error-group error__group__date">
 							<li>
 								<small>La fecha no debe estar vacía</small>
 							</li>
@@ -185,6 +185,42 @@
 						<ul class="error-group error__group__email">
 							<li>
 								<small>Ingresa un correo válido, ej: alguien@gmail.com</small>
+							</li>
+						</ul>
+					</div>
+					<div class="group-input group-password">
+						<input
+							type="password"
+							placeholder="Crea una contraseña"
+							autocomplete="off"
+							name="password"
+						/>
+						<ul class="error-group error__group__password">
+							<li>
+								<small>La contraseña debe tener 8 caracteres</small>
+							</li>
+							<li>
+								<small>Debe tener mayúsculas y minúsculas</small>
+							</li>
+							<li>
+								<small>Debe tener al menos un caracter especial</small>
+							</li>
+							<li>
+								<small>La contraseña debe tener al menos un número</small>
+							</li>
+						</ul>
+					</div>
+					<div class="group-input group-password-repeat">
+						<input
+							type="password"
+							placeholder="Repite la contraseña"
+							autocomplete="off"
+							maxlength="32"
+							name="repeat-password"
+						/>
+						<ul class="error-group error__group__repeat__password">
+							<li>
+								<small>La contraseña no coincide</small>
 							</li>
 						</ul>
 					</div>

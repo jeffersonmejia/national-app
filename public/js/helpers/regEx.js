@@ -10,6 +10,7 @@ const regEx = {
 	decimal: /^[0-9]{1,4}\.?[0-9]{0,3}$/,
 	salary: /^[0-9]{1,4}\.?[0-9]{0,3}$/,
 	tel: /^09[0-9]{8}$/,
+	date: /^.{10}$/,
 };
 
 export default regEx;

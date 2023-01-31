@@ -60,6 +60,7 @@ button a {
 	background-color: var(--btn-disabled);
 	cursor: not-allowed;
 }
+
 @media (hover: hover) {
 	body button.btn-disabled:hover {
 		background-color: var(--btn-disabled-hover);

@@ -14,9 +14,11 @@ const d = document,
 		address: d.querySelector(".error__group__address"),
 		tel: d.querySelector(".error__group__tel"),
 		email: d.querySelector(".error__group__email"),
+		password: d.querySelector(".error__group__password"),
+		repeatPassword: d.querySelector(".error__group__repeat__password"),
 		salary: d.querySelector(".error__group__salary"),
+		date: d.querySelector(".error__group__date"),
 	},
-	$groupDate = d.querySelector(".group-date input"),
 	$nextBtn = d.getElementById("submit"),
 	$registerBtn = d.getElementById("register-btn"),
 	$adviceForm = d.querySelector(".advices-container"),
@@ -31,16 +33,20 @@ const isValid = {
 	name: false,
 	lastname: false,
 	address: false,
+	password: false,
+	passwordRepeat: false,
 	email: false,
 	tel: false,
 	salary: false,
 };
 
+const dataCollector = {};
+
 /**
  * Check if all inputs have been filled
  * @param {HTMLInputElement} input it gets an input element
  */
-function checkFirstForm(input, first, next) {
+function checkFirstForm(input) {
 	if (input.matches("#dni")) {
 		firstValidation(input, $errorDni, $fingerprint);
 	}
@@ -49,19 +55,45 @@ function checkFirstForm(input, first, next) {
 	}
 }
 
+function collectData(name, value) {
+	dataCollector[name] = value;
+	console.log(dataCollector);
+}
+
+function checkEveryInput(name, input) {
+	if (name !== "repeat-password") {
+		checkForm(input, $error, isValid);
+		if (name === "password") dataCollector[name] = input.value;
+	} else {
+		if (dataCollector.password !== input.value) {
+			$error.repeatPassword.classList.add("visible");
+		} else {
+			$error.repeatPassword.classList.remove("visible");
+		}
+	}
+	handleSubmitStatus(isValid);
+}
+
+function handleSubmitStatus({
+	name,
+	lastname,
+	address,
+	email,
+	salary,
+	tel,
+	password,
+	passwordRepeat,
+}) {
+	if (name && lastname && address && email && salary && tel && password && passwordRepeat)
+		setBtnState($registerBtn, false);
+}
+
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
 		checkFirstForm(e.target);
 	}
-	if (e.target.parentElement.matches(".group-input")) {
-		checkForm(e.target, $error, isValid);
-
-		const { name, lastname, address, email, salary, tel } = isValid;
-
-		if (name && lastname && address && email && salary && tel) {
-			setBtnState($registerBtn, false);
-		}
-	}
+	if (e.target.parentElement.matches(".group-input"))
+		checkEveryInput(e.target.name, e.target);
 });
 
 d.addEventListener("click", (e) => {

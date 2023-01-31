@@ -194,10 +194,6 @@ main {
 	.register-form-expanded input {
 		width: 100%;
 	}
-	.group-address {
-		grid-column: 1/-1;
-		grid-row: 3/4;
-	}
 	.register-form-expanded button:last-child {
 		max-width: 500px;
 		margin-left: auto;
