@@ -69,6 +69,7 @@ function checkEveryInput(name, input) {
 			$error.repeatPassword.classList.add("visible");
 		} else {
 			$error.repeatPassword.classList.remove("visible");
+			isValid.passwordRepeat = true;
 		}
 	}
 	handleSubmitStatus(isValid);
