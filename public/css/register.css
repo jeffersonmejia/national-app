@@ -118,6 +118,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 4px;
+	animation: visible 0.3s ease-in-out;
 }
 .checked-btn {
 	width: fit-content;
@@ -126,7 +127,6 @@ main {
 	color: rgb(16, 161, 0);
 	background-color: rgb(179, 255, 179);
 	transition-property: border-radius;
-	transition: padding 0.3s ease-in-out;
 }
 .fingerprint {
 	animation: visible 0.3s ease-in-out;
