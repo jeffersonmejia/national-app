@@ -1,17 +1,17 @@
 :root {
-	--main-bg: hsl(224, 100%, 60%);
+	--main-bg: hsl(250.3, 77.5%, 36.7%);
 	--main-fg: rgb(255, 255, 255);
 	--main-box-bg: hsl(224, 100%, 20%);
 	--input-focus: hsl(0, 0%, 95%);
-	--btn-bg: hsl(224, 100%, 60%);
+	--btn-bg: hsl(250, 78%, 37%);
 	--btn-disabled: hsl(0, 0%, 57.6%);
 	--btn-disabled-hover: hsl(0, 0%, 65%);
-	--btn-bg: hsl(224, 100%, 60%);
-	--btn-hover: hsl(224, 100%, 54%);
+	--btn-bg: hsl(250, 100%, 69.4%);
+	--btn-hover: hsl(250.2, 94.2%, 73.1%);
 	--btn-ancle-hover: hsl(224, 100%, 65%);
 	--btn-fg: rgb(255, 255, 255);
 	--gray-fg: hsl(0, 0%, 40%);
-	--blue-fg: hsl(224, 100%, 20%);
+	--blue-fg: hsl(231.9, 97.1%, 13.5%);
 	--input-blue-fg: hsl(224, 100%, 30%);
 	--btn-dark-bg: hsl(91, 100%, 33%);
 	--btn-dark-hover: hsl(91, 100%, 40%);

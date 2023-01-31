@@ -67,6 +67,7 @@ function checkEveryInput(name, input) {
 	} else {
 		if (dataCollector.password !== input.value) {
 			$error.repeatPassword.classList.add("visible");
+			isValid.passwordRepeat = false;
 		} else {
 			$error.repeatPassword.classList.remove("visible");
 			isValid.passwordRepeat = true;
