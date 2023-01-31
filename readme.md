@@ -1,8 +1,8 @@
 # Banco Nacional 🏦🇪🇨
 
-## **Introduction**
+## **Introduction 💡**
 
-> 💡 Web application that manages transactions and payment of frequent services
+> Web application that manages transactions and payment of frequent services
 
 ### **Content table**
 
@@ -24,17 +24,17 @@ mobile, tablet & desktop here!
 
 <!-- [![main.png](https://i.postimg.cc/tCGKM1HS/main.png)](https://postimg.cc/mhVpcgkC) -->
 
-### **Features**
+### **Features 🧩**
 
 ---
 
 - Not available
 
-### **Installation**
+### **Installation 🔨**
 
 ---
 
-**You'll need the next dependencies 🔨**
+**You'll need the next dependencies**
 
 - <div style="display:flex; align-items:center;"> Windows <img src="https://i.postimg.cc/bNcF5V3C/windows11.png" width="20"/></div>
 
@@ -56,7 +56,7 @@ mobile, tablet & desktop here!
 
     `sudo apt-get install php7.4-opcache php7.4-readline`
 
-### **Tech stack**
+### **Tech stack 🎨**
 
 ---
 
@@ -70,24 +70,24 @@ mobile, tablet & desktop here!
 
 [PHP](https://www.php.net/docs.php)
 
-### **License**
+### **License ⚖️**
 
 ---
 
-> MIT ⚖️
+> MIT
 
 ### **Credits**
 
 ---
 
-**Author**
+**Author 👾**
 
-`Jefferson Mejía 🍉`
+`Jefferson Mejía`
 
-**Icons**
+**Icons 💎**
 
 [Google fonts](https://fonts.google.com/about)
 
-**Images**
+**Images 🌌**
 
 [Adoble Stock](https://stock.adobe.com)
