@@ -40,7 +40,7 @@ mobile, tablet & desktop here!
 
   - [Xampp](https://www.apachefriends.org/download.html)
 
-- Linux
+- <div style="display:flex; align-items:center;">Linux <img src="https://i.postimg.cc/gkqynD8r/2333464.png" width="15"/> </div>
 
   - Debian
 
