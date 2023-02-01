@@ -90,6 +90,30 @@ function handleSubmitStatus({
 		setBtnState($registerBtn, false);
 }
 
+async function registerUser(data) {
+	try {
+		let options = {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		};
+
+		const res = await fetch("../server/register.php", options),
+			json = await res.json();
+		console.log(res);
+
+		if (!res.ok)
+			throw {
+				status: res.status,
+				statusText: res.statusText,
+			};
+	} catch (error) {
+		console.log("error" + error.statusText);
+	}
+}
+registerUser(collectData);
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
 		checkFirstForm(e.target);
