@@ -124,9 +124,16 @@ main {
 	width: fit-content;
 	padding: 12px;
 	border-radius: 50%;
+	transition-property: border-radius;
+}
+
+.checked-btn-successful {
 	color: rgb(16, 161, 0);
 	background-color: rgb(179, 255, 179);
-	transition-property: border-radius;
+}
+.checked-btn-unsuccessful {
+	color: rgb(161, 38, 0);
+	background-color: rgb(255, 179, 179);
 }
 .fingerprint {
 	animation: visible 0.3s ease-in-out;

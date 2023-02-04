@@ -1,5 +1,7 @@
 import loadConfig from "./helpers/config.js";
+import { setLoaderStatus } from "./helpers/loader.js";
 import { checkForm, firstValidation } from "./helpers/validateForm.js";
+import ListApi from "./helpers/ListApi.js";
 import setBtnState from "./helpers/btnState.js";
 loadConfig();
 
@@ -26,8 +28,15 @@ const d = document,
 	$formMainData = d.querySelector(".register-user-query"),
 	$formUserData = d.querySelector(".register-user-data"),
 	$main = d.querySelector("main"),
-	$checkedBtn = d.querySelector(".checked-container"),
-	$mainTitle = d.querySelector(".main-title");
+	$checkedBox = d.querySelector(".checked-container"),
+	$checkedIcon = d.querySelector(".checked-container span"),
+	$checkedText = d.querySelector(".checked-container small"),
+	$mainTitle = d.querySelector(".main-title"),
+	$firstFieldInputs = d.querySelectorAll(".register-user-query input"),
+	$secFieldInputs = d.querySelectorAll(".register-user-data input"),
+	$loader = d.querySelector(".modal-loader");
+
+const API = ListApi.register;
 
 const isValid = {
 	name: false,
@@ -51,13 +60,13 @@ function checkFirstForm(input) {
 		firstValidation(input, $errorDni, $fingerprint);
 	}
 	if (input.matches("#fingerprint")) {
-		setBtnState($nextBtn, !firstValidation(input, $errorFinger));
+		if (firstValidation(input, $errorFinger)) {
+			setBtnState($nextBtn, false);
+			$firstFieldInputs.forEach((input) => {
+				dataCollector[input.name] = input.value;
+			});
+		}
 	}
-}
-
-function collectData(name, value) {
-	dataCollector[name] = value;
-	console.log(dataCollector);
 }
 
 function checkEveryInput(name, input) {
@@ -86,12 +95,28 @@ function handleSubmitStatus({
 	password,
 	passwordRepeat,
 }) {
-	if (name && lastname && address && email && salary && tel && password && passwordRepeat)
+	if (
+		name &&
+		lastname &&
+		address &&
+		email &&
+		salary &&
+		tel &&
+		password &&
+		passwordRepeat
+	) {
 		setBtnState($registerBtn, false);
+		$secFieldInputs.forEach((input) => {
+			if (input.name !== "repeat-password") {
+				dataCollector[input.name] = input.value;
+			}
+		});
+	}
 }
 
 async function registerUser(data) {
 	try {
+		setLoaderStatus($loader, true);
 		let options = {
 			method: "POST",
 			headers: {
@@ -100,20 +125,36 @@ async function registerUser(data) {
 			body: JSON.stringify(data),
 		};
 
-		const res = await fetch("../server/register.php", options),
-			json = await res.json();
-		console.log(res);
+		const res = await fetch(API, options);
 
 		if (!res.ok)
 			throw {
 				status: res.status,
 				statusText: res.statusText,
 			};
+		redirectUser(res.ok, "Registro éxitoso");
 	} catch (error) {
-		console.log("error" + error.statusText);
+		redirectUser(error.ok, error.statusText || "Error interno");
 	}
 }
-registerUser(collectData);
+
+function redirectUser(success, message) {
+	$registerForm.classList.add("border-none");
+	$formUserData.classList.add("hidden");
+	$checkedBox.classList.remove("hidden");
+
+	if (success) {
+		$checkedIcon.classList.add("checked-btn-successful");
+		$checkedIcon.textContent = "check";
+		$checkedText.textContent = message;
+	} else {
+		setLoaderStatus($loader, false);
+		$checkedIcon.classList.add("checked-btn-unsuccessful");
+		$checkedIcon.textContent = "cancel";
+		$checkedText.textContent = message + ". Registro sin éxito";
+	}
+	setTimeout(() => (location.pathname = "/national"), 1700);
+}
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
 		checkFirstForm(e.target);
@@ -133,15 +174,7 @@ d.addEventListener("click", (e) => {
 		$formUserData.classList.remove("hidden");
 		$mainTitle.classList.remove("hidden");
 	}
-	if (e.target.matches("#register-btn")) {
-		$registerForm.classList.add("border-none");
-		$formUserData.classList.add("hidden");
-		$checkedBtn.classList.remove("hidden");
-		setTimeout(() => {
-			let HOST = "jeffersonmejia.github.io";
-			location.pathname = location.host === HOST ? "/national" : "/";
-		}, 1700);
-	}
+	if (e.target.matches("#register-btn")) registerUser(dataCollector);
 });
 
 d.addEventListener("DOMContentLoaded", (e) => {
