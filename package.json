@@ -1,0 +1,20 @@
+{
+	"name": "national",
+	"version": "1.0.0",
+	"description": "National Bank",
+	"main": "index.js",
+	"scripts": {
+		"dev": "sass"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jeffersonmejia/national.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jeffersonmejia/national/issues"
+	},
+	"homepage": "https://github.com/jeffersonmejia/national#readme"
+}
