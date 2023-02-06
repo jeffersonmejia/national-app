@@ -9,5 +9,3 @@ cd ..
 cp -r server dist
 cp LICENSE dist
 cp readme.md dist
-
-echo "app compiled successfully"

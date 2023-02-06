@@ -27,50 +27,41 @@
   --opacity: rgba(0, 0, 0, 0.5);
   --opacity-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --navbar-height: 65px;
-  --benefit-fg: rgb(25, 126, 0);
-}
+  --benefit-fg: rgb(25, 126, 0); }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 h1,
 img {
-  width: 100%;
-}
+  width: 100%; }
 
 html {
   font-family: "Nunito Sans", sans-serif;
-  color: var(--blue-fg);
-}
+  color: var(--blue-fg); }
 
 hr {
-  color: var(--main-fg);
-}
+  color: var(--main-fg); }
 
 .select-disabled {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
-}
+  user-select: none; }
 
 .hidden {
-  display: none;
-}
+  display: none; }
 
 @media screen and (min-width: 600px) {
   html {
-    background-color: rgb(245, 245, 245);
-  }
+    background-color: whitesmoke; }
+
   footer {
-    background-color: rgb(245, 245, 245);
-  }
+    background-color: whitesmoke; }
+
   h1 {
     text-align: center;
-    padding-bottom: 16px;
-  }
-}
+    padding-bottom: 16px; } }
 
 /*# sourceMappingURL=panel.css.map */

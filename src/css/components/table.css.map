@@ -1,1 +1,7 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/components/table.scss"],"names":[],"mappings":"AAAA;AAAA;EAEC;EACA;;;AAED;EACC;EACA;EACA","file":"table.css"}
+{
+"version": 3,
+"mappings": "AAAA;qBACsB;EACrB,MAAM,EAAE,mBAAmB;EAC3B,eAAe,EAAE,QAAQ;;AAE1B,qBAAsB;EACrB,UAAU,EAAE,KAAK;EACjB,OAAO,EAAE,cAAc;EACvB,SAAS,EAAE,MAAM",
+"sources": ["../../sass/components/table.scss"],
+"names": [],
+"file": "table.css"
+}

@@ -1,0 +1,14 @@
+.group-input {
+  width: 100%; }
+
+input {
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  background-color: white;
+  transition: background-color 0.25s ease-out; }
+
+input:focus {
+  background-color: var(--input-focus); }
+
+/*# sourceMappingURL=input.css.map */

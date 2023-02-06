@@ -22,7 +22,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(root, "index.html"),
-				/*agencies: resolve(root, "src/agencies.html"),
+				agencies: resolve(root, "src/agencies.html"),
 				credit: resolve(root, "src/credit.html"),
 				custom: resolve(root, "src/custom.html"),
 				invest: resolve(root, "src/invest.html"),
@@ -31,7 +31,7 @@ export default defineConfig({
 				register: resolve(root, "src/register.html"),
 				schedule: resolve(root, "src/schedule.html"),
 				support: resolve(root, "src/support.html"),
-				virtual: resolve(root, "src/virtual.html"),*/
+				virtual: resolve(root, "src/virtual.html"),
 			},
 		},
 	},
