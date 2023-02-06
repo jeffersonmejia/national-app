@@ -1,0 +1,42 @@
+@use "components/reset.scss";
+@use "components/navbar.scss";
+@use "components/burger.scss";
+@use "components/form.scss";
+@use "components/button.scss";
+@use "components/footer.scss";
+
+main {
+	margin-top: calc(var(--navbar-height) + 24px);
+}
+main,
+footer {
+	animation: visible 0.3s ease-in-out;
+}
+h1 {
+	margin-left: 28px;
+}
+.form :is(small, h2) {
+	padding: 0;
+}
+@media screen and (min-width: 600px) {
+	h1 {
+		margin-left: 0;
+	}
+	.form {
+		max-width: 430px;
+	}
+	.form fieldset {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.form legend {
+		width: 100%;
+		grid-column: 1/-1;
+	}
+	.form :is(input:nth-child(2), select) {
+		grid-column: 1/-1;
+	}
+	.form button {
+		grid-column: 1/-1;
+	}
+}

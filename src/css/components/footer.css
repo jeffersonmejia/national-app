@@ -1,0 +1,15 @@
+footer {
+  padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: var(--main-fg);
+  color: rgb(140, 140, 140);
+}
+
+footer small {
+  margin: 24px 0;
+}
+
+/*# sourceMappingURL=footer.css.map */

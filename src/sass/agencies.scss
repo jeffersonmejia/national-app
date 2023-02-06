@@ -1,0 +1,17 @@
+@use "components/reset.scss";
+@use "components/navbar.scss";
+@use "components/burger.scss";
+@use "components/button.scss";
+@use "components/form.scss";
+
+main {
+	margin-top: calc(var(--navbar-height) + 24px);
+}
+h1 {
+	padding-left: 20px;
+}
+@media screen and (min-width: 600px) {
+	h1 {
+		padding-left: 0;
+	}
+}

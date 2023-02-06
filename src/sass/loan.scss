@@ -1,0 +1,92 @@
+@use "components/reset.scss";
+@use "components/navbar.scss";
+@use "components/burger.scss";
+@use "components/button.scss";
+@use "components/footer.scss";
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: var(--navbar-height);
+}
+main > h1 {
+	margin: 32px 0;
+	padding-right: 16px;
+	width: 100%;
+	padding-left: 4px;
+}
+.loan-container {
+	display: flex;
+	flex-direction: column;
+}
+.loan-content :is(h1, h3) {
+	margin: 8px 0;
+}
+.loan-content :is(figcaption, h1),
+main > h1 {
+	padding: 0 16px;
+}
+
+.loan-content ul {
+	margin: 8px 0;
+}
+.loan-content li {
+	padding-left: 20px;
+	list-style: inside;
+}
+@media (hover: hover) {
+	.loan-content a:hover {
+		color: hsl(114, 45%, 53%);
+	}
+}
+@media screen and (min-width: 300px) {
+	footer {
+		background-color: rgb(245, 245, 245);
+	}
+}
+@media screen and (min-width: 600px) {
+	main {
+		background-color: rgb(245, 245, 245);
+	}
+	.loan-content {
+		background-color: white;
+	}
+	.loan-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+		gap: 16px;
+		padding: 0 12px;
+	}
+
+	main > h1 {
+		padding: 0 32px;
+	}
+	.loan-content {
+		border: var(--light-border);
+		border-radius: var(--border-radius);
+		padding: 12px 24px;
+	}
+	.loan-content h1 {
+		font-size: 1.5rem;
+	}
+	.loan-content li {
+		margin-left: 24px;
+		padding-left: 0;
+	}
+	.loan-content img {
+		border-radius: var(--border-radius);
+	}
+	.loan-container h1 {
+		padding-left: 0;
+	}
+	main > h1 {
+		padding: 0 16px;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	main {
+		padding: 0 160px;
+	}
+}

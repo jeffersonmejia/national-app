@@ -3,8 +3,10 @@
 	"version": "1.0.0",
 	"description": "National Bank",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
-		"dev": "sass"
+		"dev": "vite",
+		"build": "vite build"
 	},
 	"repository": {
 		"type": "git",
@@ -16,5 +18,11 @@
 	"bugs": {
 		"url": "https://github.com/jeffersonmejia/national/issues"
 	},
-	"homepage": "https://github.com/jeffersonmejia/national#readme"
+	"homepage": "https://github.com/jeffersonmejia/national#readme",
+	"dependencies": {
+		"vite-plugin-purgecss": "^0.2.12"
+	},
+	"devDependencies": {
+		"vite-plugin-html": "^3.2.0"
+	}
 }

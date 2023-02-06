@@ -1,0 +1,239 @@
+@use "components/reset.scss";
+@use "components/animations.scss";
+@use "components/navbar.scss";
+@use "components/burger.scss";
+@use "components/loader.scss";
+@use "components/button.scss";
+@use "components/footer.scss";
+
+main {
+	margin-top: 65px;
+}
+.navbar {
+	box-shadow: var(--opacity-shadow);
+}
+header {
+	position: relative;
+	background-color: rgb(0, 24, 77);
+	animation: opacity 0.3s ease-in-out;
+}
+header figure {
+	height: 90vh;
+}
+header figcaption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--main-fg);
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 20px;
+}
+header img {
+	height: 90vh;
+	opacity: 0.5;
+	object-fit: cover;
+	object-position: center top;
+}
+header button {
+	height: var(--btn-height);
+	width: 100%;
+	border: none;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	margin: 8px 0;
+	animation: showUp 0.3s ease-in-out;
+}
+@media (hover: hover) {
+	header button:hover {
+		background-color: var(--btn-hover);
+	}
+}
+.services {
+	color: var(--blue-fg);
+}
+.services h1 {
+	width: 100%;
+	padding: 12px 16px;
+	padding-bottom: 8px;
+}
+.services ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	gap: 12px;
+	padding: 0 0 24px 0;
+}
+.services li {
+	width: 100%;
+	text-align: center;
+}
+.services a {
+	text-decoration: none;
+	color: var(--blue-fg);
+}
+@media (hover: hover) {
+	.services a:hover {
+		text-decoration: underline;
+	}
+}
+.purchases {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.purchases figure {
+	width: 100%;
+	max-width: 600px;
+	padding-bottom: 8px;
+}
+.purchases figcaption {
+	text-align: center;
+	color: var(--blue-fg);
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 10px 20px 0 20px;
+	text-align: left;
+}
+.purchases button {
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+	transition: background-color 0.3s ease-in-out;
+	cursor: pointer;
+	max-width: 300px;
+	margin: auto;
+}
+@media (hover: hover) {
+	.purchases button:hover {
+		background-color: var(--btn-hover);
+	}
+}
+.contacts {
+	color: var(--blue-fg);
+}
+.contacts img {
+	width: 70%;
+	margin: 32px;
+	margin-bottom: 12px;
+}
+.contacts-content {
+	margin: auto;
+	margin-bottom: 12px;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.contacts-content button {
+	width: 80%;
+	max-width: 300px;
+	margin: 12px 0 0 0;
+	transition: background-color 0.3s ease-in-out;
+}
+@media screen and (min-width: 600px) {
+	main {
+		background-color: rgb(245, 245, 245);
+	}
+	.contacts {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+		gap: 60px;
+		place-items: center;
+	}
+	.contacts-content {
+		background-color: white;
+	}
+	footer {
+		background-color: rgb(245, 245, 245);
+	}
+	.contacts-content button {
+		width: 100%;
+	}
+	.contacts-content:last-child {
+		justify-self: left;
+	}
+	.contacts-content:first-child {
+		justify-self: right;
+	}
+	.contacts {
+		max-width: 80%;
+		margin: auto;
+	}
+	.contacts .contacts-content {
+		max-width: 500px;
+		border: 1px solid rgb(212, 212, 212);
+		border-radius: var(--border-radius);
+		padding: 32px 16px;
+		padding-top: 0;
+		color: var(--blue-fg);
+	}
+	.contacts img {
+		width: 100%;
+		max-width: 150px;
+		margin-bottom: 24px;
+		display: block;
+	}
+	.contacts button {
+		background-color: var(--btn-bg);
+	}
+	.contacts-content p {
+		text-align: center;
+	}
+	@media (hover: hover) {
+		.contacts button:hover {
+			background-color: var(--btn-hover);
+		}
+	}
+}
+@media screen and (min-width: 600px) {
+	.services {
+		padding: 12px 0;
+		text-align: center;
+	}
+	.services ul {
+		max-width: 500px;
+		margin: 0 auto;
+		flex-direction: row;
+	}
+	.purchases {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+		padding-bottom: 32px;
+	}
+	.purchases figcaption {
+		color: var(--blue-fg);
+	}
+}
+@media screen and (min-width: 800px) {
+	header :is(figure, img) {
+		height: 90vh;
+	}
+	.contacts .contacts-content {
+		margin-bottom: 16px;
+	}
+	.purchases {
+		padding: 0 32px;
+		display: flex;
+		flex-direction: row;
+		gap: 32px;
+		align-items: flex-start;
+	}
+	.purchases img {
+		border-radius: var(--border-radius);
+	}
+	.purchases button {
+		margin-top: 8px;
+	}
+	.purchases figure {
+		border-radius: var(--border-radius);
+	}
+}

@@ -1,0 +1,106 @@
+@use "components/reset.scss";
+@use "components/navbar.scss";
+@use "components/burger.scss";
+@use "components/button.scss";
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.advices-container {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--main-bg);
+	color: var(--main-fg);
+	padding: 40px;
+}
+.advices-container figure {
+	margin-top: var(--navbar-height);
+}
+.advices-container img {
+	max-width: 260px;
+	display: none;
+}
+.advices-container h4 {
+	margin: 12px 0;
+}
+.advices-container li:not(:first-child) {
+	margin: 12px 0;
+}
+.login-form {
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: var(--border-radius);
+	padding: 32px;
+}
+.login-form fieldset {
+	width: 100%;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.login-form input:nth-child(2) {
+	margin-top: 12px;
+}
+.login-form input {
+	border: var(--light-border);
+	border-radius: var(--border-radius);
+	padding: 12px;
+}
+.login-form button {
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+	transition: background-color 0.3s ease-in-out;
+}
+@media (hover: hover) {
+	.login-form button:hover {
+		background-color: var(--btn-hover);
+	}
+	.login-form a:hover {
+		text-decoration: underline;
+	}
+}
+.forget-group {
+	display: flex;
+	flex-direction: column;
+}
+.forget-group a {
+	text-decoration: none;
+	color: var(--main-bg);
+}
+@media screen and (min-width: 600px) {
+	.login-form {
+		width: 80%;
+		border: var(--light-border);
+	}
+}
+@media screen and (min-width: 900px) {
+	main {
+		display: grid;
+		grid-template-columns: 2fr 1.5fr;
+		background-color: rgb(245, 245, 245);
+	}
+	main .login-form {
+		background-color: white;
+	}
+	.advices-container {
+		display: flex;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.advices-container img {
+		display: block;
+	}
+}
