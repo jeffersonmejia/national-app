@@ -1,8 +1,8 @@
-@use "components/reset.scss";
-@use "components/navbar.scss";
-@use "components/burger.scss";
-@use "components/button.scss";
-@use "components/form.scss";
+@import "components/reset.scss";
+@import "components/navbar.scss";
+@import "components/burger.scss";
+@import "components/button.scss";
+@import "components/form.scss";
 
 main {
 	margin-top: calc(var(--navbar-height) + 24px);

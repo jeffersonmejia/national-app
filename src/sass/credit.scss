@@ -1,7 +1,7 @@
-@use "components/reset.scss";
-@use "components/navbar.scss";
-@use "components/burger.scss";
-@use "components/footer.scss";
+@import "components/reset.scss";
+@import "components/navbar.scss";
+@import "components/burger.scss";
+@import "components/footer.scss";
 
 main {
 	padding-top: calc(var(--navbar-height));

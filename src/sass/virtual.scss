@@ -1,7 +1,7 @@
-@use "components/reset.scss";
-@use "components/navbar.scss";
-@use "components/burger.scss";
-@use "components/button.scss";
+@import "components/reset.scss";
+@import "components/navbar.scss";
+@import "components/burger.scss";
+@import "components/button.scss";
 
 main {
 	height: 100vh;
