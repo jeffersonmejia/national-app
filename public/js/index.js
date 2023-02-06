@@ -3,8 +3,7 @@ loadConfig();
 
 const d = document,
 	$btnCallout = d.querySelector("header .btn");
+
 d.addEventListener("DOMContentLoaded", (e) => {
-	setTimeout(() => {
-		$btnCallout.classList.add("visible");
-	}, 2200);
+	setTimeout(() => $btnCallout.classList.add("visible"), 2200);
 });
