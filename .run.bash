@@ -2,7 +2,7 @@
 npm run build
 
 cd src
-sass --watch sass css
+sass --watch sass:css
 cd ..
 
 # COPY FILES TO PRODUCTION FOLDER 
