@@ -4,7 +4,8 @@
 	"description": "National Bank",
 	"main": "index.js",
 	"scripts": {
-		"dev": "vite"
+		"dev": "vite",
+		"sass": "sass --watch sass:css"
 	},
 	"repository": {
 		"type": "git",

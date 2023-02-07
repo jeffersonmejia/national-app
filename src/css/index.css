@@ -63,18 +63,6 @@ hr {
   h1 {
     text-align: center;
     padding-bottom: 16px; } }
-@keyframes barLoader {
-  0% {
-    transform: translateX(-200%); }
-  100% {
-    transform: translateX(200%); } }
-@keyframes showUp {
-  from {
-    opacity: 0;
-    transform: translateY(12%); }
-  to {
-    opacity: 1;
-    transform: translateY(0%); } }
 .navbar {
   width: 100%;
   background-color: var(--main-fg);
@@ -203,6 +191,18 @@ hr {
 
   .burger-menu {
     display: none; } }
+@keyframes barLoader {
+  0% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(200%); } }
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: translateY(12%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
 .modal-loader {
   position: fixed;
   top: 0;

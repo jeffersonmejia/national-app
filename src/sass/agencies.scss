@@ -3,6 +3,8 @@
 @import "components/burger.scss";
 @import "components/button.scss";
 @import "components/form.scss";
+@import "components/animations.scss";
+@import "components/loader.scss";
 
 main {
 	margin-top: calc(var(--navbar-height) + 24px);

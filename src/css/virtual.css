@@ -191,6 +191,39 @@ hr {
 
   .burger-menu {
     display: none; } }
+@keyframes barLoader {
+  0% {
+    transform: translateX(-200%); }
+  100% {
+    transform: translateX(200%); } }
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: translateY(12%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+.modal-loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 999; }
+
+.modal-loader-bar {
+  height: 4px;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  transform: translateX(-200%);
+  animation: barLoader 1.7s linear infinite; }
+
+.loader-bar-active {
+  background-color: var(--main-bg);
+  transition: transform 0.3s ease-in-out; }
+
 button,
 button a {
   width: 100%;
