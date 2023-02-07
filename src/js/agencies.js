@@ -1,41 +1,16 @@
-import loadConfig from "./helpers/config.js";
-loadConfig();
+import loadGeneralConfig from "./helpers/config.js";
+import Apis from "./helpers/Apis.js";
+import get from "./helpers/request.js";
+import loadOption from "./helpers/loadOption.js";
 
 const d = document,
-	$agenciesList = d.getElementById("agencies-list");
+	$agenciesList = d.getElementById("agencies-list"),
+	API = Apis.agencies;
 
-const API = "./assets/db/agencies.json";
+async function loadAgenciesList() {
+	let agencies = await get(API);
+	if (agencies) loadOption(agencies, $agenciesList);
+}
 
-const getAgenciesList = async () => {
-	try {
-		const res = await fetch(API),
-			json = await res.json();
-		if (!res.ok) {
-			throw {
-				status: res.status,
-				statusText: res.statusText,
-			};
-		} else return json;
-	} catch (error) {
-		console.log(error);
-	}
-};
-
-const loadAgenciesList = async () => {
-	let agencies = await getAgenciesList(),
-		$template = d.createDocumentFragment();
-
-	if (agencies) {
-		for (const agency in agencies) {
-			let $option = d.createElement("option"),
-				$clone = $option.cloneNode(true);
-
-			$clone.textContent = agency;
-			$agenciesList.appendChild($clone);
-		}
-	}
-};
-
-d.addEventListener("DOMContentLoaded", (e) => {
-	loadAgenciesList();
-});
+loadGeneralConfig();
+d.addEventListener("DOMContentLoaded", (e) => loadAgenciesList());

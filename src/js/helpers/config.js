@@ -3,7 +3,7 @@ const d = document,
 	$modalLoader = d.querySelector(".modal-loader"),
 	$navbarModal = d.querySelector(".navbar-modal");
 
-export default function loadConfig() {
+export default function loadGeneralConfig() {
 	d.addEventListener("DOMContentLoaded", (e) => {
 		handleLoader($modalLoader);
 	});
