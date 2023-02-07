@@ -4,6 +4,11 @@ loadConfig();
 const d = document,
 	$btnCallout = d.querySelector("header button");
 
-d.addEventListener("DOMContentLoaded", (e) => {
+/**
+ * Show a button removing clase hidden
+ */
+function appearButton() {
 	setTimeout(() => $btnCallout.classList.remove("hidden"), 2200);
-});
+}
+
+d.addEventListener("DOMContentLoaded", (e) => appearButton());
