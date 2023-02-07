@@ -1,2 +1,2 @@
-import loadConfig from "./helpers/config.js";
-loadConfig();
+import loadMainConfig from "./helpers/config.js";
+loadMainConfig();

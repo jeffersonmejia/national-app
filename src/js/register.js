@@ -1,9 +1,9 @@
-import loadConfig from "./helpers/config.js";
+import loadMainConfig from "./helpers/config.js";
 import { setLoaderStatus } from "./helpers/loader.js";
 import { checkForm, firstValidation } from "./helpers/validateForm.js";
 import ListApi from "./helpers/ListApi.js";
 import setBtnState from "./helpers/btnState.js";
-loadConfig();
+import { post } from "./helpers/request.js";
 
 const d = document,
 	$inputs = d.querySelectorAll("input"),
@@ -49,7 +49,18 @@ const isValid = {
 	salary: false,
 };
 
-const dataCollector = {};
+const dataCollector = {
+	dni: "0000",
+	fingerprint: "0000",
+	name: "belu",
+	lastname: "rosado",
+	date: "2002-11-25",
+	address: "Santo Domingo",
+	tel: "0987091528",
+	email: "jeff@gmail.com",
+	password: "bellaciapo",
+	salary: "415",
+};
 
 /**
  * Check if all inputs have been filled
@@ -115,46 +126,29 @@ function handleSubmitStatus({
 }
 
 async function registerUser(data) {
-	try {
-		setLoaderStatus($loader, true);
-		let options = {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		};
-
-		const res = await fetch(API, options);
-
-		if (!res.ok)
-			throw {
-				status: res.status,
-				statusText: res.statusText,
-			};
-		redirectUser(res.ok, "Registro éxitoso");
-	} catch (error) {
-		redirectUser(error.ok, error.statusText || "Error interno");
-	}
-}
-
-function redirectUser(success, message) {
+	setLoaderStatus($loader, true);
+	let res = await post(API, data);
 	$registerForm.classList.add("border-none");
 	$formUserData.classList.add("hidden");
 	$checkedBox.classList.remove("hidden");
+	replyToUser(res);
+}
 
-	if (success) {
+function replyToUser(isRegistered) {
+	setLoaderStatus($loader, false);
+	if (isRegistered) {
 		$checkedIcon.classList.add("checked-btn-successful");
 		$checkedIcon.textContent = "check";
-		$checkedText.textContent = message;
+		$checkedText.textContent = ". Registro éxitoso";
 	} else {
-		setLoaderStatus($loader, false);
 		$checkedIcon.classList.add("checked-btn-unsuccessful");
 		$checkedIcon.textContent = "cancel";
-		$checkedText.textContent = message + ". Registro sin éxito";
+		$checkedText.textContent = "Registro sin éxito";
 	}
 	setTimeout(() => (location.pathname = "/national"), 1700);
 }
+
+loadMainConfig();
 d.addEventListener("keyup", (e) => {
 	if (e.target.parentElement.matches(".register-user-query")) {
 		checkFirstForm(e.target);
@@ -177,6 +171,4 @@ d.addEventListener("click", (e) => {
 	if (e.target.matches("#register-btn")) registerUser(dataCollector);
 });
 
-d.addEventListener("DOMContentLoaded", (e) => {
-	$inputs.forEach((el) => (el.value = ""));
-});
+d.addEventListener("DOMContentLoaded", (e) => $inputs.forEach((el) => (el.value = "")));

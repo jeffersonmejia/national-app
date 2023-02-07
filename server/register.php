@@ -31,9 +31,9 @@
 	VALUES('$dni', '$name', '$lastname', $accountid, '$address', '$fingerprint', '$date_born', '$tel', '$email', '$hash', '$salary');";
 	
 	if(mysqli_query($conn, $sql)){
-		echo json_encode(array("message"=>"successful"));
+		header('HTTP/1.0 200 Ok');
 	}else{
-		echo json_encode(array("message"=>"[Query error]: ".mysqli_error($conn)));
+		header('HTTP/1.0 500 Internal error');
 	}
 
 	mysqli_close($conn);
