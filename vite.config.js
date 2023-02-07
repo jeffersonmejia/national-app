@@ -1,4 +1,4 @@
-import cssPurge from "vite-plugin-purgecss";
+import htmlPurge from "vite-plugin-purgecss";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { resolve } from "path";
 import { defineConfig } from "vite";
@@ -9,7 +9,7 @@ const outDir = resolve(__dirname, "dist");
 export default defineConfig({
 	root,
 	plugins: [
-		cssPurge(),
+		htmlPurge(),
 		createHtmlPlugin({
 			minify: true,
 			removeComments: true,
