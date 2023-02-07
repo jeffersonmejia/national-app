@@ -321,20 +321,7 @@ main {
 .error-group {
   width: 90%;
   color: var(--error-fg);
-  height: 0;
-  margin: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out; }
-
-.error-active {
-  height: fit-content;
-  margin: auto;
-  visibility: visible;
-  opacity: 1; }
-
-.error-active li:last-child {
-  margin-bottom: 8px; }
+  animation: showUp 0.3s ease-in-out; }
 
 .register-form button {
   transition: background-color 0.3s ease-in-out; }

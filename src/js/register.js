@@ -75,10 +75,10 @@ function checkEveryInput(name, input) {
 		if (name === "password") dataCollector[name] = input.value;
 	} else {
 		if (dataCollector.password !== input.value) {
-			$error.repeatPassword.classList.add("visible");
+			$error.repeatPassword.classList.remove("hidden");
 			isValid.passwordRepeat = false;
 		} else {
-			$error.repeatPassword.classList.remove("visible");
+			$error.repeatPassword.classList.add("hidden");
 			isValid.passwordRepeat = true;
 		}
 	}

@@ -19,10 +19,10 @@ function firstValidation(input, error, next) {
 	let isCompleted = validate(input.value, input.name);
 
 	if (!isCompleted) {
-		error.classList.add("error-active");
+		error.classList.remove("hidden");
 		if (next !== undefined) next.classList.add("hidden");
 	} else {
-		error.classList.remove("error-active");
+		error.classList.add("hidden");
 		if (next !== undefined) next.classList.remove("hidden") ?? null;
 	}
 	return isCompleted;
@@ -36,10 +36,10 @@ function firstValidation(input, error, next) {
  */
 function checkForm(input, error, isValid) {
 	if (validate(input.value, input.name)) {
-		error[input.name].classList.remove("visible");
+		error[input.name].classList.add("hidden");
 		isValid[input.name] = true;
 	} else {
-		error[input.name].classList.add("visible");
+		error[input.name].classList.remove("hidden");
 		isValid[input.name] = false;
 	}
 }
