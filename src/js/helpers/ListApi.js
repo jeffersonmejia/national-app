@@ -1,6 +1,5 @@
 const http = "http://",
 	host = "localhost",
-	port = "80",
 	path = "national";
 
 export default {

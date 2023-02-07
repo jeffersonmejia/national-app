@@ -1,4 +1,4 @@
-import loadGeneralConfig from "./helpers/config.js";
+import loadMainConfig from "./helpers/config.js";
 import Apis from "./helpers/Apis.js";
 import get from "./helpers/request.js";
 import loadOption from "./helpers/loadOption.js";
@@ -12,5 +12,5 @@ async function loadAgenciesList() {
 	if (agencies) loadOption(agencies, $agenciesList);
 }
 
-loadGeneralConfig();
+loadMainConfig();
 d.addEventListener("DOMContentLoaded", (e) => loadAgenciesList());
