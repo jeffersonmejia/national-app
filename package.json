@@ -6,12 +6,11 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
-		"build-app": "bash .run.bash"
+		"build": "vite build"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/jeffersonmejia/national.git"
+		"url": "https://github.com/jeffersonmejia/national.git"
 	},
 	"keywords": [],
 	"author": "",
@@ -19,12 +18,5 @@
 	"bugs": {
 		"url": "https://github.com/jeffersonmejia/national/issues"
 	},
-	"homepage": "https://github.com/jeffersonmejia/national#readme",
-	"dependencies": {
-		"vite-plugin-purgecss": "^0.2.12"
-	},
-	"devDependencies": {
-		"html-minifier": "^4.0.0",
-		"vite-plugin-html": "^3.2.0"
-	}
+	"homepage": "https://github.com/jeffersonmejia/national#readme"
 }
