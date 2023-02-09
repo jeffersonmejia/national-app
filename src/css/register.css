@@ -15,11 +15,15 @@
   --btn-ancle-hover: hsl(224, 100%, 60%);
   --bar-loader-bg: hsl(194, 100%, 53%);
   --modal-bg: rgba(0, 0, 0, 0.5);
+  --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --border-radius: 8px;
   --light-border-color: hsl(0, 0%, 90%);
   --light-border: 1px solid var(--light-border-color);
   --navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --navbar-height: 65px;
+  --modal-bg: rgba(0, 0, 0, 0.4);
+  --modal-content-bg: white;
   --benefit-fg: rgb(25, 126, 0);
   --error-fg: red; }
 
@@ -120,13 +124,13 @@ html .hidden {
   position: fixed;
   bottom: 4vh;
   right: 4vh;
-  background-color: var(--main-bg);
-  color: var(--main-fg);
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
   padding: 12px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 999;
-  box-shadow: var(--opacity-shadow);
+  box-shadow: var(--burger-shadow);
   transition-property: background-color;
   transition: transform 0.3s ease-in-out;
   animation: showUp 0.3s ease-in-out; }
@@ -136,7 +140,7 @@ html .hidden {
     transform: translateY(-8px);
     background-color: var(--btn-hover); } }
 .navbar-modal {
-  background-color: var(--opacity);
+  background-color: var(--modal-bg);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -150,7 +154,7 @@ html .hidden {
 .navbar-modal-content {
   width: 100%;
   text-align: center;
-  background-color: var(--main-fg);
+  background-color: var(--modal-content-bg);
   list-style: none; }
 
 .navbar-modal-content li {
