@@ -5,18 +5,33 @@
 	align-items: center;
 	justify-content: center;
 	background-color: var(--light-box);
-	padding: 40px;
-}
-.advices-container figure {
-	margin-top: var(--navbar-height);
+	padding: 0 40px;
 }
 .advices-container img {
 	max-width: 260px;
 	display: none;
 }
-.advices-container h4 {
+.advices-container h2 {
 	margin: 12px 0;
+}
+.advices-container ul {
+	margin-left: 16px;
+}
+.advices-container li {
+	color: var(--reading-fg);
 }
 .advices-container li:not(:first-child) {
 	margin: 12px 0;
+}
+@media screen and (min-width: 1200px) {
+	.advices-container img {
+		display: block;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.advices-container {
+		display: flex;
+	}
 }

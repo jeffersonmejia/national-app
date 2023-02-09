@@ -29,6 +29,12 @@ button a {
 	button.btn-disabled:hover {
 		background-color: var(--btn-disabled-hover);
 	}
+	button:hover {
+		background-color: var(--btn-hover);
+	}
+	.ancle-btn:hover {
+		color: var(--btn-hover);
+	}
 }
 .ancle-btn {
 	display: block;
@@ -39,4 +45,17 @@ button a {
 	width: fit-content;
 	margin-left: auto;
 	transition: color 0.3s ease-in-out;
+}
+.simple-btn {
+	display: block;
+	margin: 4px 0;
+	text-align: center;
+	color: var(--btn-bg);
+}
+.simple-btn a {
+	cursor: pointer;
+	text-decoration: none;
+}
+.simple-btn a:visited {
+	color: inherit;
 }

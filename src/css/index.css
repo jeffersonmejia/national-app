@@ -1,29 +1,29 @@
 :root {
   --input-focus: hsl(0, 0%, 95%);
-  --main-color: rgb(0, 24, 77);
-  --light-bg: rgb(245, 245, 245);
+  --main-color: rgb(32, 33, 36);
+  --light-bg: rgb(244, 244, 244);
   --light-box: white;
   --header-bg: var(--main-color);
   --header-fg: var(--light-bg);
   --btn-height: 48px;
-  --btn-bg: hsl(250, 100%, 69.4%);
+  --btn-bg: hsl(214, 89%, 52%);
+  --btn-hover: hsl(214, 89%, 60%);
   --btn-fg: rgb(255, 255, 255);
-  --btn-hover: hsl(250.2, 94.2%, 73.1%);
   --btn-disabled: hsl(0, 0%, 60%);
   --btn-disabled-hover: hsl(0, 0%, 70%);
-  --btn-ancle-bg: hsl(224, 100%, 40%);
-  --btn-ancle-hover: hsl(224, 100%, 60%);
   --bar-loader-bg: hsl(194, 100%, 53%);
   --modal-bg: rgba(0, 0, 0, 0.5);
   --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  --border-radius: 8px;
+  --border-radius: 16px;
   --light-border-color: hsl(0, 0%, 90%);
   --light-border: 1px solid var(--light-border-color);
   --navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --navbar-height: 65px;
   --modal-bg: rgba(0, 0, 0, 0.4);
   --modal-content-bg: white;
+  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --reading-fg: rgb(95, 99, 104);
   --benefit-fg: rgb(25, 126, 0);
   --error-fg: red; }
 
@@ -219,7 +219,7 @@ html .hidden {
   animation: barLoader 1.7s linear infinite; }
 
 .loader-bar-active {
-  background-color: var(--main-bg);
+  background-color: var(--main-color);
   transition: transform 0.3s ease-in-out; }
 
 button,
@@ -249,7 +249,13 @@ button a {
 
 @media (hover: hover) {
   button.btn-disabled:hover {
-    background-color: var(--btn-disabled-hover); } }
+    background-color: var(--btn-disabled-hover); }
+
+  button:hover {
+    background-color: var(--btn-hover); }
+
+  .ancle-btn:hover {
+    color: var(--btn-hover); } }
 .ancle-btn {
   display: block;
   text-align: right;
@@ -259,6 +265,19 @@ button a {
   width: fit-content;
   margin-left: auto;
   transition: color 0.3s ease-in-out; }
+
+.simple-btn {
+  display: block;
+  margin: 4px 0;
+  text-align: center;
+  color: var(--btn-bg); }
+
+.simple-btn a {
+  cursor: pointer;
+  text-decoration: none; }
+
+.simple-btn a:visited {
+  color: inherit; }
 
 footer {
   padding-bottom: 0;
@@ -384,11 +403,11 @@ header button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  box-shadow: var(--box-shadow); }
 
 .contacts-content button {
   width: 80%;
-  max-width: 300px;
   margin: 12px 0 0 0;
   transition: background-color 0.3s ease-in-out; }
 
@@ -398,8 +417,8 @@ header button {
 
   .contacts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
-    gap: 60px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    gap: 6rem;
     place-items: center; }
 
   .contacts-content {
@@ -421,10 +440,13 @@ header button {
     max-width: 80%;
     margin: auto; }
 
+  .contacts-content {
+    width: 360px; }
+
   .contacts .contacts-content {
-    max-width: 500px;
     border-radius: var(--border-radius);
-    padding: 32px 16px;
+    padding: 20px 32px;
+    padding-bottom: 32px;
     padding-top: 0; }
 
   .contacts img {
@@ -441,6 +463,9 @@ header button {
 @media screen and (min-width: 600px) and (hover: hover) {
   .contacts button:hover {
     background-color: var(--btn-hover); } }
+@media screen and (min-width: 600px) {
+  .contacts-content :is(button, p) {
+    max-width: 300px; } }
 @media screen and (min-width: 600px) {
   .services {
     padding: 12px 0;
