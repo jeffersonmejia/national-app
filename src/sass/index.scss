@@ -10,11 +10,11 @@ main {
 	margin-top: 65px;
 }
 .navbar {
-	box-shadow: var(--opacity-shadow);
+	box-shadow: var(--navbar-shadow);
 }
 header {
 	position: relative;
-	background-color: rgb(0, 24, 77);
+	background-color: var(--header-bg);
 	animation: opacity 0.3s ease-in-out;
 }
 header figure {
@@ -25,7 +25,7 @@ header figcaption {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: var(--main-fg);
+	color: var(--header-fg);
 	font-weight: bold;
 	display: flex;
 	flex-direction: column;
@@ -53,9 +53,7 @@ header button {
 		background-color: var(--btn-hover);
 	}
 }
-.services {
-	color: var(--blue-fg);
-}
+
 .services h1 {
 	width: 100%;
 	padding: 12px 16px;
@@ -77,7 +75,7 @@ header button {
 }
 .services a {
 	text-decoration: none;
-	color: var(--blue-fg);
+	color: var(--main-color);
 }
 @media (hover: hover) {
 	.services a:hover {
@@ -96,7 +94,6 @@ header button {
 }
 .purchases figcaption {
 	text-align: center;
-	color: var(--blue-fg);
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
@@ -115,9 +112,6 @@ header button {
 	.purchases button:hover {
 		background-color: var(--btn-hover);
 	}
-}
-.contacts {
-	color: var(--blue-fg);
 }
 .contacts img {
 	width: 70%;
@@ -141,7 +135,7 @@ header button {
 }
 @media screen and (min-width: 600px) {
 	main {
-		background-color: rgb(245, 245, 245);
+		background-color: var(--light-bg);
 	}
 	.contacts {
 		display: grid;
@@ -150,10 +144,10 @@ header button {
 		place-items: center;
 	}
 	.contacts-content {
-		background-color: white;
+		background-color: var(--light-box);
 	}
 	footer {
-		background-color: rgb(245, 245, 245);
+		background-color: var(--light-bg);
 	}
 	.contacts-content button {
 		width: 100%;
@@ -170,11 +164,9 @@ header button {
 	}
 	.contacts .contacts-content {
 		max-width: 500px;
-		border: 1px solid rgb(212, 212, 212);
 		border-radius: var(--border-radius);
 		padding: 32px 16px;
 		padding-top: 0;
-		color: var(--blue-fg);
 	}
 	.contacts img {
 		width: 100%;
@@ -208,9 +200,6 @@ header button {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 		padding-bottom: 32px;
-	}
-	.purchases figcaption {
-		color: var(--blue-fg);
 	}
 }
 @media screen and (min-width: 800px) {

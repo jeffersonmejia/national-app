@@ -1,32 +1,26 @@
 :root {
-  --main-bg: hsl(250.3, 77.5%, 36.7%);
-  --main-fg: rgb(255, 255, 255);
-  --main-box-bg: hsl(231.9, 77.3%, 41.4%);
   --input-focus: hsl(0, 0%, 95%);
-  --btn-bg: hsl(250, 78%, 37%);
-  --btn-disabled: hsl(0, 0%, 57.6%);
-  --btn-disabled-hover: hsl(0, 0%, 65%);
-  --btn-bg: hsl(250, 100%, 69.4%);
-  --btn-hover: hsl(250.2, 94.2%, 73.1%);
-  --btn-ancle-hover: hsl(224, 100%, 65%);
-  --btn-fg: rgb(255, 255, 255);
-  --gray-fg: hsl(0, 0%, 40%);
-  --blue-fg: hsl(231.9, 97.1%, 13.5%);
-  --input-blue-fg: hsl(224, 100%, 30%);
-  --btn-dark-bg: hsl(91, 100%, 33%);
-  --btn-dark-hover: hsl(91, 100%, 40%);
-  --blue-border: 1px solid hsl(224, 100%, 40%);
-  --bar-loader-bg: hsl(194, 100%, 53%);
-  --span-highlight: red;
-  --error-fg: red;
+  --main-color: rgb(0, 24, 77);
+  --light-bg: rgb(245, 245, 245);
+  --light-box: white;
+  --header-bg: var(--main-color);
+  --header-fg: var(--light-bg);
   --btn-height: 48px;
+  --btn-bg: hsl(250, 100%, 69.4%);
+  --btn-fg: rgb(255, 255, 255);
+  --btn-hover: hsl(250.2, 94.2%, 73.1%);
+  --btn-disabled: hsl(0, 0%, 60%);
+  --btn-disabled-hover: hsl(0, 0%, 70%);
+  --btn-ancle-bg: hsl(224, 100%, 40%);
+  --btn-ancle-hover: hsl(224, 100%, 60%);
+  --bar-loader-bg: hsl(194, 100%, 53%);
+  --modal-bg: rgba(0, 0, 0, 0.5);
   --border-radius: 8px;
   --light-border-color: hsl(0, 0%, 90%);
   --light-border: 1px solid var(--light-border-color);
-  --border-white: 1px solid var(--main-fg);
-  --opacity: rgba(0, 0, 0, 0.5);
-  --opacity-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  --navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --navbar-height: 65px;
-  --benefit-fg: rgb(25, 126, 0); }
+  --benefit-fg: rgb(25, 126, 0);
+  --error-fg: red; }
 
 /*# sourceMappingURL=var.css.map */

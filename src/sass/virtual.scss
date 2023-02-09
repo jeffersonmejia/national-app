@@ -4,6 +4,7 @@
 @import "components/animations.scss";
 @import "components/loader.scss";
 @import "components/button.scss";
+@import "components/advices.scss";
 
 main {
 	height: 100vh;
@@ -11,30 +12,6 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-}
-
-.advices-container {
-	display: none;
-	height: 100%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--main-bg);
-	color: var(--main-fg);
-	padding: 40px;
-}
-.advices-container figure {
-	margin-top: var(--navbar-height);
-}
-.advices-container img {
-	max-width: 260px;
-	display: none;
-}
-.advices-container h4 {
-	margin: 12px 0;
-}
-.advices-container li:not(:first-child) {
-	margin: 12px 0;
 }
 .login-form {
 	width: 100%;

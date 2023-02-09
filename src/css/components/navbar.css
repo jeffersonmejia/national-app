@@ -1,14 +1,14 @@
 .navbar {
+  height: var(--navbar-height);
   width: 100%;
-  background-color: var(--main-fg);
-  color: var(--main-bg);
+  background-color: var(--light-box);
+  color: var(--light-fg);
+  border: var(--light-border);
   display: flex;
   align-items: center;
   position: fixed;
-  height: var(--navbar-height);
   top: 0;
-  z-index: 997;
-  border: var(--light-border); }
+  z-index: 997; }
 
 .navbar ul {
   display: none;
