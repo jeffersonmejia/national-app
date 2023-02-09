@@ -1,7 +1,7 @@
 :root {
   --main-bg: hsl(250.3, 77.5%, 36.7%);
   --main-fg: rgb(255, 255, 255);
-  --main-box-bg: hsl(224, 100%, 20%);
+  --main-box-bg: hsl(231.9, 77.3%, 41.4%);
   --input-focus: hsl(0, 0%, 95%);
   --btn-bg: hsl(250, 78%, 37%);
   --btn-disabled: hsl(0, 0%, 57.6%);
@@ -50,7 +50,7 @@ hr {
   -moz-user-select: none;
   user-select: none; }
 
-.hidden {
+html .hidden {
   display: none; }
 
 @media screen and (min-width: 600px) {
