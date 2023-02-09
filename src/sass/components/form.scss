@@ -3,8 +3,43 @@ form {
 	padding: 8px;
 	max-width: 400px;
 	margin: auto;
+	width: 100%;
+	max-width: 460px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: var(--border-radius);
+	padding: 32px;
 }
-form :is(input, small, select) {
+
+form fieldset {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	border: none;
+}
+form legend {
+	width: 100%;
+	padding: 4px;
+}
+form h1 {
+	padding: 0;
+	text-align: left;
+}
+form input:nth-child(2) {
+	margin-top: 12px;
+}
+@media (hover: hover) {
+	form button:hover {
+		background-color: var(--btn-hover);
+	}
+	form a:hover {
+		text-decoration: underline;
+	}
+}
+form :is(input, select) {
 	width: 100%;
 	padding: 12px;
 }
@@ -14,30 +49,13 @@ form :is(input, select) {
 	height: var(--btn-height);
 }
 
-form fieldset {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	border: none;
-}
-form small {
-	padding: 0;
-	padding-top: 12px;
-}
-
 form select {
-	background-color: white;
+	background-color: var(--light-box);
 	color: rgb(100, 100, 100);
 }
-form legend {
-	margin: 12px 0;
-}
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	form {
-		background-color: white;
-		border: var(--light-border);
-		border-radius: var(--border-radius);
-		padding: 32px;
-		padding-top: 8px;
+		background-color: var(--light-box);
+		box-shadow: var(--box-shadow);
 	}
 }

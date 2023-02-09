@@ -126,10 +126,10 @@ header button {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	box-shadow: var(--box-shadow);
 }
 .contacts-content button {
 	width: 80%;
-	max-width: 300px;
 	margin: 12px 0 0 0;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -139,13 +139,14 @@ header button {
 	}
 	.contacts {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(400px, auto));
-		gap: 60px;
+		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+		gap: 6rem;
 		place-items: center;
 	}
 	.contacts-content {
 		background-color: var(--light-box);
 	}
+
 	footer {
 		background-color: var(--light-bg);
 	}
@@ -162,10 +163,13 @@ header button {
 		max-width: 80%;
 		margin: auto;
 	}
+	.contacts-content {
+		width: 360px;
+	}
 	.contacts .contacts-content {
-		max-width: 500px;
 		border-radius: var(--border-radius);
-		padding: 32px 16px;
+		padding: 20px 32px;
+		padding-bottom: 32px;
 		padding-top: 0;
 	}
 	.contacts img {
@@ -184,6 +188,9 @@ header button {
 		.contacts button:hover {
 			background-color: var(--btn-hover);
 		}
+	}
+	.contacts-content :is(button, p) {
+		max-width: 300px;
 	}
 }
 @media screen and (min-width: 600px) {
@@ -209,6 +216,7 @@ header button {
 	.contacts .contacts-content {
 		margin-bottom: 16px;
 	}
+
 	.purchases {
 		padding: 0 32px;
 		display: flex;

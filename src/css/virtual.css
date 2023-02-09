@@ -1,29 +1,29 @@
 :root {
   --input-focus: hsl(0, 0%, 95%);
-  --main-color: rgb(0, 24, 77);
-  --light-bg: rgb(245, 245, 245);
+  --main-color: rgb(32, 33, 36);
+  --light-bg: rgb(244, 244, 244);
   --light-box: white;
   --header-bg: var(--main-color);
   --header-fg: var(--light-bg);
   --btn-height: 48px;
-  --btn-bg: hsl(250, 100%, 69.4%);
+  --btn-bg: hsl(214, 89%, 52%);
+  --btn-hover: hsl(214, 89%, 60%);
   --btn-fg: rgb(255, 255, 255);
-  --btn-hover: hsl(250.2, 94.2%, 73.1%);
   --btn-disabled: hsl(0, 0%, 60%);
   --btn-disabled-hover: hsl(0, 0%, 70%);
-  --btn-ancle-bg: hsl(224, 100%, 40%);
-  --btn-ancle-hover: hsl(224, 100%, 60%);
   --bar-loader-bg: hsl(194, 100%, 53%);
   --modal-bg: rgba(0, 0, 0, 0.5);
   --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  --border-radius: 8px;
+  --border-radius: 16px;
   --light-border-color: hsl(0, 0%, 90%);
   --light-border: 1px solid var(--light-border-color);
   --navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --navbar-height: 65px;
   --modal-bg: rgba(0, 0, 0, 0.4);
   --modal-content-bg: white;
+  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --reading-fg: rgb(95, 99, 104);
   --benefit-fg: rgb(25, 126, 0);
   --error-fg: red; }
 
@@ -219,7 +219,7 @@ html .hidden {
   animation: barLoader 1.7s linear infinite; }
 
 .loader-bar-active {
-  background-color: var(--main-bg);
+  background-color: var(--main-color);
   transition: transform 0.3s ease-in-out; }
 
 button,
@@ -249,7 +249,13 @@ button a {
 
 @media (hover: hover) {
   button.btn-disabled:hover {
-    background-color: var(--btn-disabled-hover); } }
+    background-color: var(--btn-disabled-hover); }
+
+  button:hover {
+    background-color: var(--btn-hover); }
+
+  .ancle-btn:hover {
+    color: var(--btn-hover); } }
 .ancle-btn {
   display: block;
   text-align: right;
@@ -260,38 +266,42 @@ button a {
   margin-left: auto;
   transition: color 0.3s ease-in-out; }
 
-.advices-container {
-  display: none;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--light-box);
-  padding: 40px; }
+.simple-btn {
+  display: block;
+  margin: 4px 0;
+  text-align: center;
+  color: var(--btn-bg); }
 
-.advices-container figure {
-  margin-top: var(--navbar-height); }
+.simple-btn a {
+  cursor: pointer;
+  text-decoration: none; }
 
-.advices-container img {
-  max-width: 260px;
-  display: none; }
+.simple-btn a:visited {
+  color: inherit; }
 
-.advices-container h4 {
-  margin: 12px 0; }
+.group-input {
+  width: 100%; }
 
-.advices-container li:not(:first-child) {
-  margin: 12px 0; }
-
-main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-
-.login-form {
+input {
+  cursor: pointer;
+  outline: none;
   width: 100%;
-  max-width: 500px;
+  background-color: white;
+  transition: background-color 0.25s ease-out;
+  border: var(--light-border);
+  border-radius: var(--border-radius);
+  padding: 12px; }
+
+input:focus {
+  background-color: var(--input-focus); }
+
+form {
+  width: 90%;
+  padding: 8px;
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+  max-width: 460px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -299,57 +309,89 @@ main {
   border-radius: var(--border-radius);
   padding: 32px; }
 
-.login-form fieldset {
+form fieldset {
   width: 100%;
-  border: none;
   display: flex;
   flex-direction: column;
-  gap: 12px; }
+  gap: 12px;
+  border: none; }
 
-.login-form input:nth-child(2) {
+form legend {
+  width: 100%;
+  padding: 4px; }
+
+form h1 {
+  padding: 0;
+  text-align: left; }
+
+form input:nth-child(2) {
   margin-top: 12px; }
 
-.login-form input {
-  border: var(--light-border);
-  border-radius: var(--border-radius);
-  padding: 12px; }
-
-.login-form button {
-  background-color: var(--btn-bg);
-  color: var(--btn-fg);
-  transition: background-color 0.3s ease-in-out; }
-
 @media (hover: hover) {
-  .login-form button:hover {
+  form button:hover {
     background-color: var(--btn-hover); }
 
-  .login-form a:hover {
+  form a:hover {
     text-decoration: underline; } }
-.forget-group {
+form :is(input, select) {
+  width: 100%;
+  padding: 12px; }
+
+form :is(input, select) {
+  border: var(--light-border);
+  border-radius: var(--border-radius);
+  height: var(--btn-height); }
+
+form select {
+  background-color: var(--light-box);
+  color: #646464; }
+
+@media screen and (min-width: 700px) {
+  form {
+    background-color: var(--light-box);
+    box-shadow: var(--box-shadow); } }
+main {
+  height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
-.forget-group a {
-  text-decoration: none;
-  color: var(--main-bg); }
-
-@media screen and (min-width: 600px) {
-  .login-form {
-    width: 80%;
-    border: var(--light-border); } }
 @media screen and (min-width: 900px) {
   main {
     display: grid;
-    grid-template-columns: 2fr 1.5fr;
-    background-color: whitesmoke; }
+    grid-template-columns: 2fr 1.5fr; } }
+.advices-container {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-box);
+  padding: 0 40px; }
 
-  main .login-form {
-    background-color: white; }
+.advices-container img {
+  max-width: 260px;
+  display: none; }
 
-  .advices-container {
-    display: flex; } }
+.advices-container h2 {
+  margin: 12px 0; }
+
+.advices-container ul {
+  margin-left: 16px; }
+
+.advices-container li {
+  color: var(--reading-fg); }
+
+.advices-container li:not(:first-child) {
+  margin: 12px 0; }
+
 @media screen and (min-width: 1200px) {
   .advices-container img {
-    display: block; } }
+    display: block;
+    margin: auto; } }
+@media screen and (min-width: 900px) {
+  .advices-container {
+    display: flex; } }
 
 /*# sourceMappingURL=virtual.css.map */
