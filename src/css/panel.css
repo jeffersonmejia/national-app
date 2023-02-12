@@ -274,9 +274,15 @@ aside li:not(:last-child) {
 
 .logout span {
   cursor: pointer;
-  color: var(--btn-bg);
+  color: rgb(132, 132, 132);
+  transition: color 0.3s ease-in-out;
 }
 
+@media (hover: hover) {
+  .logout span:hover {
+    color: var(--btn-hover);
+  }
+}
 span.group-control-active,
 .group-control span:active {
   color: var(--btn-bg);
