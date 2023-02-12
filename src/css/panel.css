@@ -1,78 +1,93 @@
 :root {
   --input-focus: hsl(0, 0%, 95%);
-  --main-color: rgb(0, 24, 77);
-  --light-bg: rgb(245, 245, 245);
+  --main-color: rgb(32, 33, 36);
+  --light-bg: rgb(244, 244, 244);
   --light-box: white;
   --header-bg: var(--main-color);
   --header-fg: var(--light-bg);
   --btn-height: 48px;
-  --btn-bg: hsl(250, 100%, 69.4%);
+  --btn-bg: rgb(24, 118, 242);
+  --btn-hover: hsl(214, 89%, 60%);
   --btn-fg: rgb(255, 255, 255);
-  --btn-hover: hsl(250.2, 94.2%, 73.1%);
   --btn-disabled: hsl(0, 0%, 60%);
   --btn-disabled-hover: hsl(0, 0%, 70%);
-  --btn-ancle-bg: hsl(224, 100%, 40%);
-  --btn-ancle-hover: hsl(224, 100%, 60%);
   --bar-loader-bg: hsl(194, 100%, 53%);
   --modal-bg: rgba(0, 0, 0, 0.5);
   --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  --border-radius: 8px;
+  --border-radius: 16px;
   --light-border-color: hsl(0, 0%, 90%);
   --light-border: 1px solid var(--light-border-color);
   --navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   --navbar-height: 65px;
   --modal-bg: rgba(0, 0, 0, 0.4);
   --modal-content-bg: white;
+  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --reading-fg: rgb(95, 99, 104);
   --benefit-fg: rgb(25, 126, 0);
-  --error-fg: red; }
+  --error-fg: red;
+}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 h1,
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 html {
   font-family: "Nunito Sans", sans-serif;
-  color: var(--main-color); }
+  color: var(--main-color);
+}
 
 hr {
-  color: var(--main-fg); }
+  color: var(--light-bg);
+}
 
 .select-disabled {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 html .hidden {
-  display: none; }
+  display: none;
+}
 
 @media screen and (min-width: 600px) {
   html {
-    background-color: whitesmoke; }
-
+    background-color: rgb(245, 245, 245);
+  }
   footer {
-    background-color: whitesmoke; }
-
+    background-color: rgb(245, 245, 245);
+  }
   h1 {
     text-align: center;
-    padding-bottom: 16px; } }
+    padding-bottom: 16px;
+  }
+}
 @keyframes barLoader {
   0% {
-    transform: translateX(-200%); }
+    transform: translateX(-200%);
+  }
   100% {
-    transform: translateX(200%); } }
+    transform: translateX(200%);
+  }
+}
 @keyframes showUp {
   from {
     opacity: 0;
-    transform: translateY(12%); }
+    transform: translateY(12%);
+  }
   to {
     opacity: 1;
-    transform: translateY(0%); } }
+    transform: translateY(0%);
+  }
+}
 .modal-loader {
   position: fixed;
   top: 0;
@@ -80,7 +95,8 @@ html .hidden {
   bottom: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 999; }
+  z-index: 999;
+}
 
 .modal-loader-bar {
   height: 4px;
@@ -88,18 +104,105 @@ html .hidden {
   width: 100%;
   position: fixed;
   transform: translateX(-200%);
-  animation: barLoader 1.7s linear infinite; }
+  animation: barLoader 1.7s linear infinite;
+}
 
 .loader-bar-active {
-  background-color: var(--main-bg);
-  transition: transform 0.3s ease-in-out; }
+  background-color: var(--main-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+button,
+button a {
+  width: 100%;
+  height: var(--btn-height);
+}
+
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+button a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--btn-fg);
+}
+
+.btn-disabled {
+  background-color: var(--btn-disabled);
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  button.btn-disabled:hover {
+    background-color: var(--btn-disabled-hover);
+  }
+  button:hover {
+    background-color: var(--btn-hover);
+  }
+  .ancle-btn:hover {
+    color: var(--btn-hover);
+  }
+}
+.ancle-btn {
+  display: block;
+  text-align: right;
+  margin: 12px 0;
+  color: var(--btn-bg);
+  text-decoration: none;
+  width: fit-content;
+  margin-left: auto;
+  transition: color 0.3s ease-in-out;
+}
+
+.simple-btn {
+  display: block;
+  margin: 4px 0;
+  text-align: center;
+  color: var(--btn-bg);
+}
+
+.simple-btn a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.simple-btn a:visited {
+  color: inherit;
+}
+
+html {
+  background-color: var(--light-bg);
+}
 
 nav {
   width: 100%;
   position: fixed;
   top: 0;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border-bottom: var(--light-border);
+}
+
+aside {
+  padding: 12px 24px;
+}
+
+aside li {
+  list-style: none;
+}
+
+aside li:not(:last-child) {
+  margin: 8px 0;
+}
 
 .logo {
   padding: 12px;
@@ -108,31 +211,207 @@ nav {
   align-items: baseline;
   gap: 4px;
   flex-grow: 1;
-  color: #182ebb; }
+  color: var(--btn-bg);
+}
 
 .logo h1 {
   font-size: 1.1rem;
   margin: 0;
   padding-bottom: 0;
-  padding-left: 6px; }
+  padding-left: 6px;
+  text-align: left;
+  width: fit-content;
+  cursor: pointer;
+}
 
 .group-control {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   place-items: center;
-  border-bottom: 1px solid #e4e4e4; }
+}
 
-.group-control span {
-  color: #9f9f9f;
-  width: 100%;
+.group-control span,
+.logout {
+  color: var(--btn-disabled);
+  width: fit-content;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 span.group-control-active,
 .group-control span:active {
-  color: #182ebb; }
+  color: var(--btn-bg);
+}
+
+nav {
+  background-color: var(--light-box);
+}
+
+main {
+  margin-top: 77px;
+}
+
+.welcome {
+  max-height: 85px;
+  padding: 16px;
+  padding-left: 20px;
+  background-color: var(--light-box);
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px;
+}
+
+.welcome img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.welcome figcaption {
+  display: flex;
+  align-items: center;
+}
+
+.welcome h1 {
+  font-size: 1.4rem;
+  text-align: left;
+  padding-bottom: 0;
+}
+
+.account {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--border-radius);
+  background-color: var(--light-box);
+  padding: 16px;
+  padding-bottom: 0;
+  box-shadow: var(--box-shadow);
+}
+
+.account-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.account-data h2,
+.account-balance span {
+  font-size: 1.5em;
+}
+
+.account-data h2 {
+  padding-bottom: 8px;
+}
+
+.account-balance {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.account-balance span {
+  width: fit-content;
+  margin-left: auto;
+  color: var(--btn-bg);
+  cursor: pointer;
+}
+
+.account-balance small {
+  margin-top: 20px;
+}
+
+.group-btn {
+  margin-top: 40px;
+}
+
+.simple-btn {
+  height: var(--btn-height);
+  padding-top: 8px;
+  margin-bottom: 0;
+}
+
+.simple-btn small {
+  width: fit-content;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.accounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  gap: 24px;
+  place-content: center;
+  place-items: center;
+}
+
+.account:last-child {
+  grid-column: 1/-1;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 350px) {
+  .welcome {
+    display: flex;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 750px) {
+  div.next-account {
+    display: block;
+  }
+}
+@media screen and (min-width: 950px) {
+  html {
+    background-color: var(--light-box);
+  }
+  .welcome {
+    margin: 0;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60px;
+    place-content: center;
+    padding: 0 20px;
+  }
+  .logo {
+    text-align: left;
+  }
+  .logout {
+    width: 100%;
+    text-align: right;
+  }
+  main {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: minmax(150px, 15%) 1fr;
+    place-content: center;
+    place-items: center stretch;
+  }
+  .group-control {
+    display: none;
+  }
+  .accounts {
+    grid-column: 2/-1;
+  }
+  span.logout {
+    display: block;
+    padding: 12px;
+  }
+  aside.aside {
+    display: block;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .accounts {
+    grid-template-columns: repeat(auto-fill, minmax(360px, auto));
+  }
+  .account:last-child {
+    grid-column: auto;
+  }
+}
 
 /*# sourceMappingURL=panel.css.map */
