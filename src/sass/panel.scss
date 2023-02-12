@@ -14,13 +14,37 @@ nav {
 	border-bottom: var(--light-border);
 }
 aside {
+	width: 100%;
 	padding: 12px 24px;
 }
 aside li {
 	list-style: none;
+	cursor: pointer;
+	padding: 24px 0;
+	padding-left: 16px;
+	padding-right: 8px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 0.95;
+	color: rgb(132, 132, 132);
+	border-radius: var(--border-radius);
+	transition-property: background-color;
+	transition: 0.7s ease-in-out;
+	display: flex;
+	align-items: center;
+}
+@media (hover: hover) {
+	aside li:hover:not(.aside-active) {
+		background-color: hsl(214, 89%, 92%);
+		color: hsl(214, 89%, 50%);
+	}
 }
 aside li:not(:last-child) {
-	margin: 8px 0;
+	margin: 2px 0;
+}
+.aside-active {
+	background-color: hsl(214, 89%, 92%);
+	color: hsl(214, 89%, 50%);
 }
 .logo {
 	padding: 12px;
@@ -48,8 +72,7 @@ aside li:not(:last-child) {
 	place-items: center;
 }
 
-.group-control span,
-.logout {
+.group-control span {
 	color: var(--btn-disabled);
 	width: fit-content;
 	height: 40px;
@@ -57,6 +80,13 @@ aside li:not(:last-child) {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+}
+.logout {
+	cursor: default;
+}
+.logout span {
+	cursor: pointer;
+	color: var(--btn-bg);
 }
 span.group-control-active,
 .group-control span:active {
@@ -165,8 +195,12 @@ main {
 	html {
 		background-color: var(--light-box);
 	}
+	.app {
+		flex-grow: 1;
+	}
 	.welcome {
 		margin: 0;
+		flex-grow: 1;
 	}
 	nav {
 		display: grid;
@@ -184,10 +218,7 @@ main {
 	}
 	main {
 		margin-top: 60px;
-		display: grid;
-		grid-template-columns: minmax(150px, 15%) 1fr;
-		place-content: center;
-		place-items: center stretch;
+		display: flex;
 	}
 	.group-control {
 		display: none;
@@ -196,11 +227,13 @@ main {
 		grid-column: 2/-1;
 	}
 
-	span.logout {
+	a.logout {
 		display: block;
 		padding: 12px;
 	}
 	aside.aside {
+		min-width: 200px;
+		width: 15%;
 		display: block;
 	}
 }
