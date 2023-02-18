@@ -4,6 +4,7 @@
   --light-bg: rgb(244, 244, 244);
   --light-box: white;
   --bars-bg: rgb(124, 176, 244);
+  --loader-bar-fg: rgb(24, 118, 242);
   --header-bg: var(--main-color);
   --header-fg: var(--light-bg);
   --btn-height: 48px;
@@ -81,13 +82,19 @@ html .hidden {
     transform: translateX(200%);
   }
 }
-@keyframes showUp {
+@keyframes bgLoader {
   from {
-    opacity: 0;
-    transform: translateY(12%);
+    background-color: rgba(232, 232, 232, 0.7);
   }
   to {
-    opacity: 1;
+    background-color: rgba(232, 232, 232, 0.7);
+  }
+}
+@keyframes showUp {
+  from {
+    transform: translateY(15%);
+  }
+  to {
     transform: translateY(0%);
   }
 }
@@ -97,22 +104,20 @@ html .hidden {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.5);
   z-index: 999;
+  animation: bgLoader 1s ease-in-out infinite;
 }
 
 .modal-loader-bar {
-  height: 4px;
+  height: 3px;
   top: 0;
   width: 100%;
   position: fixed;
-  transform: translateX(-200%);
-  animation: barLoader 1.7s linear infinite;
+  animation: barLoader 1s ease-in-out infinite;
 }
 
 .loader-bar-active {
-  background-color: var(--main-color);
-  transition: transform 0.3s ease-in-out;
+  background-color: var(--loader-bar-fg);
 }
 
 button,
@@ -182,10 +187,73 @@ button a {
   color: inherit;
 }
 
-html {
-  background-color: var(--light-bg);
+form {
+  width: 90%;
+  padding: 8px;
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+  max-width: 460px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 32px;
 }
 
+form fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: none;
+}
+
+form legend {
+  width: 100%;
+  padding: 4px;
+}
+
+form h1 {
+  padding: 0;
+  text-align: left;
+}
+
+form input:nth-child(2) {
+  margin-top: 12px;
+}
+
+@media (hover: hover) {
+  form button:hover {
+    background-color: var(--btn-hover);
+  }
+  form a:hover {
+    text-decoration: underline;
+  }
+}
+form :is(input, select) {
+  width: 100%;
+  padding: 12px;
+}
+
+form :is(input, select) {
+  border: var(--light-border);
+  border-radius: var(--border-radius);
+  height: var(--btn-height);
+}
+
+form select {
+  background-color: var(--light-box);
+  color: rgb(100, 100, 100);
+}
+
+@media screen and (min-width: 700px) {
+  form {
+    background-color: var(--light-box);
+    box-shadow: var(--box-shadow);
+  }
+}
 nav {
   width: 100%;
   position: fixed;
@@ -195,18 +263,30 @@ nav {
   border-bottom: var(--light-border);
 }
 
+nav a,
+aside a {
+  text-decoration: none;
+  color: inherit;
+}
+
 aside {
   width: 100%;
   padding: 12px 24px;
 }
 
+aside a {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
 aside li {
   list-style: none;
   cursor: pointer;
-  padding: 24px 0;
-  padding-left: 16px;
-  padding-right: 8px;
-  height: 40px;
+  height: 48px;
   font-weight: bold;
   font-size: 0.95;
   color: rgb(132, 132, 132);
@@ -290,6 +370,45 @@ span.group-control-active,
 
 nav {
   background-color: var(--light-box);
+}
+
+@media screen and (min-width: 950px) {
+  html {
+    background-color: var(--light-box);
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .logo {
+    width: 100%;
+  }
+  .logo {
+    text-align: left;
+  }
+  .logout {
+    width: 100%;
+    text-align: right;
+  }
+  main {
+    margin-top: 60px;
+    display: flex;
+  }
+  .group-control {
+    display: none;
+  }
+  a.logout {
+    display: block;
+    padding: 12px;
+  }
+  aside.aside {
+    min-width: 200px;
+    width: 15%;
+    display: block;
+  }
+}
+html {
+  background-color: var(--light-bg);
 }
 
 main {
@@ -510,6 +629,21 @@ main {
 .month-finances small {
   font-weight: bold;
   color: rgb(85, 85, 85);
+}
+
+.app-payments {
+  margin-top: 16px;
+}
+
+.app-payments form {
+  padding-top: 0;
+}
+
+.app-payments h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 4px;
+  padding-top: 12px;
 }
 
 @media screen and (min-width: 350px) {

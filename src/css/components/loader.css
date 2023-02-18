@@ -1,0 +1,23 @@
+.modal-loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  animation: bgLoader 1s ease-in-out infinite;
+}
+
+.modal-loader-bar {
+  height: 3px;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  animation: barLoader 1s ease-in-out infinite;
+}
+
+.loader-bar-active {
+  background-color: var(--loader-bar-fg);
+}
+
+/*# sourceMappingURL=loader.css.map */

@@ -2,105 +2,13 @@
 @import "components/animations.scss";
 @import "components/loader.scss";
 @import "components/button.scss";
+@import "components/form.scss";
+@import "components/appNavbar.scss";
+
 html {
 	background-color: var(--light-bg);
 }
-nav {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	border-bottom: var(--light-border);
-}
-aside {
-	width: 100%;
-	padding: 12px 24px;
-}
-aside li {
-	list-style: none;
-	cursor: pointer;
-	padding: 24px 0;
-	padding-left: 16px;
-	padding-right: 8px;
-	height: 40px;
-	font-weight: bold;
-	font-size: 0.95;
-	color: rgb(132, 132, 132);
-	border-radius: var(--border-radius);
-	transition-property: background-color;
-	transition: 0.7s ease-in-out;
-	display: flex;
-	align-items: center;
-}
-@media (hover: hover) {
-	aside li:hover:not(.aside-active) {
-		background-color: hsl(214, 89%, 92%);
-		color: hsl(214, 89%, 50%);
-	}
-}
-aside li:not(:last-child) {
-	margin: 2px 0;
-}
-.aside-active {
-	background-color: hsl(214, 89%, 92%);
-	color: hsl(214, 89%, 50%);
-}
-.logo {
-	padding: 12px;
-	padding-bottom: 0;
-	display: flex;
-	align-items: baseline;
-	gap: 4px;
-	flex-grow: 1;
-	color: var(--btn-bg);
-}
 
-.logo h1 {
-	font-size: 1.1rem;
-	margin: 0;
-	padding-bottom: 0;
-	padding-left: 6px;
-	text-align: left;
-	width: fit-content;
-	cursor: pointer;
-}
-
-.group-control {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	place-items: center;
-}
-
-.group-control span {
-	color: var(--btn-disabled);
-	width: fit-content;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
-.logout {
-	cursor: default;
-}
-.logout span {
-	cursor: pointer;
-	color: rgb(132, 132, 132);
-	transition: color 0.3s ease-in-out;
-}
-@media (hover: hover) {
-	.logout span:hover {
-		color: var(--btn-hover);
-	}
-}
-span.group-control-active,
-.group-control span:active {
-	color: var(--btn-bg);
-}
-nav {
-	background-color: var(--light-box);
-}
 main {
 	margin-top: 77px;
 }
@@ -287,6 +195,18 @@ main {
 	font-weight: bold;
 	color: rgb(85, 85, 85);
 }
+.app-payments {
+	margin-top: 16px;
+}
+.app-payments form {
+	padding-top: 0;
+}
+.app-payments h1 {
+	text-align: center;
+	font-size: 2rem;
+	margin: 4px;
+	padding-top: 12px;
+}
 @media screen and (min-width: 350px) {
 	.welcome {
 		display: flex;
@@ -339,20 +259,6 @@ main {
 		margin: 0;
 		flex-grow: 1;
 		grid-column: 1/-1;
-	}
-	nav {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		height: 60px;
-		place-content: center;
-		padding: 0 20px;
-	}
-	.logo {
-		text-align: left;
-	}
-	.logout {
-		width: 100%;
-		text-align: right;
 	}
 	main {
 		margin-top: 60px;

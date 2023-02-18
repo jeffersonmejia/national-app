@@ -4,18 +4,16 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: rgba(255, 255, 255, 0.5);
 	z-index: 999;
+	animation: bgLoader 1s ease-in-out infinite;
 }
 .modal-loader-bar {
-	height: 4px;
+	height: 3px;
 	top: 0;
 	width: 100%;
 	position: fixed;
-	transform: translateX(-200%);
-	animation: barLoader 1.7s linear infinite;
+	animation: barLoader 1s ease-in-out infinite;
 }
 .loader-bar-active {
-	background-color: var(--main-color);
-	transition: transform 0.3s ease-in-out;
+	background-color: var(--loader-bar-fg);
 }

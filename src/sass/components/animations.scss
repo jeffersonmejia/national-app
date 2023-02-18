@@ -6,13 +6,19 @@
 		transform: translateX(200%);
 	}
 }
-@keyframes showUp {
+@keyframes bgLoader {
 	from {
-		opacity: 0;
-		transform: translateY(12%);
+		background-color: rgba(232, 232, 232, 0.7);
 	}
 	to {
-		opacity: 1;
+		background-color: rgba(232, 232, 232, 0.7);
+	}
+}
+@keyframes showUp {
+	from {
+		transform: translateY(15%);
+	}
+	to {
 		transform: translateY(0%);
 	}
 }

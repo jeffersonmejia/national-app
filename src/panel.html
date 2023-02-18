@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Banco Nacional | Préstamos</title>
+		<title>Banco Nacional | Inicio</title>
 		<link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon" />
 		<meta
 			name="viewport"
@@ -32,11 +32,21 @@
 				<h1>Banco Nacional</h1>
 			</div>
 			<div class="group-control">
-				<span class="material-symbols-outlined group-control-active"> home </span>
-				<span class="material-symbols-outlined"> receipt_long </span>
-				<span class="material-symbols-outlined"> currency_exchange </span>
-				<span class="material-symbols-outlined"> credit_card </span>
-				<span class="material-symbols-outlined"> account_circle </span>
+				<span class="material-symbols-outlined group-control-active group-control-home">
+					<a href="#">home</a>
+				</span>
+				<span class="material-symbols-outlined group-control-payments">
+					<a href="app_payments.html">receipt_long</a>
+				</span>
+				<span class="material-symbols-outlined group-control-transactions">
+					<a href="">currency_exchange</a>
+				</span>
+				<span class="material-symbols-outlined group-control-credits">
+					<a href="">credit_card</a>
+				</span>
+				<span class="material-symbols-outlined group-control-account">
+					<a href="">account_circle</a>
+				</span>
 			</div>
 			<a href="./virtual.html" class="hidden logout">
 				<span class="material-symbols-outlined"> logout </span>
@@ -45,13 +55,13 @@
 		<main>
 			<aside class="aside hidden">
 				<ul>
-					<li class="aside-active">Inicio</li>
-					<li>Mi cuenta</li>
-					<li>Paga servicios</li>
-					<li>Contratar servicios</li>
+					<li class="aside-active"><a href="#">Inicio</a></li>
+					<li><a href="">Contratar servicios</a></li>
+					<li><a href="app_payments.html">Pagar servicios</a></li>
+					<li><a href="">Mi cuenta</a></li>
 				</ul>
 			</aside>
-			<div class="app">
+			<div class="app app-home">
 				<figure class="welcome">
 					<img src="./assets/images/profile.jpg" alt="" />
 					<figcaption>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Banco Nacional | Pago de servicios</title>
+		<link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1"
+		/>
+		<meta name="description" content="Banco Nacional. Seguridad, Eficiencia y agilidad" />
+		<meta name="keywords" content="nacional, login, pagos, ahorros, servicios" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css"
+		/>
+		<link rel="stylesheet" href="./css/app_payments.css" />
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<h1>Banco Nacional</h1>
+			</div>
+			<div class="group-control">
+				<span class="material-symbols-outlined group-control-home">
+					<a href="./panel.html">home</a>
+				</span>
+				<span
+					class="material-symbols-outlined group-control-payments group-control-active"
+				>
+					<a href="#">receipt_long</a>
+				</span>
+				<span class="material-symbols-outlined group-control-transactions">
+					<a href="">currency_exchange</a>
+				</span>
+				<span class="material-symbols-outlined group-control-credits">
+					<a href="">credit_card</a>
+				</span>
+				<span class="material-symbols-outlined group-control-account">
+					<a href="">account_circle</a>
+				</span>
+			</div>
+			<a href="./virtual.html" class="hidden logout">
+				<span class="material-symbols-outlined"> logout </span>
+			</a>
+		</nav>
+		<main>
+			<aside class="aside hidden">
+				<ul>
+					<li><a href="./panel.html">Inicio</a></li>
+					<li><a href="">Contratar servicios</a></li>
+					<li class="aside-active"><a href="#">Pagar servicios</a></li>
+					<li><a href="">Mi cuenta</a></li>
+				</ul>
+			</aside>
+
+			<div class="app-payments">
+				<h1>Pago de servicios</h1>
+				<form>
+					<fieldset>
+						<legend>
+							<h2>Selecciona un servicio</h2>
+							<small>Realiza todos tus pagos con Banco Nacional</small>
+						</legend>
+						<div class="form-group-icons">
+							<span class="material-symbols-outlined"> lightbulb </span>
+							<span class="material-symbols-outlined"> water_drop </span>
+							<span class="material-symbols-outlined"> wifi </span>
+							<span class="material-symbols-outlined"> local_gas_station </span>
+						</div>
+						<select>
+							<option>Selecciona un servicio</option>
+							<option>Luz</option>
+							<option>Agua</option>
+							<option>Internet</option>
+							<option>Combustible</option>
+						</select>
+						<select>
+							<option>Selecciona una cuenta</option>
+							<option>CTA001</option>
+							<option>CTA002</option>
+							<option>Cŕedito visa</option>
+						</select>
+						<button>Continuar</button>
+					</fieldset>
+				</form>
+			</div>
+		</main>
+		<div class="modal-loader">
+			<div class="modal-loader-bar loader-bar-active"></div>
+		</div>
+		<script src="./js/app_payments.js" type="module"></script>
+	</body>
+</html>

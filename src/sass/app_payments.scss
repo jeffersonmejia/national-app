@@ -1,0 +1,50 @@
+@import "components/reset.scss";
+@import "components/animations.scss";
+@import "components/loader.scss";
+@import "components/button.scss";
+@import "components/form.scss";
+@import "components/appNavbar.scss";
+
+html {
+	background-color: var(--light-bg);
+}
+.app-payments {
+	margin-top: 85px;
+}
+main h1 {
+	padding-left: 32px;
+}
+
+form {
+	margin: auto;
+	padding-top: 0;
+}
+.app-payments {
+	width: 100%;
+}
+@media screen and (min-width: 400px) {
+	html {
+		background-color: white;
+	}
+	h1 {
+		text-align: center;
+	}
+}
+@media screen and (min-width: 600px) {
+	main h1 {
+		margin: 16px 0 0 0;
+	}
+
+	form {
+		margin-top: 0;
+		padding-top: 16px;
+	}
+	.app-payments form {
+		box-shadow: var(--white-card-shadow);
+	}
+}
+@media screen and (min-width: 950px) {
+	.app-payments {
+		margin-top: 0;
+	}
+}
