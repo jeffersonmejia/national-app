@@ -333,9 +333,10 @@ aside li:not(:last-child) {
 }
 
 .group-control {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  place-items: center;
+  display: flex;
+  align-content: space-evenly;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .group-control span {
@@ -405,6 +406,20 @@ nav {
     min-width: 200px;
     width: 15%;
     display: block;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60px;
+    place-content: center;
+    padding: 0 20px;
+  }
+  .logo {
+    text-align: left;
+  }
+  .logout {
+    width: 100%;
+    text-align: right;
   }
 }
 html {
@@ -696,20 +711,6 @@ main {
     margin: 0;
     flex-grow: 1;
     grid-column: 1/-1;
-  }
-  nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 60px;
-    place-content: center;
-    padding: 0 20px;
-  }
-  .logo {
-    text-align: left;
-  }
-  .logout {
-    width: 100%;
-    text-align: right;
   }
   main {
     margin-top: 60px;

@@ -70,9 +70,10 @@ aside li:not(:last-child) {
 }
 
 .group-control {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	place-items: center;
+	display: flex;
+	align-content: space-evenly;
+	justify-content: space-around;
+	width: 100%;
 }
 
 .group-control span {
