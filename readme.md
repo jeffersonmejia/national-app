@@ -18,17 +18,16 @@
 
 ### **Preview**
 
----
-
-mobile, tablet & desktop here!
-
-<!-- [![main.png](https://i.postimg.cc/tCGKM1HS/main.png)](https://postimg.cc/mhVpcgkC) -->
+[![main-1.png](https://i.postimg.cc/sxjffLN5/main-1.png)](https://postimg.cc/MMLJd9xG)
 
 ### **Features 🧩**
 
----
-
-- Not available
+- Products & services
+- Login 
+- Register
+- Dashboard
+- Month resume
+- Forms: shifts & invest
 
 ### **Installation 🔨**
 
