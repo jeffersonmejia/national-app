@@ -476,7 +476,9 @@ html {
     border-radius: var(--border-radius);
     padding: 32px 16px;
     box-shadow: var(--white-card-shadow);
-    margin: auto;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .app-account li {
     background-color: var(--light-bg);
