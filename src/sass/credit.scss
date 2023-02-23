@@ -1,14 +1,17 @@
 @import "components/reset.scss";
-@import "components/navbar.scss";
-@import "components/burger.scss";
 @import "components/animations.scss";
-@import "components/cards.scss";
 @import "components/loader.scss";
+@import "components/button.scss";
+@import "components/cards.scss";
 @import "components/footer.scss";
 
 main {
 	padding-top: calc(var(--navbar-height));
-	background-color: rgb(245, 245, 245);
+	background-color: var(--light-bg);
+}
+
+.simple-btn {
+	margin-top: 20px;
 }
 
 .credit-card-benefits {
