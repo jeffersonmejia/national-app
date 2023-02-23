@@ -11,7 +11,6 @@ else
   git pull origin dev
   git push origin dev
   git switch main
-  git merge dev
   git merge --no-ff -m "$COMMIT_MESSAGE" dev
   git pull origin main
   git push origin main
