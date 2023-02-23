@@ -402,6 +402,15 @@ main {
   background-color: var(--light-bg);
 }
 
+.logo {
+  text-align: left;
+  display: flex;
+  align-items: baseline;
+  padding: 6px 0;
+  padding-left: 8px;
+  gap: 3px;
+}
+
 .simple-btn {
   margin-top: 20px;
 }
