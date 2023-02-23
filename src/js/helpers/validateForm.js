@@ -42,6 +42,17 @@ function checkForm(input, error, isValid) {
 		error[input.name].classList.remove("hidden");
 		isValid[input.name] = false;
 	}
+	if (window.innerWidth >= 900) {
+		error[input.name].classList.add("hidden");
+	}
 }
-
-export { firstValidation, validate, checkForm };
+function checkCustomForm(input) {
+	if (validate(input.value, input.name)) {
+		input.classList.add("input-validated");
+		isValid[input.name] = true;
+	} else {
+		input.classList.add("input-error");
+		isValid[input.name] = false;
+	}
+}
+export { firstValidation, validate, checkForm, checkCustomForm };
