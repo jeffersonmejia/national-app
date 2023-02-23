@@ -13,6 +13,7 @@
 	width: 90%;
 	color: var(--error-fg);
 	animation: showUp 0.3s ease-in-out;
+	padding-left: 8px;
 }
 .register-form-expanded {
 	margin-top: calc(var(--navbar-height) * 2);
@@ -70,6 +71,12 @@
 form {
 	padding: 24px 32px;
 }
+.input-error {
+	color: rgb(236, 44, 44);
+}
+.input-validated {
+	color: rgb(35, 148, 35);
+}
 @media screen and (min-width: 600px) {
 	.register-form-expanded {
 		border: none;
@@ -82,6 +89,7 @@ form {
 		place-content: center;
 		place-items: center;
 	}
+
 	.register-form-expanded {
 		max-width: 750px;
 		width: 100vw;

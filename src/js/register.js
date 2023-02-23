@@ -1,6 +1,6 @@
 import loadMainConfig from "./helpers/config.js";
 import { setLoaderStatus } from "./helpers/loader.js";
-import { checkForm, firstValidation } from "./helpers/validateForm.js";
+import { checkForm, firstValidation, checkCustomForm } from "./helpers/validateForm.js";
 import ListApi from "./helpers/ListApi.js";
 import setBtnState from "./helpers/btnState.js";
 import { post } from "./helpers/request.js";
@@ -82,14 +82,18 @@ function checkFirstForm(input) {
 
 function checkEveryInput(name, input) {
 	if (name !== "repeat-password") {
-		checkForm(input, $error, isValid);
+		if (window.innerWidth >= 900) {
+			checkCustomForm(input);
+		} else {
+			checkForm(input, $error, isValid);
+		}
 		if (name === "password") dataCollector[name] = input.value;
 	} else {
 		if (dataCollector.password !== input.value) {
-			$error.repeatPassword.classList.remove("hidden");
+			input.classList.add("input-error");
 			isValid.passwordRepeat = false;
 		} else {
-			$error.repeatPassword.classList.add("hidden");
+			input.classList.add("input-validated");
 			isValid.passwordRepeat = true;
 		}
 	}
