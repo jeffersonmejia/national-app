@@ -1,11 +1,9 @@
 #!/bin/bash
 
-#!/bin/bash
-
 echo "Enter a commit message"
 read COMMIT_MESSAGE
 if [ -z "$COMMIT_MESSAGE" ]; then
-  echo "Error, you must enter a commit message"
+  echo "Error, you must to enter a commit message"
 else
   git add .
   git commit -m "$COMMIT_MESSAGE"
@@ -18,4 +16,6 @@ else
   git push origin main
   git switch dev
   git status
+  current_time=$(date +%T)
+	echo "Main and dev branch has been updated at: $current_time"
 fi
