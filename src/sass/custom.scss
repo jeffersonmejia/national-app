@@ -1,37 +1,49 @@
 @import "components/reset.scss";
-@import "components/navbar.scss";
-@import "components/burger.scss";
-@import "components/form.scss";
-@import "components/button.scss";
 @import "components/animations.scss";
 @import "components/loader.scss";
-@import "components/footer.scss";
+@import "components/form.scss";
+@import "components/button.scss";
 
-main {
-	margin-top: calc(var(--navbar-height));
-}
 .main-title {
-	width: 80%;
-	padding-left: 24px;
+	width: 100%;
+	padding: 12px;
 	padding-top: 32px;
-	font-size: 1.3rem;
+	padding-bottom: 0;
+	padding-left: 32px;
+	font-size: 1.2rem;
 }
-.form {
-	margin-top: 12px;
+form {
+	padding-top: 0;
+}
+form small {
+	padding-left: 6px;
+}
+form h2 {
+	font-size: 1.2rem;
+	padding-top: 6px;
+}
+button {
+	margin-top: 16px;
+	margin-bottom: 12px;
 }
 @media screen and (min-width: 600px) {
 	.main-title {
-		width: 100%;
-		text-align: center;
-		padding: 28px 0;
-		padding-bottom: 28px;
-		text-align: center;
+		padding-left: 0;
+	}
+}
+@media screen and (min-width: 700px) {
+	.main-title {
 		font-size: 2rem;
+		width: 70%;
+		margin: 16px auto;
+		margin-top: 28px;
+		padding: 0;
 	}
-	main {
-		background-color: rgb(245, 245, 245);
+	form {
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
-	footer {
-		background-color: rgb(245, 245, 245);
+	form h2 {
+		padding-top: 0;
 	}
 }
