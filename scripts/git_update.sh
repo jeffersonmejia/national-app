@@ -12,13 +12,13 @@ else
   git push origin dev
   git switch main
 
-  current_time=$(date +%T)
-  MERGE_MESSAGE="Main and dev branch has been updated at: $current_time"
-
-  git merge --no-ff -m "$MERGE_MESSAGE" dev
+  git merge --no-ff -m "Update main and development branch" dev
   git pull origin main
   git push origin main
   git switch dev
   git status
+
+  current_time=$(date +%T)
+  MERGE_MESSAGE="Main and dev branch has been updated at: $current_time"
 	echo ">> $MERGE_MESSAGE"
 fi
