@@ -13,7 +13,7 @@ else
   git switch main
 
   current_time=$(date +%T)
-  $MERGE_MESSAGE = "Main and dev branch has been updated at: $current_time"
+  MERGE_MESSAGE = "Main and dev branch has been updated at: $current_time"
 
   git merge --no-ff -m "$MERGE_MESSAGE" dev
   git pull origin main
