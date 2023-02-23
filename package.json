@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "vite",
-		"sass": "sass src/sass:src/css --watch"
+		"sass": "sass src/sass:src/css --watch",
+		"git-update": "./run.sh"
 	},
 	"repository": {
 		"type": "git",

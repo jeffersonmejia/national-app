@@ -27,7 +27,7 @@
   --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   --white-card-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
   	0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  --reading-fg: rgb(95, 99, 104);
+  --reading-fg: hsl(216, 4%, 23%);
   --benefit-fg: rgb(25, 126, 0);
   --error-fg: red;
 }
@@ -388,7 +388,7 @@ header figcaption {
 
 header img {
   height: 90vh;
-  opacity: 0.5;
+  opacity: 0.2;
   object-fit: cover;
   object-position: center top;
 }
@@ -408,10 +408,13 @@ header button {
     background-color: var(--btn-hover);
   }
 }
+.services {
+  padding-left: 16px;
+}
+
 .services h1 {
-  width: 100%;
-  padding: 12px 16px;
-  padding-bottom: 8px;
+  padding: 8px 0;
+  font-size: 1.5rem;
 }
 
 .services ul {
@@ -420,19 +423,20 @@ header button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  list-style: none;
-  gap: 12px;
-  padding: 0 0 24px 0;
+  gap: 4px;
+  padding-bottom: 24px;
+  padding-left: 20px;
 }
 
 .services li {
   width: 100%;
-  text-align: center;
+  text-align: left;
+  color: var(--reading-fg);
 }
 
 .services a {
   text-decoration: none;
-  color: var(--main-color);
+  color: inherit;
 }
 
 @media (hover: hover) {
@@ -475,6 +479,14 @@ header button {
     background-color: var(--btn-hover);
   }
 }
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .contacts img {
   width: 70%;
   margin: 32px;
@@ -489,7 +501,18 @@ header button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: var(--box-shadow);
+}
+
+.contacts img {
+  max-width: 200px;
+}
+
+.contacts p {
+  max-width: 300px;
+}
+
+.contacts button {
+  max-width: 300px;
 }
 
 .contacts-content button {
@@ -498,43 +521,25 @@ header button {
   transition: background-color 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   main {
     background-color: var(--light-bg);
   }
   .contacts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-    gap: 6rem;
-    place-items: center;
-  }
-  .contacts-content {
-    background-color: var(--light-box);
-  }
-  footer {
-    background-color: var(--light-bg);
-  }
-  .contacts-content button {
-    width: 100%;
-  }
-  .contacts-content:last-child {
-    justify-self: left;
-  }
-  .contacts-content:first-child {
-    justify-self: right;
-  }
-  .contacts {
-    max-width: 80%;
     margin: auto;
+    max-width: 90%;
   }
   .contacts-content {
+    width: 80%;
     width: 360px;
-  }
-  .contacts .contacts-content {
+    background-color: var(--light-box);
+    box-shadow: var(--white-card-shadow);
     border-radius: var(--border-radius);
     padding: 20px 32px;
-    padding-bottom: 32px;
     padding-top: 0;
+  }
+  .contacts-content:nth-child(2) {
+    margin: 32px auto;
   }
   .contacts img {
     width: 100%;
@@ -545,18 +550,38 @@ header button {
   .contacts button {
     background-color: var(--btn-bg);
   }
-  .contacts-content p {
+  .contacts p {
     text-align: center;
   }
 }
-@media screen and (min-width: 600px) and (hover: hover) {
+@media screen and (min-width: 500px) and (hover: hover) {
   .contacts button:hover {
     background-color: var(--btn-hover);
   }
 }
-@media screen and (min-width: 600px) {
-  .contacts-content :is(button, p) {
+@media screen and (min-width: 500px) {
+  .contacts button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .contacts :is(button, p) {
     max-width: 300px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .contacts-content:last-child {
+    justify-self: left;
+  }
+}
+@media screen and (min-width: 500px) {
+  .contacts-content:first-child {
+    justify-self: right;
+  }
+}
+@media screen and (min-width: 600px) {
+  footer {
+    background-color: var(--light-bg);
   }
 }
 @media screen and (min-width: 600px) {
@@ -568,6 +593,10 @@ header button {
     max-width: 500px;
     margin: 0 auto;
     flex-direction: row;
+  }
+  .services li {
+    text-align: center;
+    list-style: none;
   }
   .purchases {
     display: grid;
@@ -582,12 +611,22 @@ header button {
   .contacts .contacts-content {
     margin-bottom: 16px;
   }
+  .services h1 {
+    font-size: 3.5rem;
+  }
   .purchases {
-    padding: 0 32px;
     display: flex;
     flex-direction: row;
-    gap: 32px;
     align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 0 32px;
+  }
+  .purchases figure {
+    width: 100%;
+    max-width: 360px;
   }
   .purchases img {
     border-radius: var(--border-radius);
@@ -597,6 +636,16 @@ header button {
   }
   .purchases figure {
     border-radius: var(--border-radius);
+  }
+}
+@media screen and (min-width: 900px) {
+  .contacts {
+    min-width: 100%;
+    margin: 0;
+    gap: 24px;
+  }
+  .contacts .contacts-content {
+    margin: 0;
   }
 }
 
