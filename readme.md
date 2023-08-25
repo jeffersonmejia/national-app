@@ -31,7 +31,7 @@ Web application that manages transactions and payment of frequent services just 
 
 4. You are ready! Go to https://localhost:5500 <img src='https://i.postimg.cc/76PGf6WB/google-chrome-logo-png-0.png' width="12"/>
 
-5. If you'd prefer access with no installation, get in [here](https://jeffersonmejia.github.io/natinal-app) 💡
+
 
 ## 3. Preview
 
