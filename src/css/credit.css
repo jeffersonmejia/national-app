@@ -1,449 +1,462 @@
 :root {
-  --input-focus: hsl(0, 0%, 95%);
-  --main-color: rgb(32, 33, 36);
-  --light-bg: rgb(244, 244, 244);
-  --light-box: white;
-  --bars-bg: rgb(124, 176, 244);
-  --loader-bar-fg: rgb(24, 118, 242);
-  --header-bg: var(--main-color);
-  --header-fg: var(--light-bg);
-  --btn-height: 48px;
-  --btn-bg: rgb(24, 118, 242);
-  --btn-hover: hsl(214, 89%, 60%);
-  --btn-fg: rgb(255, 255, 255);
-  --btn-disabled: hsl(0, 0%, 60%);
-  --btn-disabled-hover: hsl(0, 0%, 70%);
-  --bar-loader-bg: hsl(194, 100%, 53%);
-  --modal-bg: rgba(0, 0, 0, 0.5);
-  --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  --burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  --border-radius: 16px;
-  --light-border-color: hsl(0, 0%, 90%);
-  --light-border: 1px solid var(--light-border-color);
-  --navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  --navbar-height: 65px;
-  --modal-bg: rgba(0, 0, 0, 0.4);
-  --modal-content-bg: white;
-  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --white-card-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-  	0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  --reading-fg: hsl(216, 4%, 23%);
-  --benefit-fg: rgb(25, 126, 0);
-  --error-fg: red;
+	--input-focus: hsl(0, 0%, 95%);
+	--main-color: rgb(32, 33, 36);
+	--light-bg: rgb(244, 244, 244);
+	--light-box: white;
+	--bars-bg: rgb(124, 176, 244);
+	--loader-bar-fg: rgb(24, 118, 242);
+	--header-bg: var(--main-color);
+	--header-fg: var(--light-bg);
+	--btn-height: 48px;
+	--btn-bg: rgb(24, 118, 242);
+	--btn-hover: hsl(214, 89%, 60%);
+	--btn-fg: rgb(255, 255, 255);
+	--btn-disabled: hsl(0, 0%, 60%);
+	--btn-disabled-hover: hsl(0, 0%, 70%);
+	--bar-loader-bg: hsl(194, 100%, 53%);
+	--modal-bg: rgba(0, 0, 0, 0.5);
+	--burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+	--burger-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+	--border-radius: 16px;
+	--light-border-color: hsl(0, 0%, 90%);
+	--light-border: 1px solid var(--light-border-color);
+	--navbar-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+	--navbar-height: 65px;
+	--modal-bg: rgba(0, 0, 0, 0.4);
+	--modal-content-bg: white;
+	--box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	--white-card-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+		0 1px 3px 1px rgba(60, 64, 67, 0.15);
+	--reading-fg: hsl(216, 4%, 23%);
+	--benefit-fg: rgb(25, 126, 0);
+	--error-fg: red;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 h1,
 img {
-  width: 100%;
+	width: 100%;
 }
 
 html {
-  font-family: "Nunito Sans", sans-serif;
-  color: var(--main-color);
+	font-family: 'Nunito Sans', sans-serif;
+	color: var(--main-color);
 }
 
 hr {
-  color: var(--light-bg);
+	color: var(--light-bg);
 }
 
 .select-disabled {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
 html .hidden {
-  display: none;
+	display: none;
 }
 
 @media screen and (min-width: 600px) {
-  html {
-    background-color: rgb(245, 245, 245);
-  }
-  footer {
-    background-color: rgb(245, 245, 245);
-  }
-  h1 {
-    text-align: center;
-    padding-bottom: 16px;
-  }
+	html {
+		background-color: rgb(245, 245, 245);
+	}
+	footer {
+		background-color: rgb(245, 245, 245);
+	}
+	h1 {
+		text-align: center;
+		padding-bottom: 16px;
+	}
 }
 @keyframes barLoader {
-  0% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(200%);
-  }
+	0% {
+		transform: translateX(-200%);
+	}
+	100% {
+		transform: translateX(200%);
+	}
 }
 @keyframes bgLoader {
-  from {
-    background-color: rgba(232, 232, 232, 0.7);
-  }
-  to {
-    background-color: rgba(232, 232, 232, 0.7);
-  }
+	from {
+		background-color: rgba(232, 232, 232, 0.7);
+	}
+	to {
+		background-color: rgba(232, 232, 232, 0.7);
+	}
 }
 @keyframes showUp {
-  from {
-    transform: translateY(15%);
-  }
-  to {
-    transform: translateY(0%);
-  }
+	from {
+		transform: translateY(15%);
+	}
+	to {
+		transform: translateY(0%);
+	}
 }
 .modal-loader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  animation: bgLoader 1s ease-in-out infinite;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	animation: bgLoader 1s ease-in-out infinite;
 }
 
 .modal-loader-bar {
-  height: 3px;
-  top: 0;
-  width: 100%;
-  position: fixed;
-  animation: barLoader 1s ease-in-out infinite;
+	height: 3px;
+	top: 0;
+	width: 100%;
+	position: fixed;
+	animation: barLoader 1s ease-in-out infinite;
 }
 
 .loader-bar-active {
-  background-color: var(--loader-bar-fg);
+	background-color: var(--loader-bar-fg);
 }
 
 button,
 button a {
-  width: 100%;
-  height: var(--btn-height);
+	width: 100%;
+	height: var(--btn-height);
 }
 
 button {
-  background-color: var(--btn-bg);
-  color: var(--btn-fg);
-  border-radius: var(--border-radius);
-  border: none;
-  cursor: pointer;
+	background-color: var(--btn-bg);
+	color: var(--btn-fg);
+	border-radius: var(--border-radius);
+	border: none;
+	cursor: pointer;
 }
 
 button a {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--border-radius);
-  text-decoration: none;
-  color: var(--btn-fg);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--border-radius);
+	text-decoration: none;
+	color: var(--btn-fg);
 }
 
 .btn-disabled {
-  background-color: var(--btn-disabled);
-  cursor: not-allowed;
+	background-color: var(--btn-disabled);
+	cursor: not-allowed;
 }
 
 @media (hover: hover) {
-  button.btn-disabled:hover {
-    background-color: var(--btn-disabled-hover);
-  }
-  button:hover {
-    background-color: var(--btn-hover);
-  }
-  .ancle-btn:hover {
-    color: var(--btn-hover);
-  }
+	button.btn-disabled:hover {
+		background-color: var(--btn-disabled-hover);
+	}
+	button:hover {
+		background-color: var(--btn-hover);
+	}
+	.ancle-btn:hover {
+		color: var(--btn-hover);
+	}
 }
 .ancle-btn {
-  display: block;
-  text-align: right;
-  margin: 12px 0;
-  color: var(--btn-bg);
-  text-decoration: none;
-  width: fit-content;
-  margin-left: auto;
-  transition: color 0.3s ease-in-out;
+	display: block;
+	text-align: right;
+	margin: 12px 0;
+	color: var(--btn-bg);
+	text-decoration: none;
+	width: fit-content;
+	margin-left: auto;
+	transition: color 0.3s ease-in-out;
 }
 
 .simple-btn {
-  display: block;
-  margin: 4px 0;
-  text-align: center;
-  color: var(--btn-bg);
+	display: block;
+	margin: 4px 0;
+	text-align: center;
+	color: var(--btn-bg);
 }
 
 .simple-btn a {
-  cursor: pointer;
-  text-decoration: none;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .simple-btn a:visited {
-  color: inherit;
+	color: inherit;
 }
 
 .credits-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 16px;
 }
 
 .credit-card-title :is(h4, p) {
-  margin: 6px 0;
+	margin: 6px 0;
 }
 
-.credit-card-content:nth-child(-n+3) {
-  animation: opacity 0.3s ease-in-out;
+.credit-card-content:nth-child(-n + 3) {
+	animation: opacity 0.3s ease-in-out;
 }
 
 .credit-card-title h4 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 .credit-card-content {
-  width: 100%;
-  text-align: center;
-  padding: 32px 16px;
-  max-width: 600px;
-  border-radius: var(--border-radius);
-  background-color: white;
+	width: 100%;
+	text-align: center;
+	padding: 32px 16px;
+	max-width: 600px;
+	border-radius: var(--border-radius);
+	background-color: white;
 }
 
 .credit-card-content ul {
-  margin: 16px 0;
+	margin: 16px 0;
 }
 
 .credit-card-content li {
-  width: 100%;
-  text-align: left;
-  margin-left: 24px;
+	width: 100%;
+	text-align: left;
+	margin-left: 24px;
 }
 
 .credit-card-master li,
 .credit-card-expert li {
-  list-style: none;
+	list-style: none;
 }
 
 .credit-card-info {
-  width: 100%;
-  background-color: #3800ff;
-  max-width: 380px;
-  padding: 16px 8px;
-  margin: 16px auto;
-  border-radius: var(--border-radius);
-  box-shadow: 1px 0 12px rgb(140, 140, 140);
-  transition: transform 0.3s ease-in-out;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
+	width: 100%;
+	background-color: #3800ff;
+	max-width: 380px;
+	padding: 16px 8px;
+	margin: 16px auto;
+	border-radius: var(--border-radius);
+	box-shadow: 1px 0 12px rgb(140, 140, 140);
+	transition: transform 0.3s ease-in-out;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
 }
 
 .credit-card-content:last-child ul {
-  padding-top: 8px;
+	padding-top: 8px;
 }
 
 @media (hover: hover) {
-  .credit-card-info:hover {
-    transform: scale(105%);
-  }
+	.credit-card-info:hover {
+		transform: scale(105%);
+	}
 }
 .credit-card-info {
-  color: white;
+	color: white;
 }
 
 .credit-card-info > .logo {
-  color: white;
+	color: white;
 }
 
 .credit-card-master {
-  background-color: rgb(0, 5, 49);
+	background-color: rgb(0, 5, 49);
 }
 
 .credit-card-expert {
-  background-color: rgb(68, 6, 68);
+	background-color: rgb(68, 6, 68);
 }
 
 .credit-card-basic {
-  background-color: rgb(6, 48, 48);
+	background-color: rgb(6, 48, 48);
 }
 
 .credit-chip {
-  width: 36px;
-  display: block;
-  margin-left: 20px;
-  box-shadow: 1px 0 40px rgb(60, 60, 60);
+	width: 36px;
+	display: block;
+	margin-left: 20px;
+	box-shadow: 1px 0 40px rgb(60, 60, 60);
 }
 
 .credit-card-number {
-  text-align: left;
-  margin: 12px 0;
-  margin-bottom: 6px;
-  padding-left: 12px;
-  -webkit-text-fill-color: white;
+	text-align: left;
+	margin: 12px 0;
+	margin-bottom: 6px;
+	padding-left: 12px;
+	-webkit-text-fill-color: white;
 }
 
 .credit-card-number h4 {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .credit-card-date small {
-  display: flex;
-  gap: 12px;
-  padding-left: 40px;
+	display: flex;
+	gap: 12px;
+	padding-left: 40px;
 }
 
 .credit-card-footer {
-  display: flex;
+	display: flex;
 }
 
 .credit-card-footer h4 {
-  text-align: left;
-  margin-top: 4px;
-  padding-left: 16px;
-  flex-grow: 1;
+	text-align: left;
+	margin-top: 4px;
+	padding-left: 16px;
+	flex-grow: 1;
 }
 
 .credit-card-type {
-  text-align: right;
-  padding-right: 16px;
+	text-align: right;
+	padding-right: 16px;
 }
 
 .credit-card-type small {
-  font-size: 0.7rem;
+	font-size: 0.7rem;
 }
 
 @media screen and (min-width: 500px) {
-  main {
-    padding-top: calc(var(--navbar-height) + 32px);
-    background-color: rgb(245, 245, 245);
-  }
-  .credit-card-title h4 {
-    font-size: 1.15rem;
-  }
-  .credit-card-content ul {
-    margin: 16px;
-  }
-  .credit-card-content {
-    max-width: 500px;
-    margin: auto;
-    padding: 16px 32px;
-    background-color: white;
-    border: var(--light-border);
-  }
+	main {
+		padding-top: calc(var(--navbar-height) + 32px);
+		background-color: rgb(245, 245, 245);
+	}
+	.credit-card-title h4 {
+		font-size: 1.15rem;
+	}
+	.credit-card-content ul {
+		margin: 16px;
+	}
+	.credit-card-content {
+		max-width: 500px;
+		margin: auto;
+		padding: 16px 32px;
+		background-color: white;
+		border: var(--light-border);
+	}
 }
 @media screen and (min-width: 900px) {
-  .credit-card-content {
-    max-width: 800px;
-    background-color: white;
-  }
-  .credit-card-info {
-    margin-top: 12px;
-  }
-  .credit-card-title {
-    text-align: left;
-    width: 380px;
-  }
-  .credit-card-content figcaption {
-    display: grid;
-    grid-template-columns: repeat(2, auto) 1fr;
-    grid-template-rows: repeat(2, auto);
-  }
-  .credit-card-title {
-    grid-column: 1/3;
-  }
-  .credit-card-content {
-    grid-column: 1/3;
-  }
-  .credit-card-info {
-    grid-column: 1/3;
-    margin: 16px 0;
-    margin-top: 8px;
-  }
-  .credit-card-content ul {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 16px;
-  }
-  ul .credit-card-benefits {
-    justify-content: flex-start;
-    padding-right: 0;
-    margin-left: 0;
-  }
-  .credit-card-content:last-child ul {
-    padding-top: 32px;
-  }
+	.credit-card-content {
+		max-width: 800px;
+		background-color: white;
+	}
+	.credit-card-info {
+		margin-top: 12px;
+	}
+	.credit-card-title {
+		text-align: left;
+		width: 380px;
+	}
+	.credit-card-content figcaption {
+		display: grid;
+		grid-template-columns: repeat(2, auto) 1fr;
+		grid-template-rows: repeat(2, auto);
+	}
+	.credit-card-title {
+		grid-column: 1/3;
+	}
+	.credit-card-content {
+		grid-column: 1/3;
+	}
+	.credit-card-info {
+		grid-column: 1/3;
+		margin: 16px 0;
+		margin-top: 8px;
+	}
+	.credit-card-content ul {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		padding-left: 16px;
+	}
+	ul .credit-card-benefits {
+		justify-content: flex-start;
+		padding-right: 0;
+		margin-left: 0;
+	}
+	.credit-card-content:last-child ul {
+		padding-top: 32px;
+	}
 }
 footer {
-  padding-bottom: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border: none;
-  background-color: var(--main-fg);
-  color: rgb(140, 140, 140);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+	gap: 4px;
 }
-
-footer small {
-  margin: 24px 0;
+footer a {
+	text-decoration: none;
+	color: var(--text-color-gray);
+	font-size: 0.85rem;
 }
-
+footer a:hover {
+	text-decoration: underline;
+}
+footer .links {
+	list-style: none;
+	display: flex;
+	gap: 8px;
+}
+footer .separator {
+	font-size: 8px;
+	display: flex;
+	align-items: center;
+	color: var(--text-color-gray);
+}
 main {
-  padding-top: calc(var(--navbar-height));
-  background-color: var(--light-bg);
+	padding-top: calc(var(--navbar-height));
+	background-color: var(--light-bg);
 }
 
 .logo {
-  text-align: left;
-  display: flex;
-  align-items: baseline;
-  padding: 6px 0;
-  padding-left: 8px;
-  gap: 3px;
+	text-align: left;
+	display: flex;
+	align-items: baseline;
+	padding: 6px 0;
+	padding-left: 8px;
+	gap: 3px;
 }
 
 .simple-btn {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 .credit-card-benefits {
-  list-style: none;
-  margin: 24px 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 32px;
-  color: var(--benefit-fg);
+	list-style: none;
+	margin: 24px 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 32px;
+	color: var(--benefit-fg);
 }
 
 .credit-card-benefits span {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 footer {
-  background-color: rgb(245, 245, 245);
+	background-color: rgb(245, 245, 245);
 }
 
 @media screen and (min-width: 500px) {
-  .credit-card-benefits {
-    padding-right: 32px;
-  }
+	.credit-card-benefits {
+		padding-right: 32px;
+	}
 }
 @media screen and (min-width: 900px) {
-  ul .credit-card-benefits {
-    justify-content: flex-start;
-    padding-right: 0;
-    margin-left: 0;
-  }
+	ul .credit-card-benefits {
+		justify-content: flex-start;
+		padding-right: 0;
+		margin-left: 0;
+	}
 }
 
 /*# sourceMappingURL=credit.css.map */
