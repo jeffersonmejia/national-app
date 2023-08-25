@@ -1,87 +1,47 @@
-# Banco Nacional 🏦🇪🇨
+<div align="right">
+Made with love from <img src='https://i.postimg.cc/Mc25FLHJ/Flag-of-Ecuador.png' width='10'/> 
+</div>
 
-## **Introduction 💡**
+# **National App**
 
-> Web application that manages transactions and payment of frequent services
+Finances, products and services 📊
 
-### **Content table**
+## Content table
 
----
+1. Introduction
+2. Installation
+3. Preview
+4. Author
+5. Credits
 
-- _Preview_
-- _Features_
-- _Installation_
-- _Tech stack_
-- _Docs_
-- _License_
-- _Credits_
+## 1. Introduction
 
-### **Preview**
+Web application that manages transactions and payment of frequent services just on a click 📱
 
-[![main-1.png](https://i.postimg.cc/sxjffLN5/main-1.png)](https://postimg.cc/MMLJd9xG)
+## 2. Installation
 
-### **Features 🧩**
+1. Download [git](https://git-scm.com/downloads) <img src='https://i.postimg.cc/4nGTxK8y/Git-Icon-1788-C.png' width="10"/> if you don't have it
+2. Secondly, in your prefered console <img src='https://i.postimg.cc/GmBZnx3K/7560719.png' width="12" alt="Terminal freepik by Royyan Wijaya"/> execute:
 
-- Products & services
-- Login 
-- Register
-- Dashboard
-- Month resume
-- Forms: shifts & invest
+   ```
+   git clone https://github.com/jeffersonmejia/national-app.git
+   ```
 
-### **Installation 🔨**
+3. Turn VS code <img src='https://code.visualstudio.com/favicon.ico' width="10"/> live server on
 
----
+4. You are ready! Go to https://localhost:5500 <img src='https://i.postimg.cc/76PGf6WB/google-chrome-logo-png-0.png' width="12"/>
 
-**You'll need the next dependencies**
+5. If you'd prefer access with no installation, get in [here](https://jeffersonmejia.github.io/weather) 💡
 
-- <div style="display:flex; align-items:center;"> Windows <img src="https://i.postimg.cc/bNcF5V3C/windows11.png" width="20"/></div>
+## 3. Preview
 
-  - [Xampp](https://www.apachefriends.org/download.html)
+<img src="https://i.postimg.cc/nVsLB6ZT/Frame-1.png" width="450"/>
 
-- <div style="display:flex; align-items:center;">Linux <img src="https://i.postimg.cc/gkqynD8r/2333464.png" width="15"/> </div>
+## 4. Author
 
-  - Debian
+Jefferson Mejía - Eng. Systems, Web developer </>
 
-    `sudo apt-get update`
-
-    `sudo apt-get update`
-
-    `sudo apt-get install apache2 phpmyadmin mysql-server`
-
-    `sudo apt-get install php7.4 php7.4-cli php7.4-fpm`
-
-    `sudo apt-get install php7.4-common php7.4-json`
-
-    `sudo apt-get install php7.4-opcache php7.4-readline`
-
-### **Tech stack 🎨**
-
----
-
-**LAMP 🐧**
-
-### **Docs📄**
-
----
-
-[Xampp](https://www.apachefriends.org/docs/)
-
-[PHP](https://www.php.net/docs.php)
-
-### **License ⚖️**
-
----
-
-> MIT
-
-### **Credits**
-
----
-
-**Author 👾**
-
-`Jefferson Mejía`
+## 5. Credits
 
 **Icons 💎**
 
