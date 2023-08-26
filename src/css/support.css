@@ -145,6 +145,9 @@ html .hidden {
 		display: flex;
 	}
 }
+main h1 {
+	font-size: 3rem;
+}
 .burger-menu {
 	position: fixed;
 	bottom: 4vh;
@@ -378,6 +381,7 @@ main {
 
 main :is(h1, small) {
 	width: 100%;
+	text-align: left;
 	max-width: 700px;
 }
 
