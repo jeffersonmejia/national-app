@@ -161,7 +161,6 @@ html .hidden {
 
 @media (hover: hover) {
 	.burger-menu:hover {
-		transform: translateY(-8px);
 		background-color: var(--btn-hover);
 	}
 }
@@ -611,6 +610,10 @@ footer .separator {
 		grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 		padding-bottom: 32px;
 	}
+	.purchases figure:first-of-type {
+		grid-column: 1/-1;
+		max-width: none;
+	}
 }
 @media screen and (min-width: 800px) {
 	header :is(figure, img) {
@@ -636,6 +639,10 @@ footer .separator {
 		width: 100%;
 		max-width: 360px;
 	}
+	.purchases figure:first-of-type {
+		grid-column: 1/2;
+		max-width: 360px;
+	}
 	.purchases img {
 		border-radius: var(--border-radius);
 	}
@@ -656,5 +663,3 @@ footer .separator {
 		margin: 0;
 	}
 }
-
-/*# sourceMappingURL=index.css.map */
