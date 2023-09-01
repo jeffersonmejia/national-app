@@ -39,7 +39,7 @@ Web application that manages transactions and payment of frequent services just 
 
 ## 4. Author
 
-Jefferson Mejía - Eng. Systems, Web developer </>
+[Jefferson Mejía](https://jeffersonmejia.github.io/blog) - Eng. Systems, Web developer
 
 ## 5. Credits
 
